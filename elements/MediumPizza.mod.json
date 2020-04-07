@@ -1,0 +1,24 @@
+{
+  "_fv": 6,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "pizza_normal",
+    "customModelName": "Normal",
+    "name": "Medium Pizza",
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 32,
+    "nutritionalValue": 8,
+    "saturation": 0.6,
+    "eatingSpeed": 36,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "MediumPizzaFoodEaten"
+    }
+  }
+}

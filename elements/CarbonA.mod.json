@@ -1,0 +1,19 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 2.0,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "Items.COAL#0"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:Acarbon"
+    },
+    "name": "carbon_a",
+    "namespace": "mod"
+  }
+}

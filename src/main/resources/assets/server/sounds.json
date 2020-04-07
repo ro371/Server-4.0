@@ -1,0 +1,11 @@
+{
+  "policia_en_accion": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "server:olicia_en_ccion",
+        "stream": false
+      }
+    ]
+  }
+}

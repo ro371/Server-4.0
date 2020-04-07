@@ -1,0 +1,24 @@
+{
+  "_fv": 6,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "pizza_big",
+    "customModelName": "Normal",
+    "name": "Big Pizza",
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 15,
+    "saturation": 0.9,
+    "eatingSpeed": 48,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "BigPizzaFoodEaten"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_fv": 6,
+  "_type": "fuel",
+  "definition": {
+    "power": 2600,
+    "block": {
+      "value": "CUSTOM:Acarbon"
+    }
+  }
+}

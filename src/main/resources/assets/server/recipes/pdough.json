@@ -1,0 +1,30 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:wheat"
+    },
+    "3": {
+      "item": "minecraft:wheat"
+    },
+    "4": {
+      "item": "minecraft:wheat"
+    },
+    "5": {
+      "item": "minecraft:wheat"
+    },
+    "7": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "server:dough",
+    "count": 1
+  }
+}

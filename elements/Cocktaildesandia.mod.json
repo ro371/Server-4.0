@@ -1,0 +1,24 @@
+{
+  "_fv": 6,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "cocktail_de_sandia",
+    "customModelName": "Normal",
+    "name": "Cocktaildesandia",
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 32,
+    "nutritionalValue": 2,
+    "saturation": 0.1,
+    "eatingSpeed": 24,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "CocktaildesandiaFoodEaten"
+    }
+  }
+}

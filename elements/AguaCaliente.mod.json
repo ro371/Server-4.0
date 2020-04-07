@@ -1,0 +1,22 @@
+{
+  "_fv": 6,
+  "_type": "fluid",
+  "definition": {
+    "name": "AguaCaliente",
+    "textureStill": "static_water",
+    "textureFlowing": "flowing_hot_water",
+    "luminosity": 4,
+    "density": 900,
+    "viscosity": 900,
+    "isGas": false,
+    "type": "WATER",
+    "generateBucket": true,
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "spawnWorldTypes": [],
+    "onEntityCollides": {
+      "name": "AguaCalienteMobplayerCollidesBlock"
+    }
+  }
+}

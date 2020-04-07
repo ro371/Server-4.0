@@ -1,0 +1,621 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "CarbonAhumado",
+      "type": "fuel",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "carbon_ah"
+    },
+    {
+      "name": "Acarbon",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "carbon_ahumado"
+    },
+    {
+      "name": "CarbonA",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Spaguetti",
+      "type": "food",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AguaCalienteMobplayerCollidesBlock",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AguaCaliente",
+      "type": "fluid",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Hotwater",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NormalWater",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Spaguettirecipe",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ApplePie",
+      "type": "food",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tarta_de_manzana"
+    },
+    {
+      "name": "GinTonicFoodEaten",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GinTonic",
+      "type": "food",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ApplePierecipe",
+      "type": "recipe",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GinTonicRecipe",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PizzaDoughFoodEaten",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PizzaDough",
+      "type": "food",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Pdough",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SmallPizzaFoodEaten",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SmallPizza",
+      "type": "food",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MediumPizzaFoodEaten",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MediumPizza",
+      "type": "food",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Dough",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Pizzadoughcook",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SPizza",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MPizza",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Daiquiri",
+      "type": "food",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CocktaildesandiaFoodEaten",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cocktaildesandia",
+      "type": "food",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MojitoLimaLimon",
+      "type": "food",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MojitoSandia",
+      "type": "food",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DaiquiriRecipe",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Vasocraft",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Vaso",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MojLimaLimonrecipe",
+      "type": "recipe",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MojSandiarecipe",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CocktailSandiacraft",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CocktailCalabaza",
+      "type": "food",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CocktailCalabazarecipe",
+      "type": "recipe",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MojitoEaten",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BigPizzaFoodEaten",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BigPizza",
+      "type": "food",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BPizza",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PoliceArmor",
+      "type": "armor",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "PoliceArmorBootsTickEvent",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PoliceArmorHelmetTickEvent",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AltoPoliciaPotionStartedapplied",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AltoPolicia",
+      "type": "potion",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AltoPoliciaPotionExpires",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AltopoliciadetenerCommandExecuted",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Altopoliciadetener",
+      "type": "command",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "policia_en_accion",
+      "file": "olicia_en_ccion",
+      "category": "master"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.policearmorboots.name": "Police Boots",
+      "item.daiquiri.name": "Daiquiri",
+      "lingering_potion.effect.altopolicia": "Lingering Alto Policía",
+      "item.mojitosandia.name": "Mojito Sandia",
+      "item.tarta_de_manzana.name": "Apple Pie",
+      "fluid.aguacaliente": "Hot Water",
+      "potion.effect.altopolicia": "Alto Policía",
+      "item.gintonic.name": "Gin Tonic",
+      "item.cocktaildesandia.name": "Melon Drink",
+      "item.vaso.name": "Vaso",
+      "item.pizzadough.name": "Pizza Dough",
+      "item.spaguetti.name": "Spaguetti",
+      "splash_potion.effect.altopolicia": "Splash Alto Policía",
+      "item.carbon_ahumado.name": "Smoked Coal",
+      "item.mediumpizza.name": "Medium Pizza",
+      "item.smallpizza.name": "Small Pizza",
+      "item.policearmorhelmet.name": "Police Helmet",
+      "item.cocktailcalabaza.name": "Pumpkin Drink",
+      "item.policearmorbody.name": "Police Chestplate",
+      "item.dough.name": "Dough",
+      "item.bigpizza.name": "Big Pizza",
+      "item.mojitolimalimon.name": "Mojito Lima Limon",
+      "effect.altopolicia": "Alto Policia",
+      "item.policearmorlegs.name": "Police Leggings",
+      "tipped_arrow.effect.altopolicia": "Arrow of Alto Policía"
+    },
+    "es_es": {
+      "item.policearmorboots.name": "Botas de @Policía",
+      "item.daiquiri.name": "Daiquiri",
+      "lingering_potion.effect.altopolicia": "Lingering Alto Policía",
+      "item.mojitosandia.name": "Mojito Sandía",
+      "item.tarta_de_manzana.name": "Tarta de Manzana",
+      "fluid.aguacaliente": "Agua Caliente",
+      "potion.effect.altopolicia": "Alto Policía",
+      "item.gintonic.name": "Gin Tonic",
+      "item.cocktaildesandia.name": "Cocktaildesandia",
+      "item.vaso.name": "Vaso",
+      "item.pizzadough.name": "Pizza Dough",
+      "item.spaguetti.name": "Spaguetti",
+      "splash_potion.effect.altopolicia": "Splash Alto Policía",
+      "item.carbon_ahumado.name": "Carbón Ahumado",
+      "item.mediumpizza.name": "Pizza Mediana",
+      "item.smallpizza.name": "Pizza Pequeña",
+      "item.policearmorhelmet.name": "Casco de @Policía",
+      "item.cocktailcalabaza.name": "Cocktail Calabaza",
+      "item.policearmorbody.name": "Pechera de @Policía",
+      "item.dough.name": "Dough",
+      "item.bigpizza.name": "Big Pizza",
+      "item.mojitolimalimon.name": "Mojito Lima Limon",
+      "effect.altopolicia": "Alto Policia",
+      "item.policearmorlegs.name": "Pantalones de @Policía",
+      "tipped_arrow.effect.altopolicia": "Arrow of Alto Policía"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "server",
+    "modName": "Server_4.0",
+    "version": "4.0.2",
+    "description": "Random and useful mod",
+    "author": "THE_GLACIAL, MCreator",
+    "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "1.12.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.server",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000214217
+}

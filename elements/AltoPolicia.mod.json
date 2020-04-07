@@ -1,0 +1,30 @@
+{
+  "_fv": 6,
+  "_type": "potion",
+  "definition": {
+    "name": "Alto Policía",
+    "effectName": "Alto Policia",
+    "icon": "alto_policia.png",
+    "color": {
+      "value": -52225,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": true,
+    "isBenefitical": false,
+    "registerPotionType": true,
+    "curativeItems": [
+      {
+        "value": "Items.MILK_BUCKET"
+      }
+    ],
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "AltoPoliciaPotionStartedapplied"
+    },
+    "onExpired": {
+      "name": "AltoPoliciaPotionExpires"
+    }
+  }
+}

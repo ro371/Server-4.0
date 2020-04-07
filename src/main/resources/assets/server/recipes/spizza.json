@@ -1,0 +1,25 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:dye",
+      "data": 1
+    },
+    "1": {
+      "item": "server:pizzadough"
+    },
+    "2": {
+      "item": "minecraft:wheat_seeds"
+    }
+  },
+  "result": {
+    "item": "server:smallpizza",
+    "count": 1
+  }
+}

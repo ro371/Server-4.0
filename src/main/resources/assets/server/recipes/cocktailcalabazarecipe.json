@@ -1,0 +1,25 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:sugar"
+    },
+    "1": {
+      "item": "minecraft:potion",
+      "data": 32767
+    },
+    "2": {
+      "item": "minecraft:pumpkin"
+    }
+  },
+  "result": {
+    "item": "server:cocktailcalabaza",
+    "count": 1
+  }
+}

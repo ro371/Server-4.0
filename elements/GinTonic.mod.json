@@ -1,0 +1,24 @@
+{
+  "_fv": 6,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "in_onic",
+    "customModelName": "Normal",
+    "name": "Gin Tonic",
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 32,
+    "nutritionalValue": 1,
+    "saturation": 0.30000000000000004,
+    "eatingSpeed": 20,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "GinTonicFoodEaten"
+    }
+  }
+}

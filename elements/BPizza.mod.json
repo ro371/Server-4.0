@@ -1,0 +1,45 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.DYE#1"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PizzaDough"
+      },
+      {
+        "value": "CUSTOM:PizzaDough"
+      },
+      {
+        "value": "CUSTOM:PizzaDough"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.WHEAT_SEEDS"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BigPizza"
+    },
+    "name": "bpizza",
+    "namespace": "mod"
+  }
+}
