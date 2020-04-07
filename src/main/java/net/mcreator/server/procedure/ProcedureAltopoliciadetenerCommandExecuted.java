@@ -78,7 +78,7 @@ public class ProcedureAltopoliciadetenerCommandExecuted extends ElementsServer.M
 				public Vec3d getPositionVector() {
 					return new Vec3d(x, y, z);
 				}
-			}, (("effect ") + "" + ((new Object() {
+			}, (("effect ") + "" + ((((new Object() {
 				public String getText() {
 					String param = (String) cmdparams.get("0");
 					if (param != null) {
@@ -86,7 +86,99 @@ public class ProcedureAltopoliciadetenerCommandExecuted extends ElementsServer.M
 					}
 					return "";
 				}
-			}.getText()))));
+			}.getText())) + "" + (((" 2 ") + "" + ("400 ")))))));
+		}
+		if (!world.isRemote && world.getMinecraftServer() != null) {
+			world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
+				@Override
+				public String getName() {
+					return "";
+				}
+
+				@Override
+				public boolean canUseCommand(int permission, String command) {
+					return true;
+				}
+
+				@Override
+				public World getEntityWorld() {
+					return world;
+				}
+
+				@Override
+				public MinecraftServer getServer() {
+					return world.getMinecraftServer();
+				}
+
+				@Override
+				public boolean sendCommandFeedback() {
+					return false;
+				}
+
+				@Override
+				public BlockPos getPosition() {
+					return new BlockPos((int) x, (int) y, (int) z);
+				}
+
+				@Override
+				public Vec3d getPositionVector() {
+					return new Vec3d(x, y, z);
+				}
+			}, (("effect ") + "" + ((((new Object() {
+				public String getText() {
+					String param = (String) cmdparams.get("0");
+					if (param != null) {
+						return param;
+					}
+					return "";
+				}
+			}.getText())) + "" + (((" 4 ") + "" + ("400 ")))))));
+		}
+		if (!world.isRemote && world.getMinecraftServer() != null) {
+			world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
+				@Override
+				public String getName() {
+					return "";
+				}
+
+				@Override
+				public boolean canUseCommand(int permission, String command) {
+					return true;
+				}
+
+				@Override
+				public World getEntityWorld() {
+					return world;
+				}
+
+				@Override
+				public MinecraftServer getServer() {
+					return world.getMinecraftServer();
+				}
+
+				@Override
+				public boolean sendCommandFeedback() {
+					return false;
+				}
+
+				@Override
+				public BlockPos getPosition() {
+					return new BlockPos((int) x, (int) y, (int) z);
+				}
+
+				@Override
+				public Vec3d getPositionVector() {
+					return new Vec3d(x, y, z);
+				}
+			}, (("effect ") + "" + ((((new Object() {
+				public String getText() {
+					String param = (String) cmdparams.get("0");
+					if (param != null) {
+						return param;
+					}
+					return "";
+				}
+			}.getText())) + "" + (((" 18 ") + "" + ("400 ")))))));
 		}
 	}
 }

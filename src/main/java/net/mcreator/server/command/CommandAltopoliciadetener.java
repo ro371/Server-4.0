@@ -57,12 +57,12 @@ public class CommandAltopoliciadetener extends ElementsServer.ModElement {
 
 		@Override
 		public String getName() {
-			return "p ";
+			return "para";
 		}
 
 		@Override
 		public String getUsage(ICommandSender var1) {
-			return "/p  [<arguments>]";
+			return "/para [<arguments>]";
 		}
 
 		@Override

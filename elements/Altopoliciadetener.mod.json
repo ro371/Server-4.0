@@ -2,7 +2,7 @@
   "_fv": 6,
   "_type": "command",
   "definition": {
-    "commandName": "p ",
+    "commandName": "para",
     "onCommandExecuted": {
       "name": "AltopoliciadetenerCommandExecuted"
     }
