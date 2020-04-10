@@ -26,6 +26,6 @@ public class ProcedureBigPizzaFoodEaten extends ElementsServer.ModElement {
 		if (entity instanceof EntityLivingBase)
 			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.SPEED, (int) 50, (int) 1, (true), (false)));
 		if (entity instanceof EntityLivingBase)
-			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.HEALTH_BOOST, (int) 20, (int) 1, (false), (true)));
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.HEALTH_BOOST, (int) 200, (int) 0, (false), (true)));
 	}
 }
