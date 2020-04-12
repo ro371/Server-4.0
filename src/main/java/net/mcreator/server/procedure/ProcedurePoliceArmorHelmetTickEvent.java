@@ -20,6 +20,6 @@ public class ProcedurePoliceArmorHelmetTickEvent extends ElementsServer.ModEleme
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof EntityLivingBase)
-			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, (int) 5, (int) 1, (false), (false)));
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, (int) 5, (int) 0, (false), (false)));
 	}
 }

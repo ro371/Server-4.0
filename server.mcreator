@@ -462,6 +462,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -546,7 +562,7 @@
   "language_map": {
     "en_us": {
       "item.policearmorboots.name": "Police Boots",
-      "item.daiquiri.name": "Daiquiri",
+      "item.daiquiri.name": "Daiquiri Drink",
       "lingering_potion.effect.altopolicia": "Lingering Alto Policía",
       "item.mojitosandia.name": "Mojito Sandia",
       "item.tarta_de_manzana.name": "Apple Pie",
@@ -554,7 +570,7 @@
       "potion.effect.altopolicia": "Alto Policía",
       "item.gintonic.name": "Gin Tonic",
       "item.cocktaildesandia.name": "Melon Drink",
-      "item.vaso.name": "Vaso",
+      "item.vaso.name": "Glass",
       "item.spaguetti.name": "Spaguetti",
       "item.pizzadough.name": "Pizza Dough",
       "splash_potion.effect.altopolicia": "Splash Alto Policía",
@@ -566,10 +582,10 @@
       "item.policearmorbody.name": "Police Chestplate",
       "item.dough.name": "Dough",
       "item.bigpizza.name": "Big Pizza",
-      "item.mojitolimalimon.name": "Mojito Lima Limon",
-      "effect.altopolicia": "Alto Policia",
+      "item.mojitolimalimon.name": "Lemon Drink",
+      "effect.altopolicia": "Stop!",
       "item.policearmorlegs.name": "Police Leggings",
-      "tipped_arrow.effect.altopolicia": "Arrow of Alto Policía"
+      "tipped_arrow.effect.altopolicia": "Arrow of Stop!"
     },
     "es_es": {
       "item.policearmorboots.name": "Botas de @Policía",
@@ -580,10 +596,10 @@
       "fluid.aguacaliente": "Agua Caliente",
       "potion.effect.altopolicia": "Alto Policía",
       "item.gintonic.name": "Gin Tonic",
-      "item.cocktaildesandia.name": "Cocktaildesandia",
+      "item.cocktaildesandia.name": "Cocktail de Sandía",
       "item.vaso.name": "Vaso",
+      "item.pizzadough.name": "Masa de Pizza",
       "item.spaguetti.name": "Spaguetti",
-      "item.pizzadough.name": "Pizza Dough",
       "splash_potion.effect.altopolicia": "Splash Alto Policía",
       "item.carbon_ahumado.name": "Carbón Ahumado",
       "item.mediumpizza.name": "Pizza Mediana",
@@ -591,10 +607,10 @@
       "item.policearmorhelmet.name": "Casco de @Policía",
       "item.cocktailcalabaza.name": "Cocktail Calabaza",
       "item.policearmorbody.name": "Pechera de @Policía",
-      "item.dough.name": "Dough",
+      "item.dough.name": "Masa",
       "item.bigpizza.name": "Big Pizza",
-      "item.mojitolimalimon.name": "Mojito Lima Limon",
-      "effect.altopolicia": "Alto Policia",
+      "item.mojitolimalimon.name": "Mojito Lima Limón",
+      "effect.altopolicia": "Alto Policía",
       "item.policearmorlegs.name": "Pantalones de @Policía",
       "tipped_arrow.effect.altopolicia": "Arrow of Alto Policía"
     }
@@ -602,8 +618,8 @@
   "workspaceSettings": {
     "modid": "server",
     "modName": "Server_4.0",
-    "version": "4.0.3",
-    "description": "Random and useful mod",
+    "version": "4.0.3.1",
+    "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",
     "disableForgeVersionCheck": true,
@@ -613,7 +629,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "1.12.2",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Created using MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.server",
     "lockBaseModFiles": false
   },

@@ -20,6 +20,6 @@ public class ProcedurePoliceArmorBootsTickEvent extends ElementsServer.ModElemen
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof EntityLivingBase)
-			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.SPEED, (int) 5, (int) 1, (false), (false)));
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.SPEED, (int) 5, (int) 0, (false), (false)));
 	}
 }
