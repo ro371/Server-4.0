@@ -11,11 +11,14 @@
     },
     "stackSize": 64,
     "nutritionalValue": 7,
-    "saturation": 2.0,
+    "saturation": 1.0,
     "eatingSpeed": 42,
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
-    "hasGlow": false
+    "hasGlow": false,
+    "onEaten": {
+      "name": "ApplePieFoodEaten"
+    }
   }
 }

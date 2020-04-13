@@ -66,6 +66,10 @@ public class ItemBigPizza extends ElementsServer.ModElement {
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				ProcedureBigPizzaFoodEaten.executeProcedure($_dependencies);
 			}
 		}
