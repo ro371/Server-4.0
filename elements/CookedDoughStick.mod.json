@@ -1,0 +1,21 @@
+{
+  "_fv": 6,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "cooked_stick",
+    "customModelName": "Normal",
+    "name": "Cooked Dough Stick",
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 2,
+    "saturation": 0.30000000000000004,
+    "eatingSpeed": 28,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false
+  }
+}

@@ -669,6 +669,154 @@
           }
         ]
       }
+    },
+    {
+      "name": "VasodeAguaFoodEaten",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VasodeAgua",
+      "type": "food",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DoughFoodEaten",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DoughStick",
+      "type": "food",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CookedDoughStick",
+      "type": "food",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CookStick",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Dstick",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Fishstick",
+      "type": "food",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Fishstickrecipe",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "FishstickFoodEaten",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -686,6 +834,11 @@
     {
       "name": "asco_puaj",
       "file": "sco_puaj",
+      "category": "master"
+    },
+    {
+      "name": "saciado",
+      "file": "007901266_prev",
       "category": "master"
     }
   ],
@@ -708,14 +861,18 @@
       "item.mediumpizza.name": "Medium Pizza",
       "item.smallpizza.name": "Small Pizza",
       "item.policearmorhelmet.name": "Police Helmet",
+      "item.vasodeagua.name": "Vasode Agua",
       "item.cocktailcalabaza.name": "Pumpkin Drink",
       "item.policearmorbody.name": "Police Chestplate",
+      "item.fishstick.name": "Fishstick",
       "item.dough.name": "Dough",
       "item.bigpizza.name": "Big Pizza",
       "item.mojitolimalimon.name": "Lemon Drink",
       "effect.altopolicia": "Stop!",
       "item.policearmorlegs.name": "Police Leggings",
-      "tipped_arrow.effect.altopolicia": "Arrow of Stop!"
+      "tipped_arrow.effect.altopolicia": "Arrow of Stop!",
+      "item.cookeddoughstick.name": "Cooked Dough Stick",
+      "item.doughstick.name": "Dough Stick"
     },
     "es_es": {
       "item.policearmorboots.name": "Botas de @Policía",
@@ -735,25 +892,30 @@
       "item.mediumpizza.name": "Pizza Mediana",
       "item.smallpizza.name": "Pizza Pequeña",
       "item.policearmorhelmet.name": "Casco de @Policía",
+      "item.vasodeagua.name": "Vasode Agua",
       "item.cocktailcalabaza.name": "Cocktail Calabaza",
       "item.policearmorbody.name": "Pechera de @Policía",
+      "item.fishstick.name": "Fishstick",
       "item.dough.name": "Masa",
       "item.bigpizza.name": "Big Pizza",
       "item.mojitolimalimon.name": "Mojito Lima Limón",
       "effect.altopolicia": "Alto Policía",
       "item.policearmorlegs.name": "Pantalones de @Policía",
-      "tipped_arrow.effect.altopolicia": "Arrow of Alto Policía"
+      "tipped_arrow.effect.altopolicia": "Arrow of Alto Policía",
+      "item.cookeddoughstick.name": "Cooked Dough Stick",
+      "item.doughstick.name": "Dough Stick"
     }
   },
   "workspaceSettings": {
     "modid": "server",
     "modName": "Server_4.0",
-    "version": "4.0.4",
+    "version": "4.0.4.1",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "server",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],

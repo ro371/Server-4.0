@@ -58,6 +58,7 @@ public class ElementsServer implements IFuelHandler, IWorldGenerator {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("server", "policia_en_accion")));
 		sounds.put(new ResourceLocation("server", "yummy"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "yummy")));
 		sounds.put(new ResourceLocation("server", "asco_puaj"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "asco_puaj")));
+		sounds.put(new ResourceLocation("server", "saciado"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "saciado")));
 	}
 
 	public void preInit(FMLPreInitializationEvent event) {

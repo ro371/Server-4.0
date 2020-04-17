@@ -25,5 +25,14 @@
         "stream": false
       }
     ]
+  },
+  "saciado": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "server:007901266_prev",
+        "stream": false
+      }
+    ]
   }
 }

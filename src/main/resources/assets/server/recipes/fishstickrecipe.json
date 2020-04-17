@@ -1,0 +1,17 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_fish",
+      "data": 32767
+    },
+    {
+      "item": "server:cookeddoughstick"
+    }
+  ],
+  "result": {
+    "item": "server:fishstick",
+    "count": 1
+  }
+}

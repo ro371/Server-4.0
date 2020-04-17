@@ -12,30 +12,30 @@ import net.minecraft.entity.Entity;
 import net.mcreator.server.ElementsServer;
 
 @ElementsServer.ModElement.Tag
-public class ProcedureBigPizzaFoodEaten extends ElementsServer.ModElement {
-	public ProcedureBigPizzaFoodEaten(ElementsServer instance) {
-		super(instance, 35);
+public class ProcedureFishstickFoodEaten extends ElementsServer.ModElement {
+	public ProcedureFishstickFoodEaten(ElementsServer instance) {
+		super(instance, 54);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure BigPizzaFoodEaten!");
+			System.err.println("Failed to load dependency entity for procedure FishstickFoodEaten!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure BigPizzaFoodEaten!");
+			System.err.println("Failed to load dependency x for procedure FishstickFoodEaten!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure BigPizzaFoodEaten!");
+			System.err.println("Failed to load dependency y for procedure FishstickFoodEaten!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure BigPizzaFoodEaten!");
+			System.err.println("Failed to load dependency z for procedure FishstickFoodEaten!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure BigPizzaFoodEaten!");
+			System.err.println("Failed to load dependency world for procedure FishstickFoodEaten!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -44,13 +44,15 @@ public class ProcedureBigPizzaFoodEaten extends ElementsServer.ModElement {
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		if (entity instanceof EntityLivingBase)
-			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.STRENGTH, (int) 180, (int) 1, (true), (false)));
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.STRENGTH, (int) 160, (int) 0, (true), (false)));
 		if (entity instanceof EntityLivingBase)
-			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, (int) 180, (int) 1, (true), (false)));
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.REGENERATION, (int) 100, (int) 0, (true), (false)));
 		if (entity instanceof EntityLivingBase)
-			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.SPEED, (int) 80, (int) 1, (true), (false)));
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, (int) 160, (int) 0, (true), (false)));
 		if (entity instanceof EntityLivingBase)
-			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.HEALTH_BOOST, (int) 250, (int) 0, (false), (true)));
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, (int) 300, (int) 0, (true), (false)));
+		if (entity instanceof EntityLivingBase)
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, (int) 250, (int) 0, (true), (false)));
 		world.playSound((EntityPlayer) null, x, y, z,
 				(net.minecraft.util.SoundEvent) net.minecraft.util.SoundEvent.REGISTRY.getObject(new ResourceLocation("server:yummy")),
 				SoundCategory.NEUTRAL, (float) 100, (float) 1);

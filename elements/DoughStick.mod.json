@@ -1,0 +1,24 @@
+{
+  "_fv": 6,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "dough_stick",
+    "customModelName": "Normal",
+    "name": "Dough Stick",
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 0,
+    "saturation": 0.1,
+    "eatingSpeed": 30,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "DoughFoodEaten"
+    }
+  }
+}
