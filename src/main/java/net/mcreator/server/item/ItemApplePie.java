@@ -39,7 +39,7 @@ public class ItemApplePie extends ElementsServer.ModElement {
 	}
 	public static class ItemFoodCustom extends ItemFood {
 		public ItemFoodCustom() {
-			super(7, 1f, false);
+			super(7, 0.9f, false);
 			setUnlocalizedName("tarta_de_manzana");
 			setRegistryName("tarta_de_manzana");
 			setAlwaysEdible();

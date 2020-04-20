@@ -6,40 +6,40 @@
     "xpReward": 0.0,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": false,
+    "recipeShapeless": true,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "Items.EGG"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.WHEAT"
-      },
-      {
-        "value": "Items.WHEAT_SEEDS"
-      },
-      {
-        "value": "Items.WHEAT"
+        "value": "CUSTOM:Poisondrops"
       },
       {
         "value": ""
       },
       {
         "value": ""
+      },
+      {
+        "value": "CUSTOM:MediumPizza"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Poisondrops"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Spaguetti"
+      "value": "CUSTOM:Mediumpizzaveneno"
     },
-    "name": "spaguetti_recipe",
+    "name": "mediumpizzavenenorecipe",
     "namespace": "mod"
   }
 }

@@ -45,7 +45,7 @@ import java.util.function.Supplier;
 @Mod(modid = Server.MODID, version = Server.VERSION)
 public class Server {
 	public static final String MODID = "server";
-	public static final String VERSION = "4.0.4.1";
+	public static final String VERSION = "4.0.5";
 	public static final SimpleNetworkWrapper PACKET_HANDLER = NetworkRegistry.INSTANCE.newSimpleChannel("server:a");
 	@SidedProxy(clientSide = "net.mcreator.server.ClientProxyServer", serverSide = "net.mcreator.server.ServerProxyServer")
 	public static IProxyServer proxy;

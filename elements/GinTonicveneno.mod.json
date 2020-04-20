@@ -3,22 +3,22 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "pizza_big",
+    "texture": "in_onic",
     "customModelName": "Normal",
-    "name": "Big Pizza",
+    "name": "Gin Tonicveneno",
     "creativeTab": {
       "value": "FOOD"
     },
-    "stackSize": 16,
-    "nutritionalValue": 15,
-    "saturation": 0.9,
-    "eatingSpeed": 48,
+    "stackSize": 32,
+    "nutritionalValue": 1,
+    "saturation": 0.3,
+    "eatingSpeed": 22,
     "forDogs": false,
     "isAlwaysEdible": true,
-    "animation": "eat",
+    "animation": "drink",
     "hasGlow": false,
     "onEaten": {
-      "name": "BigPizzaFoodEaten"
+      "name": "DaiquiriVenenoFoodEaten"
     }
   }
 }

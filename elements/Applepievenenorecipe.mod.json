@@ -6,25 +6,25 @@
     "xpReward": 0.0,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": false,
+    "recipeShapeless": true,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "Items.EGG"
+        "value": "CUSTOM:Poisondrops"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.WHEAT"
+        "value": ""
       },
       {
-        "value": "Items.WHEAT_SEEDS"
+        "value": "CUSTOM:ApplePie"
       },
       {
-        "value": "Items.WHEAT"
+        "value": ""
       },
       {
         "value": ""
@@ -37,9 +37,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Spaguetti"
+      "value": "CUSTOM:ApplePieveneno"
     },
-    "name": "spaguetti_recipe",
+    "name": "applepievenenorecipe",
     "namespace": "mod"
   }
 }

@@ -44,7 +44,7 @@ public class ItemFishstick extends ElementsServer.ModElement {
 			setRegistryName("fishstick");
 			setAlwaysEdible();
 			setCreativeTab(CreativeTabs.FOOD);
-			setMaxStackSize(64);
+			setMaxStackSize(16);
 		}
 
 		@Override

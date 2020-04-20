@@ -16,15 +16,15 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
-import net.mcreator.server.procedure.ProcedureBigPizzaFoodEaten;
+import net.mcreator.server.procedure.ProcedureDaiquiriVenenoFoodEaten;
 import net.mcreator.server.ElementsServer;
 
 @ElementsServer.ModElement.Tag
-public class ItemBigPizza extends ElementsServer.ModElement {
-	@GameRegistry.ObjectHolder("server:bigpizza")
+public class ItemGinTonicveneno extends ElementsServer.ModElement {
+	@GameRegistry.ObjectHolder("server:gintonicveneno")
 	public static final Item block = null;
-	public ItemBigPizza(ElementsServer instance) {
-		super(instance, 35);
+	public ItemGinTonicveneno(ElementsServer instance) {
+		super(instance, 61);
 	}
 
 	@Override
@@ -35,26 +35,26 @@ public class ItemBigPizza extends ElementsServer.ModElement {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
-		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("server:bigpizza", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("server:gintonicveneno", "inventory"));
 	}
 	public static class ItemFoodCustom extends ItemFood {
 		public ItemFoodCustom() {
-			super(15, 0.9f, false);
-			setUnlocalizedName("bigpizza");
-			setRegistryName("bigpizza");
+			super(1, 0.3f, false);
+			setUnlocalizedName("gintonicveneno");
+			setRegistryName("gintonicveneno");
 			setAlwaysEdible();
 			setCreativeTab(CreativeTabs.FOOD);
-			setMaxStackSize(16);
+			setMaxStackSize(32);
 		}
 
 		@Override
 		public int getMaxItemUseDuration(ItemStack stack) {
-			return 48;
+			return 22;
 		}
 
 		@Override
 		public EnumAction getItemUseAction(ItemStack par1ItemStack) {
-			return EnumAction.EAT;
+			return EnumAction.DRINK;
 		}
 
 		@Override
@@ -70,7 +70,7 @@ public class ItemBigPizza extends ElementsServer.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureBigPizzaFoodEaten.executeProcedure($_dependencies);
+				ProcedureDaiquiriVenenoFoodEaten.executeProcedure($_dependencies);
 			}
 		}
 	}

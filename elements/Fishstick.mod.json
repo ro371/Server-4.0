@@ -9,7 +9,7 @@
     "creativeTab": {
       "value": "FOOD"
     },
-    "stackSize": 64,
+    "stackSize": 16,
     "nutritionalValue": 8,
     "saturation": 0.7,
     "eatingSpeed": 28,

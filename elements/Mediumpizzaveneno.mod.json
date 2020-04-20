@@ -3,22 +3,22 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "pizza_big",
+    "texture": "pizza_normal",
     "customModelName": "Normal",
-    "name": "Big Pizza",
+    "name": "Mediumpizzaveneno",
     "creativeTab": {
       "value": "FOOD"
     },
-    "stackSize": 16,
-    "nutritionalValue": 15,
-    "saturation": 0.9,
-    "eatingSpeed": 48,
+    "stackSize": 32,
+    "nutritionalValue": 8,
+    "saturation": 0.6,
+    "eatingSpeed": 38,
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
     "hasGlow": false,
     "onEaten": {
-      "name": "BigPizzaFoodEaten"
+      "name": "DaiquiriVenenoFoodEaten"
     }
   }
 }

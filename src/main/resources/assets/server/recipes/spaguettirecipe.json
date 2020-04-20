@@ -2,16 +2,20 @@
   "group": "server",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012"
+    " 1 ",
+    "345"
   ],
   "key": {
-    "0": {
+    "1": {
+      "item": "minecraft:egg"
+    },
+    "3": {
       "item": "minecraft:wheat"
     },
-    "1": {
+    "4": {
       "item": "minecraft:wheat_seeds"
     },
-    "2": {
+    "5": {
       "item": "minecraft:wheat"
     }
   },

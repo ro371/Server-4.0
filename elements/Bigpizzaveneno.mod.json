@@ -5,20 +5,20 @@
     "renderType": 0,
     "texture": "pizza_big",
     "customModelName": "Normal",
-    "name": "Big Pizza",
+    "name": "Bigpizzaveneno",
     "creativeTab": {
       "value": "FOOD"
     },
     "stackSize": 16,
     "nutritionalValue": 15,
     "saturation": 0.9,
-    "eatingSpeed": 48,
+    "eatingSpeed": 50,
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
     "hasGlow": false,
     "onEaten": {
-      "name": "BigPizzaFoodEaten"
+      "name": "DaiquiriVenenoFoodEaten"
     }
   }
 }

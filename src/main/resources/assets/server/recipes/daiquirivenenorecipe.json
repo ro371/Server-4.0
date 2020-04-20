@@ -1,0 +1,16 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "server:poisondrops"
+    },
+    {
+      "item": "server:daiquiri"
+    }
+  ],
+  "result": {
+    "item": "server:daiquiriveneno",
+    "count": 1
+  }
+}

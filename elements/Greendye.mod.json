@@ -12,34 +12,34 @@
         "value": ""
       },
       {
-        "value": "Items.EGG"
-      },
-      {
         "value": ""
-      },
-      {
-        "value": "Items.WHEAT"
-      },
-      {
-        "value": "Items.WHEAT_SEEDS"
-      },
-      {
-        "value": "Items.WHEAT"
       },
       {
         "value": ""
       },
       {
         "value": ""
+      },
+      {
+        "value": "CUSTOM:Poisondrops"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.SAND#0"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Spaguetti"
+      "value": "Items.DYE#2"
     },
-    "name": "spaguetti_recipe",
+    "name": "greendye",
     "namespace": "mod"
   }
 }

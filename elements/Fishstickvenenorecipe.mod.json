@@ -6,25 +6,25 @@
     "xpReward": 0.0,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": false,
+    "recipeShapeless": true,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "Items.EGG"
+        "value": ""
       },
       {
         "value": ""
       },
       {
-        "value": "Items.WHEAT"
+        "value": "CUSTOM:Poisondrops"
       },
       {
-        "value": "Items.WHEAT_SEEDS"
+        "value": "CUSTOM:Fishstick"
       },
       {
-        "value": "Items.WHEAT"
+        "value": "CUSTOM:Poisondrops"
       },
       {
         "value": ""
@@ -37,9 +37,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Spaguetti"
+      "value": "CUSTOM:Fishstickveneno"
     },
-    "name": "spaguetti_recipe",
+    "name": "fishstickvenenorecipe",
     "namespace": "mod"
   }
 }

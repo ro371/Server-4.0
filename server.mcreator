@@ -817,6 +817,206 @@
           }
         ]
       }
+    },
+    {
+      "name": "Poisondrops",
+      "type": "item",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Burnglobefish",
+      "type": "recipe",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Greendye",
+      "type": "recipe",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DaiquiriVenenoFoodEaten",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Daiquiriveneno",
+      "type": "food",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Daiquirivenenorecipe",
+      "type": "recipe",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Vasodeaguaveneno",
+      "type": "food",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GinTonicveneno",
+      "type": "food",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Spagettiveneno",
+      "type": "food",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Gintonicvenenorecipe",
+      "type": "recipe",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Spaguettivenenorecipe",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ApplePieveneno",
+      "type": "food",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Applepievenenorecipe",
+      "type": "recipe",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Vasodeaguavenenorecipe",
+      "type": "recipe",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SmallPizzaveneno",
+      "type": "food",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Mediumpizzaveneno",
+      "type": "food",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Bigpizzaveneno",
+      "type": "food",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Smallpizzavenenorecipe",
+      "type": "recipe",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Mediumpizzavenenorecipe",
+      "type": "recipe",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Bigpizzavenenorecipe",
+      "type": "recipe",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Fishstickveneno",
+      "type": "food",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Fishstickvenenorecipe",
+      "type": "recipe",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -844,46 +1044,61 @@
   ],
   "language_map": {
     "en_us": {
+      "item.fishstickveneno.name": "Fishstick",
+      "item.daiquiriveneno.name": "Daiquiri",
       "item.policearmorboots.name": "Police Boots",
-      "item.daiquiri.name": "Daiquiri Drink",
-      "lingering_potion.effect.altopolicia": "Lingering Alto Policía",
-      "item.mojitosandia.name": "Mojito Sandia",
-      "item.tarta_de_manzana.name": "Tarta de Manzana",
+      "item.daiquiri.name": "Daiquiri",
+      "lingering_potion.effect.altopolicia": "Lingering Stop",
+      "item.vasodeaguaveneno.name": "Glass of Water",
+      "item.mojitosandia.name": "Cup of Melon",
+      "item.tarta_de_manzana.name": "Apple Pie",
       "fluid.aguacaliente": "Hot Water",
-      "potion.effect.altopolicia": "Alto Policía",
+      "item.spagettiveneno.name": "Spagetti",
+      "potion.effect.altopolicia": "Stop!",
       "item.gintonic.name": "Gin Tonic",
       "item.cocktaildesandia.name": "Melon Drink",
+      "item.applepieveneno.name": "Apple Pie",
       "item.vaso.name": "Glass",
       "item.pizzadough.name": "Pizza Dough",
       "item.spaguetti.name": "Spaguetti",
-      "splash_potion.effect.altopolicia": "Splash Alto Policía",
-      "item.carbon_ahumado.name": "Carbón Ahumado",
+      "splash_potion.effect.altopolicia": "Splash Stop!",
+      "item.carbon_ahumado.name": "Smoked Coal",
       "item.mediumpizza.name": "Medium Pizza",
       "item.smallpizza.name": "Small Pizza",
       "item.policearmorhelmet.name": "Police Helmet",
-      "item.vasodeagua.name": "Vasode Agua",
+      "item.poisondrops.name": "Poisondrops",
+      "item.vasodeagua.name": "Glass of Water",
+      "item.mediumpizzaveneno.name": "Medium Pizza",
       "item.cocktailcalabaza.name": "Pumpkin Drink",
       "item.policearmorbody.name": "Police Chestplate",
       "item.fishstick.name": "Fishstick",
       "item.dough.name": "Dough",
       "item.bigpizza.name": "Big Pizza",
       "item.mojitolimalimon.name": "Lemon Drink",
+      "item.gintonicveneno.name": "Gin Tonic",
+      "item.smallpizzaveneno.name": "Small Pizza",
       "effect.altopolicia": "Stop!",
       "item.policearmorlegs.name": "Police Leggings",
+      "item.bigpizzaveneno.name": "Big Pizza",
       "tipped_arrow.effect.altopolicia": "Arrow of Stop!",
       "item.cookeddoughstick.name": "Cooked Dough Stick",
       "item.doughstick.name": "Dough Stick"
     },
     "es_es": {
+      "item.fishstickveneno.name": "Palito de Pescado",
+      "item.daiquiriveneno.name": "Daiquiri",
       "item.policearmorboots.name": "Botas de @Policía",
       "item.daiquiri.name": "Daiquiri",
       "lingering_potion.effect.altopolicia": "Lingering Alto Policía",
+      "item.vasodeaguaveneno.name": "Vaso de Agua",
       "item.mojitosandia.name": "Mojito Sandía",
       "item.tarta_de_manzana.name": "Tarta de Manzana",
       "fluid.aguacaliente": "Agua Caliente",
+      "item.spagettiveneno.name": "Spagetti",
       "potion.effect.altopolicia": "Alto Policía",
       "item.gintonic.name": "Gin Tonic",
       "item.cocktaildesandia.name": "Cocktail de Sandía",
+      "item.applepieveneno.name": "Tarta de Manzana",
       "item.vaso.name": "Vaso",
       "item.spaguetti.name": "Spaguetti",
       "item.pizzadough.name": "Masa de Pizza",
@@ -892,24 +1107,29 @@
       "item.mediumpizza.name": "Pizza Mediana",
       "item.smallpizza.name": "Pizza Pequeña",
       "item.policearmorhelmet.name": "Casco de @Policía",
-      "item.vasodeagua.name": "Vasode Agua",
-      "item.cocktailcalabaza.name": "Cocktail Calabaza",
+      "item.poisondrops.name": "Gotas de Veneno",
+      "item.vasodeagua.name": "Vaso de Agua",
+      "item.mediumpizzaveneno.name": "Pizza Mediana",
+      "item.cocktailcalabaza.name": "Cocktail de Calabaza",
       "item.policearmorbody.name": "Pechera de @Policía",
-      "item.fishstick.name": "Fishstick",
-      "item.dough.name": "Masa",
+      "item.fishstick.name": "Palito de Pescado",
+      "item.dough.name": "Masa de Harina",
       "item.bigpizza.name": "Big Pizza",
       "item.mojitolimalimon.name": "Mojito Lima Limón",
+      "item.gintonicveneno.name": "Gin Tonic",
+      "item.smallpizzaveneno.name": "Pizza Pequeña",
       "effect.altopolicia": "Alto Policía",
       "item.policearmorlegs.name": "Pantalones de @Policía",
+      "item.bigpizzaveneno.name": "Pizza Grande",
       "tipped_arrow.effect.altopolicia": "Arrow of Alto Policía",
-      "item.cookeddoughstick.name": "Cooked Dough Stick",
-      "item.doughstick.name": "Dough Stick"
+      "item.cookeddoughstick.name": "Palo de Harina cocinado",
+      "item.doughstick.name": "Palo de Harina"
     }
   },
   "workspaceSettings": {
     "modid": "server",
     "modName": "Server_4.0",
-    "version": "4.0.4.1",
+    "version": "4.0.5",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",

@@ -3,22 +3,22 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "pizza_big",
+    "texture": "arta_de_anzana",
     "customModelName": "Normal",
-    "name": "Big Pizza",
+    "name": "Apple Pieveneno",
     "creativeTab": {
       "value": "FOOD"
     },
-    "stackSize": 16,
-    "nutritionalValue": 15,
+    "stackSize": 64,
+    "nutritionalValue": 7,
     "saturation": 0.9,
-    "eatingSpeed": 48,
+    "eatingSpeed": 44,
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
     "hasGlow": false,
     "onEaten": {
-      "name": "BigPizzaFoodEaten"
+      "name": "DaiquiriVenenoFoodEaten"
     }
   }
 }
