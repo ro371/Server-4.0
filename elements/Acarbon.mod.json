@@ -1,11 +1,12 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "carbon_ahumado",
     "customModelName": "Normal",
     "name": "Carbón Ahumado",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "MATERIALS"
     },
@@ -16,11 +17,14 @@
     "damageCount": 0,
     "destroyAnyBlock": false,
     "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
       "Fuel_item"
     ],
-    "hasGlow": false
+    "hasGlow": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 64
   }
 }

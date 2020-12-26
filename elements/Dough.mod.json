@@ -1,11 +1,12 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "dough",
     "customModelName": "Normal",
     "name": "Dough",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "MISC"
     },
@@ -16,10 +17,13 @@
     "damageCount": 0,
     "destroyAnyBlock": false,
     "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
     "hasGlow": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "DoughRightClickedInAir"
     }

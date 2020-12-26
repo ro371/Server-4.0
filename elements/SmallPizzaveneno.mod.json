@@ -1,11 +1,13 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "food",
   "definition": {
     "renderType": 0,
     "texture": "izza_mall",
     "customModelName": "Normal",
     "name": "Small Pizzaveneno",
+    "rarity": "COMMON",
+    "specialInfo": [],
     "creativeTab": {
       "value": "FOOD"
     },

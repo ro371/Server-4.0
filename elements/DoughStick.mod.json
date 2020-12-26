@@ -1,11 +1,13 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "food",
   "definition": {
     "renderType": 0,
     "texture": "dough_stick",
     "customModelName": "Normal",
     "name": "Dough Stick",
+    "rarity": "COMMON",
+    "specialInfo": [],
     "creativeTab": {
       "value": "FOOD"
     },

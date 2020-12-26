@@ -1,5 +1,5 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -24,6 +24,10 @@
     "bodyName": "Police Chestplate",
     "leggingsName": "Police Leggings",
     "bootsName": "Police Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

@@ -1,0 +1,16 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "server:aguacaliente"
+    }
+  },
+  "result": {
+    "item": "minecraft:water_bucket",
+    "count": 1
+  }
+}

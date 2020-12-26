@@ -1,0 +1,144 @@
+{
+  "_fv": 13,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Cambia aquí tus monedas",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Cambia aquí tus monedas",
+          "x": 158,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:Coin1"
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Itemtaken1"
+          },
+          "name": "Slot #0",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 186,
+          "y": 58
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:Coin5"
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Itemtaken2"
+          },
+          "name": "Slot #2",
+          "x": 132,
+          "y": 86
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 186,
+          "y": 87
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_hd.png",
+          "use1Xscale": false,
+          "name": "arrow_hd.png",
+          "x": 35,
+          "y": -54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_hd2.png",
+          "use1Xscale": false,
+          "name": "arrow_hd2.png",
+          "x": 36,
+          "y": -29
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "coin.png",
+          "use1Xscale": false,
+          "name": "coin.png",
+          "x": 150,
+          "y": 90
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "coin_.png",
+          "use1Xscale": false,
+          "name": "coin_.png",
+          "x": 205,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "coin_1.png",
+          "use1Xscale": false,
+          "name": "coin_1.png",
+          "x": 150,
+          "y": 64
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "coin_1_.png",
+          "use1Xscale": false,
+          "name": "coin_1_.png",
+          "x": 205,
+          "y": 91
+        }
+      }
+    ]
+  }
+}

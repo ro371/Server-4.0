@@ -1,11 +1,13 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "food",
   "definition": {
     "renderType": 0,
     "texture": "spaguetti",
     "customModelName": "Normal",
     "name": "Spagettiveneno",
+    "rarity": "COMMON",
+    "specialInfo": [],
     "creativeTab": {
       "value": "FOOD"
     },

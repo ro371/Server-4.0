@@ -1,0 +1,30 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 4 ",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:yellow_dye"
+    },
+    "4": {
+      "item": "server:vaso"
+    },
+    "6": {
+      "item": "minecraft:potion"
+    },
+    "7": {
+      "item": "minecraft:potion"
+    },
+    "8": {
+      "item": "minecraft:potion"
+    }
+  },
+  "result": {
+    "item": "server:mojitolimalimon",
+    "count": 3
+  }
+}

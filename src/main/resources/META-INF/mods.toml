@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+
+[[mods]]
+modId="server"
+version="4.0.5"
+displayName="Server_4.0"
+credits="Created using MCreator - https://mcreator.net/about"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/server-4-0"
+logoFile="logo.png"
+authors="THE_GLACIAL, MCreator"
+description='''
+Random and useful mod for you and your friends
+'''
+
+[[dependencies.server]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

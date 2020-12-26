@@ -1,5 +1,5 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "potion",
   "definition": {
     "name": "Alto Policía",
@@ -13,11 +13,6 @@
     "isBad": true,
     "isBenefitical": false,
     "registerPotionType": true,
-    "curativeItems": [
-      {
-        "value": "Items.MILK_BUCKET"
-      }
-    ],
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "onStarted": {

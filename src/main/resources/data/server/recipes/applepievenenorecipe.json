@@ -1,0 +1,16 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "server:poisondrops"
+    },
+    {
+      "item": "server:tarta_de_manzana"
+    }
+  ],
+  "result": {
+    "item": "server:applepieveneno",
+    "count": 1
+  }
+}

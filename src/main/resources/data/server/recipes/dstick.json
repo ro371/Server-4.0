@@ -1,0 +1,16 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "server:dough"
+    },
+    {
+      "item": "server:dough"
+    }
+  ],
+  "result": {
+    "item": "server:doughstick",
+    "count": 1
+  }
+}

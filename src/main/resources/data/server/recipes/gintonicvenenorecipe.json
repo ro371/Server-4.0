@@ -1,0 +1,16 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "server:poisondrops"
+    },
+    {
+      "item": "server:gintonic"
+    }
+  ],
+  "result": {
+    "item": "server:gintonicveneno",
+    "count": 1
+  }
+}
