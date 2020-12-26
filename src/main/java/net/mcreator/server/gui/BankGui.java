@@ -12,7 +12,9 @@ import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -34,8 +36,8 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.server.procedures.Itemtaken2Procedure;
-import net.mcreator.server.procedures.Itemtaken1Procedure;
+import net.mcreator.server.procedures.BankWhileThisGUIIsOpenTickProcedure;
+import net.mcreator.server.procedures.BankThisGUIIsClosedProcedure;
 import net.mcreator.server.item.Coin5Item;
 import net.mcreator.server.item.Coin1Item;
 import net.mcreator.server.ServerModElements;
@@ -57,11 +59,28 @@ public class BankGui extends ServerModElements.ModElement {
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
+	}
+
+	@SubscribeEvent
+	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		PlayerEntity entity = event.player;
+		if (event.phase == TickEvent.Phase.END && entity.openContainer instanceof GuiContainerMod) {
+			World world = entity.world;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				BankWhileThisGUIIsOpenTickProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	@SubscribeEvent
@@ -125,12 +144,6 @@ public class BankGui extends ServerModElements.ModElement {
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 23) {
 				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(0, 0, 0);
-				}
-
-				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(Coin1Item.block, (int) (1)).getItem() == stack.getItem());
 				}
@@ -142,12 +155,6 @@ public class BankGui extends ServerModElements.ModElement {
 				}
 			}));
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 7, 50) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(2, 0, 0);
-				}
-
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(Coin5Item.block, (int) (1)).getItem() == stack.getItem());
@@ -298,6 +305,11 @@ public class BankGui extends ServerModElements.ModElement {
 		@Override
 		public void onContainerClosed(PlayerEntity playerIn) {
 			super.onContainerClosed(playerIn);
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				BankThisGUIIsClosedProcedure.executeProcedure($_dependencies);
+			}
 			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
 				if (!playerIn.isAlive() || playerIn instanceof ServerPlayerEntity && ((ServerPlayerEntity) playerIn).hasDisconnected()) {
 					for (int j = 0; j < internal.getSlots(); ++j) {
@@ -489,19 +501,5 @@ public class BankGui extends ServerModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (slotID == 0 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				Itemtaken1Procedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 2 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				Itemtaken2Procedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 }

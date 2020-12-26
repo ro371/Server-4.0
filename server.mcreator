@@ -1047,22 +1047,6 @@
       }
     },
     {
-      "name": "Itemtaken1",
-      "type": "procedure",
-      "sortid": 78,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "OpenBank",
       "type": "procedure",
       "sortid": 79,
@@ -1095,12 +1079,39 @@
       }
     },
     {
-      "name": "Itemtaken2",
+      "name": "BankWhileThisGUIIsOpenTick",
       "type": "procedure",
-      "sortid": 80,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "ids": {},
+      "registry_name": "bank_while_this_gui_is_open_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Burnpoison",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "burnpoison"
+    },
+    {
+      "name": "BankThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bank_this_gui_is_closed",
       "metadata": {
         "dependencies": [
           {

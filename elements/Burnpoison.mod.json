@@ -14,7 +14,7 @@
     "smeltingReturnStack": {
       "value": "CUSTOM:Poisondrops"
     },
-    "name": "burnglobefish",
+    "name": "burnpoison",
     "namespace": "mod"
   }
 }

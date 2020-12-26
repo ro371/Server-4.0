@@ -32,9 +32,6 @@
           "id": 0,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Itemtaken1"
-          },
           "name": "Slot #0",
           "x": 133,
           "y": 59
@@ -60,9 +57,6 @@
           "id": 2,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Itemtaken2"
-          },
           "name": "Slot #2",
           "x": 132,
           "y": 86
@@ -139,6 +133,12 @@
           "y": 91
         }
       }
-    ]
+    ],
+    "onTick": {
+      "name": "BankWhileThisGUIIsOpenTick"
+    },
+    "onClosed": {
+      "name": "BankThisGUIIsClosed"
+    }
   }
 }

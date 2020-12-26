@@ -5,7 +5,7 @@
     "name": "AguaCaliente",
     "textureStill": "static_water",
     "textureFlowing": "flowing_hot_water",
-    "luminosity": 4,
+    "luminosity": 5,
     "density": 900,
     "viscosity": 900,
     "isGas": false,

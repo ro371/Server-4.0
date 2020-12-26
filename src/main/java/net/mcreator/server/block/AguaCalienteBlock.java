@@ -65,7 +65,7 @@ public class AguaCalienteBlock extends ServerModElements.ModElement {
 	public void initElements() {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing,
 				FluidAttributes.builder(new ResourceLocation("server:blocks/static_water"), new ResourceLocation("server:blocks/flowing_hot_water"))
-						.luminosity(4).density(900).viscosity(900)).bucket(() -> bucket).block(() -> block);
+						.luminosity(5).density(900).viscosity(900)).bucket(() -> bucket).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("aguacaliente");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("aguacaliente_flowing");
 		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER)) {
