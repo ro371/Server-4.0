@@ -14,6 +14,7 @@ import net.minecraft.entity.Entity;
 import net.mcreator.server.ServerModElements;
 
 import java.util.Map;
+import java.util.Collection;
 
 @ServerModElements.ModElement.Tag
 public class DaiquiriVenenoFoodEatenProcedure extends ServerModElements.ModElement {
@@ -66,14 +67,51 @@ public class DaiquiriVenenoFoodEatenProcedure extends ServerModElements.ModEleme
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 240, (int) 2, (true), (true)));
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HUNGER, (int) 700, (int) 1, (true), (false)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HUNGER, (int) (500 + (1.5 * (new Object() {
+				int check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == Effects.BLINDNESS)
+								return effect.getDuration();
+						}
+					}
+					return 0;
+				}
+			}.check(entity)))), (int) 2, (true), (false)));
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 500, (int) 1, (true), (false)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 500, (int) 2, (true), (false)));
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.BLINDNESS, (int) 120, (int) 0, (true), (false)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.BLINDNESS, (int) (120 + (1.5 * (new Object() {
+				int check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == Effects.BLINDNESS)
+								return effect.getDuration();
+						}
+					}
+					return 0;
+				}
+			}.check(entity)))), (int) 0, (true), (false)));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 200, (int) 1, (true), (false)));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.MINING_FATIGUE, (int) 400, (int) 2, (true), (false)));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) (300 + (1.5 * (new Object() {
+				int check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == Effects.BLINDNESS)
+								return effect.getDuration();
+						}
+					}
+					return 0;
+				}
+			}.check(entity)))), (int) 0, (true), (false)));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.MINING_FATIGUE, (int) 450, (int) 0, (true), (false)));
 	}
 }

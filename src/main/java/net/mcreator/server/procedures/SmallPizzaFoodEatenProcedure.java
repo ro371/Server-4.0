@@ -24,5 +24,7 @@ public class SmallPizzaFoodEatenProcedure extends ServerModElements.ModElement {
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 60, (int) 1, (true), (false)));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 240, (int) 0, (true), (false)));
 	}
 }

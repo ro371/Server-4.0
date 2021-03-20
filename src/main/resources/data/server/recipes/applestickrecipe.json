@@ -1,0 +1,16 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "server:cookeddoughstick"
+    }
+  ],
+  "result": {
+    "item": "server:apple_stick",
+    "count": 1
+  }
+}

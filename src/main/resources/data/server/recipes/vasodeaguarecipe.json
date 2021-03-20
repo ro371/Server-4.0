@@ -1,0 +1,22 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "server:vaso"
+    },
+    {
+      "item": "server:vaso"
+    },
+    {
+      "item": "server:vaso"
+    }
+  ],
+  "result": {
+    "item": "server:vasodeagua",
+    "count": 3
+  }
+}

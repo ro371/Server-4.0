@@ -8,6 +8,7 @@ import net.minecraft.entity.Entity;
 import net.mcreator.server.ServerModElements;
 
 import java.util.Map;
+import java.util.Collection;
 
 @ServerModElements.ModElement.Tag
 public class GinTonicFoodEatenProcedure extends ServerModElements.ModElement {
@@ -24,14 +25,43 @@ public class GinTonicFoodEatenProcedure extends ServerModElements.ModElement {
 		Entity entity = (Entity) dependencies.get("entity");
 		double Drunk = 0;
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 16, (int) 2, (true), (true)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) (((new Object() {
+				int check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == Effects.POISON)
+								return effect.getDuration();
+						}
+					}
+					return 0;
+				}
+			}.check(entity)) * 2) + 40), (int) 2, (true), (true)));
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NAUSEA, (int) ((Drunk) + 150), (int) 3, (true), (true)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NAUSEA, (int) (((new Object() {
+				int check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == Effects.NAUSEA)
+								return effect.getDuration();
+						}
+					}
+					return 0;
+				}
+			}.check(entity)) * 2) + 100), (int) 3, (true), (true)));
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.BLINDNESS, (int) (((Drunk) / 2) + 50), (int) 1, (true), (true)));
-		Drunk = (double) ((Drunk) + 20);
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) == 0)) {
-			Drunk = (double) 0;
-		}
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.BLINDNESS, (int) (((new Object() {
+				int check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == Effects.BLINDNESS)
+								return effect.getDuration();
+						}
+					}
+					return 0;
+				}
+			}.check(entity)) * 2) + 60), (int) 0, (true), (true)));
 	}
 }
