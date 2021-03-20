@@ -64,7 +64,7 @@ public class DaiquiriVenenoFoodEatenProcedure extends ServerModElements.ModEleme
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NAUSEA, (int) 450, (int) 5, (true), (false)));
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 240, (int) 1, (true), (true)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 240, (int) 2, (true), (true)));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HUNGER, (int) 700, (int) 1, (true), (false)));
 		if (entity instanceof LivingEntity)
