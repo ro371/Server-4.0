@@ -19,8 +19,10 @@
   "item.cocktaildesandia.name": "Melon Drink",
   "item.server.fishstick": "Fishstick",
   "item.server.apple_stick": "Apple Stick",
+  "item.server.spaguettidough": "Spaguettidough",
   "item.server.tarta_de_manzana": "Apple Pie",
   "item.server.fishstickveneno": "Fishstick",
+  "item.server.alone": "Alone",
   "item.pizzadough.name": "Pizza Dough",
   "item.spaguetti.name": "Spaguetti",
   "splash_potion.effect.altopolicia": "Splash Stop!",
@@ -61,6 +63,7 @@
   "item.vaso.name": "Glass",
   "item.server.policearmor_helmet": "Police Helmet",
   "item.server.policearmor_boots": "Police Boots",
+  "subtitles.alone": "Alan Walker - Alone",
   "item.carbon_ahumado.name": "Smoked Coal",
   "item.server.smallpizza": "Small Pizza",
   "item.minecraft.lingering_potion.effect.altopolicia": "Lingering Alto Policía",
@@ -80,6 +83,7 @@
   "item.policearmorlegs.name": "Police Leggings",
   "item.server.poisondrops": "Poison Drops",
   "item.server.carbon_ahumado": "Smoked Coal",
+  "item.server.alone.desc": "Alan Walker - Alone",
   "item.cookeddoughstick.name": "Cooked Dough Stick",
   "item.server.mediumpizza": "Medium Pizza"
 }

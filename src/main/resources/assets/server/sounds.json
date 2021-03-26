@@ -34,5 +34,15 @@
         "stream": false
       }
     ]
+  },
+  "alone": {
+    "category": "music",
+    "subtitle": "subtitles.alone",
+    "sounds": [
+      {
+        "name": "server:alan_walker_-_alone",
+        "stream": true
+      }
+    ]
   }
 }

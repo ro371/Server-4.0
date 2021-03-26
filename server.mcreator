@@ -1170,6 +1170,123 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "vasodeaguarecipe"
+    },
+    {
+      "name": "Spaguettidough",
+      "type": "food",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spaguettidough"
+    },
+    {
+      "name": "Spaguettidoughrecipe",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spaguettidoughrecipe"
+    },
+    {
+      "name": "Paint",
+      "type": "painting",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "paint"
+    },
+    {
+      "name": "Solejuanma",
+      "type": "painting",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "solejuanma"
+    },
+    {
+      "name": "Romeo",
+      "type": "painting",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "romeo"
+    },
+    {
+      "name": "Angel",
+      "type": "painting",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angel"
+    },
+    {
+      "name": "Alejandra",
+      "type": "painting",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alejandra"
+    },
+    {
+      "name": "Chispa",
+      "type": "painting",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chispa"
+    },
+    {
+      "name": "Cocheangel",
+      "type": "painting",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cocheangel"
+    },
+    {
+      "name": "Angelmanzana",
+      "type": "painting",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angelmanzana"
+    },
+    {
+      "name": "Alone",
+      "type": "musicdisc",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alone"
+    },
+    {
+      "name": "Angelmovil",
+      "type": "painting",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angelmovil"
+    },
+    {
+      "name": "Angelrogelio",
+      "type": "painting",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angelrogelio"
     }
   ],
   "variable_elements": [],
@@ -1201,6 +1318,14 @@
         "007901266_prev"
       ],
       "category": "master"
+    },
+    {
+      "name": "alone",
+      "files": [
+        "alan_walker_-_alone"
+      ],
+      "category": "music",
+      "subtitle": "Alan Walker - Alone"
     }
   ],
   "language_map": {
@@ -1225,8 +1350,10 @@
       "item.cocktaildesandia.name": "Melon Drink",
       "item.server.fishstick": "Fishstick",
       "item.server.apple_stick": "Apple Stick",
+      "item.server.spaguettidough": "Spaguettidough",
       "item.server.tarta_de_manzana": "Apple Pie",
       "item.server.fishstickveneno": "Fishstick",
+      "item.server.alone": "Alone",
       "item.pizzadough.name": "Pizza Dough",
       "item.spaguetti.name": "Spaguetti",
       "splash_potion.effect.altopolicia": "Splash Stop!",
@@ -1267,6 +1394,7 @@
       "item.vaso.name": "Glass",
       "item.server.policearmor_helmet": "Police Helmet",
       "item.server.policearmor_boots": "Police Boots",
+      "subtitles.alone": "Alan Walker - Alone",
       "item.carbon_ahumado.name": "Smoked Coal",
       "item.server.smallpizza": "Small Pizza",
       "item.minecraft.lingering_potion.effect.altopolicia": "Lingering Alto Policía",
@@ -1286,6 +1414,7 @@
       "item.policearmorlegs.name": "Police Leggings",
       "item.server.poisondrops": "Poison Drops",
       "item.server.carbon_ahumado": "Smoked Coal",
+      "item.server.alone.desc": "Alan Walker - Alone",
       "item.cookeddoughstick.name": "Cooked Dough Stick",
       "item.server.mediumpizza": "Medium Pizza"
     },
@@ -1310,8 +1439,10 @@
       "item.cocktaildesandia.name": "Cocktail de Sandía",
       "item.server.fishstick": "Palito de pescado",
       "item.server.apple_stick": "Palo de Manzana",
+      "item.server.spaguettidough": "Spaguettidough",
       "item.server.tarta_de_manzana": "Tarta de Manzana",
       "item.server.fishstickveneno": "Palito de Pescado",
+      "item.server.alone": "Alone",
       "item.spaguetti.name": "Spaguetti",
       "item.pizzadough.name": "Masa de Pizza",
       "splash_potion.effect.altopolicia": "Splash Alto Policía",
@@ -1352,6 +1483,7 @@
       "item.vaso.name": "Vaso",
       "item.server.policearmor_helmet": "Casco de @Policía",
       "item.server.policearmor_boots": "Botas de @Policía",
+      "subtitles.alone": "Alan Walker - Alone",
       "item.carbon_ahumado.name": "Carbón Ahumado",
       "item.server.smallpizza": "Pizza Pequeña",
       "item.minecraft.lingering_potion.effect.altopolicia": "Lingering Alto Policía",
@@ -1371,6 +1503,7 @@
       "item.policearmorlegs.name": "Pantalones de @Policía",
       "item.server.poisondrops": "Gotas de veneno",
       "item.server.carbon_ahumado": "Carbón Ahumado",
+      "item.server.alone.desc": "Alan Walker - Alone",
       "item.cookeddoughstick.name": "Palo de Harina cocinado",
       "item.server.mediumpizza": "Pizza Mediana"
     }
@@ -1378,7 +1511,7 @@
   "workspaceSettings": {
     "modid": "server",
     "modName": "Server_4.0",
-    "version": "4.0.5",
+    "version": "4.0.6",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",

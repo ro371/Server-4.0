@@ -3,7 +3,8 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     " 1 ",
-    "345"
+    "345",
+    "678"
   ],
   "key": {
     "1": {
@@ -17,6 +18,15 @@
     },
     "5": {
       "item": "minecraft:wheat"
+    },
+    "6": {
+      "item": "server:spaguettidough"
+    },
+    "7": {
+      "item": "server:spaguettidough"
+    },
+    "8": {
+      "item": "server:spaguettidough"
     }
   },
   "result": {

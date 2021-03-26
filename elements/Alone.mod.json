@@ -1,0 +1,17 @@
+{
+  "_fv": 13,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "alonedisk",
+    "name": "Alone",
+    "description": "Alan Walker - Alone",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:alone"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}
