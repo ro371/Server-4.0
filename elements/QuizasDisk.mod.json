@@ -1,0 +1,17 @@
+{
+  "_fv": 13,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "quizasdisk",
+    "name": "Quizas Disk",
+    "description": "Brytiago ft Lunay ft Ozuna – Quizás",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:quizas"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

@@ -44,5 +44,35 @@
         "stream": true
       }
     ]
+  },
+  "de_sastre": {
+    "category": "music",
+    "subtitle": "subtitles.de_sastre",
+    "sounds": [
+      {
+        "name": "server:sofia_ellar_-_de_sastre_videoclip_oficial",
+        "stream": true
+      }
+    ]
+  },
+  "quizas": {
+    "category": "master",
+    "subtitle": "subtitles.quizas",
+    "sounds": [
+      {
+        "name": "server:brytiago_ft_lunay_ft_ozuna_-_quizas",
+        "stream": false
+      }
+    ]
+  },
+  "sufremamon_disk": {
+    "category": "music",
+    "subtitle": "subtitles.sufremamon_disk",
+    "sounds": [
+      {
+        "name": "server:sufre_mamn_devulveme_a_mi_chica_-_hombres_g_videoclip",
+        "stream": true
+      }
+    ]
   }
 }
