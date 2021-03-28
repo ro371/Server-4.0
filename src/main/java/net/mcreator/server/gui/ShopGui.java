@@ -12,7 +12,9 @@ import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -34,6 +36,9 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.server.procedures.ShopWhileThisGUIIsOpenTickProcedure;
+import net.mcreator.server.procedures.ShopThisGUIIsOpenedProcedure;
+import net.mcreator.server.procedures.Itemtaken1Procedure;
 import net.mcreator.server.ServerModElements;
 import net.mcreator.server.ServerMod;
 
@@ -53,11 +58,28 @@ public class ShopGui extends ServerModElements.ModElement {
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
+	}
+
+	@SubscribeEvent
+	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		PlayerEntity entity = event.player;
+		if (event.phase == TickEvent.Phase.END && entity.openContainer instanceof GuiContainerMod) {
+			World world = entity.world;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				ShopWhileThisGUIIsOpenTickProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	@SubscribeEvent
@@ -119,16 +141,23 @@ public class ShopGui extends ServerModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 62, 19) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 16, 19) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 19, 19) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 19) {
 				@Override
-				public boolean canTakeStack(PlayerEntity player) {
-					return false;
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(1, 1, 0);
+					return retval;
 				}
 
 				@Override
@@ -143,6 +172,12 @@ public class ShopGui extends ServerModElements.ModElement {
 					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 80 + 8 + sj * 18, 33 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
 				this.addSlot(new Slot(inv, si, 80 + 8 + si * 18, 33 + 142));
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				ShopThisGUIIsOpenedProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		public Map<Integer, Slot> get() {
@@ -335,10 +370,10 @@ public class ShopGui extends ServerModElements.ModElement {
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
 			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/shop.png"));
-			this.blit(this.guiLeft + 109, this.guiTop + 1, 0, 0, 128, 64, 128, 64);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
-			this.blit(this.guiLeft + 40, this.guiTop + 19, 0, 0, 16, 16, 16, 16);
+			this.blit(this.guiLeft + 38, this.guiTop + 19, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/shoptext.png"));
+			this.blit(this.guiLeft + 136, this.guiTop + 10, 0, 0, 64, 32, 64, 32);
 		}
 
 		@Override
@@ -465,5 +500,13 @@ public class ShopGui extends ServerModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (slotID == 1 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				Itemtaken1Procedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 }

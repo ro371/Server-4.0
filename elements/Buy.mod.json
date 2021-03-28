@@ -3,6 +3,9 @@
   "_type": "command",
   "definition": {
     "commandName": "buy",
-    "permissionLevel": 1
+    "permissionLevel": 1,
+    "onCommandExecuted": {
+      "name": "BuyCommandExecuted"
+    }
   }
 }

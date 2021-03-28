@@ -9,8 +9,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.Commands;
 import net.minecraft.command.CommandSource;
 
+import net.mcreator.server.procedures.BuyCommandExecutedProcedure;
 import net.mcreator.server.ServerModElements;
 
+import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
 
@@ -31,7 +33,7 @@ public class BuyCommand extends ServerModElements.ModElement {
 
 	private LiteralArgumentBuilder<CommandSource> customCommand() {
 		return LiteralArgumentBuilder.<CommandSource>literal("buy").requires(s -> s.hasPermissionLevel(1))
-				.then(Commands.argument("arguments", StringArgumentType.greedyString()));
+				.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(this::execute)).executes(this::execute);
 	}
 
 	private int execute(CommandContext<CommandSource> ctx) {
@@ -49,6 +51,15 @@ public class BuyCommand extends ServerModElements.ModElement {
 				cmdparams.put(Integer.toString(index[0]), param);
 			index[0]++;
 		});
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("entity", entity);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			$_dependencies.put("world", world);
+			BuyCommandExecutedProcedure.executeProcedure($_dependencies);
+		}
 		return 0;
 	}
 }

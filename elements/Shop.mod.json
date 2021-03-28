@@ -13,48 +13,57 @@
       {
         "type": "image",
         "data": {
-          "image": "shop.png",
-          "use1Xscale": false,
-          "name": "shop.png",
-          "x": 154,
-          "y": 21
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 0,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": false,
-          "name": "Slot #0",
-          "x": 106,
-          "y": 38
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 83,
+          "y": 39
         }
       },
       {
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:Coin1"
           },
-          "id": 1,
+          "id": 0,
           "disableStackInteraction": true,
           "dropItemsWhenNotBound": false,
+          "name": "Slot #0",
+          "x": 60,
+          "y": 38
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken1"
+          },
           "name": "Slot #1",
-          "x": 63,
+          "x": 105,
           "y": 38
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "arrow.png",
+          "image": "shoptext.png",
           "use1Xscale": true,
-          "name": "arrow.png",
-          "x": 85,
-          "y": 39
+          "name": "shoptext.png",
+          "x": 181,
+          "y": 30
         }
       }
-    ]
+    ],
+    "onOpen": {
+      "name": "ShopThisGUIIsOpened"
+    },
+    "onTick": {
+      "name": "ShopWhileThisGUIIsOpenTick"
+    }
   }
 }

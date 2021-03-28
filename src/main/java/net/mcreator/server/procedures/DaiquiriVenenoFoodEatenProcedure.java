@@ -72,7 +72,7 @@ public class DaiquiriVenenoFoodEatenProcedure extends ServerModElements.ModEleme
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
 						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.BLINDNESS)
+							if (effect.getPotion() == Effects.HUNGER)
 								return effect.getDuration();
 						}
 					}
@@ -104,7 +104,7 @@ public class DaiquiriVenenoFoodEatenProcedure extends ServerModElements.ModEleme
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
 						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.BLINDNESS)
+							if (effect.getPotion() == Effects.SLOWNESS)
 								return effect.getDuration();
 						}
 					}
