@@ -17,7 +17,7 @@
           "use1Xscale": true,
           "name": "arrow.png",
           "x": 83,
-          "y": 39
+          "y": 35
         }
       },
       {
@@ -31,7 +31,7 @@
           "dropItemsWhenNotBound": false,
           "name": "Slot #0",
           "x": 60,
-          "y": 38
+          "y": 35
         }
       },
       {
@@ -45,7 +45,7 @@
           },
           "name": "Slot #1",
           "x": 105,
-          "y": 38
+          "y": 35
         }
       },
       {
@@ -57,6 +57,82 @@
           "x": 181,
           "y": 30
         }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 2,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #2",
+          "x": 60,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 82,
+          "y": 62
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken2"
+          },
+          "name": "Slot #3",
+          "x": 105,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 4,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #4",
+          "x": 60,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken3"
+          },
+          "name": "Slot #5",
+          "x": 105,
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 82,
+          "y": 89
+        }
       }
     ],
     "onOpen": {
@@ -64,6 +140,9 @@
     },
     "onTick": {
       "name": "ShopWhileThisGUIIsOpenTick"
+    },
+    "onClosed": {
+      "name": "ShopThisGUIIsClosed"
     }
   }
 }

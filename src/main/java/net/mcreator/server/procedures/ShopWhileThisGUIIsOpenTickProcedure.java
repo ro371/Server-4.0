@@ -6,6 +6,7 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.server.item.SufreMamonDiskItem;
 import net.mcreator.server.item.QuizasDiskItem;
 import net.mcreator.server.item.Coin1Item;
 import net.mcreator.server.ServerModElements;
@@ -32,8 +33,32 @@ public class ShopWhileThisGUIIsOpenTickProcedure extends ServerModElements.ModEl
 				Object invobj = ((Supplier) _current).get();
 				if (invobj instanceof Map) {
 					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
-					_setstack.setCount((int) 1);
+					_setstack.setCount((int) 2);
 					((Slot) ((Map) invobj).get((int) (0))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 3);
+					((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 4);
+					((Slot) ((Map) invobj).get((int) (4))).putStack(_setstack);
 					_current.detectAndSendChanges();
 				}
 			}
@@ -48,6 +73,35 @@ public class ShopWhileThisGUIIsOpenTickProcedure extends ServerModElements.ModEl
 						_setstack.setCount((int) 1);
 						((Slot) ((Map) invobj).get((int) (1))).putStack(_setstack);
 						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (((entity.getPersistentData().getDouble("coin1")) >= 3)) {
+				if (entity instanceof PlayerEntity) {
+					Container _current = ((PlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							ItemStack _setstack = new ItemStack(SufreMamonDiskItem.block, (int) (1));
+							_setstack.setCount((int) 1);
+							((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+			} else {
+				if (((entity.getPersistentData().getDouble("coin1")) >= 4)) {
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(SufreMamonDiskItem.block, (int) (1));
+								_setstack.setCount((int) 1);
+								((Slot) ((Map) invobj).get((int) (5))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
 					}
 				}
 			}

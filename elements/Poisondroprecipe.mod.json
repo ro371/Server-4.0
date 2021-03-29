@@ -4,7 +4,7 @@
   "definition": {
     "recipeType": "Smelting",
     "xpReward": 1.0,
-    "cookingTime": 250,
+    "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
     "recipeShapeless": false,
@@ -12,9 +12,9 @@
       "value": "Items.ROTTEN_FLESH"
     },
     "smeltingReturnStack": {
-      "value": "CUSTOM:Poisondrop"
+      "value": "CUSTOM:PoisonDropitem"
     },
-    "name": "poison_drop",
+    "name": "poisondroprecipe",
     "namespace": "mod"
   }
 }

@@ -38,6 +38,9 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.server.procedures.ShopWhileThisGUIIsOpenTickProcedure;
 import net.mcreator.server.procedures.ShopThisGUIIsOpenedProcedure;
+import net.mcreator.server.procedures.ShopThisGUIIsClosedProcedure;
+import net.mcreator.server.procedures.Itemtaken3Procedure;
+import net.mcreator.server.procedures.Itemtaken2Procedure;
 import net.mcreator.server.procedures.Itemtaken1Procedure;
 import net.mcreator.server.ServerModElements;
 import net.mcreator.server.ServerMod;
@@ -103,7 +106,7 @@ public class ShopGui extends ServerModElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(2);
+			this.internal = new ItemStackHandler(6);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -141,7 +144,7 @@ public class ShopGui extends ServerModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 16, 19) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 16, 16) {
 				@Override
 				public boolean canTakeStack(PlayerEntity player) {
 					return false;
@@ -152,11 +155,59 @@ public class ShopGui extends ServerModElements.ModElement {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 19) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 16) {
 				@Override
 				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
 					ItemStack retval = super.onTake(entity, stack);
 					GuiContainerMod.this.slotChanged(1, 1, 0);
+					return retval;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 16, 43) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 43) {
+				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(3, 1, 0);
+					return retval;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 16, 70) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 61, 70) {
+				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(5, 1, 0);
 					return retval;
 				}
 
@@ -196,18 +247,18 @@ public class ShopGui extends ServerModElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 2) {
-					if (!this.mergeItemStack(itemstack1, 2, this.inventorySlots.size(), true)) {
+				if (index < 6) {
+					if (!this.mergeItemStack(itemstack1, 6, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
-					if (index < 2 + 27) {
-						if (!this.mergeItemStack(itemstack1, 2 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 6, false)) {
+					if (index < 6 + 27) {
+						if (!this.mergeItemStack(itemstack1, 6 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 2, 2 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 6, 6 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
@@ -310,12 +361,24 @@ public class ShopGui extends ServerModElements.ModElement {
 		@Override
 		public void onContainerClosed(PlayerEntity playerIn) {
 			super.onContainerClosed(playerIn);
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				ShopThisGUIIsClosedProcedure.executeProcedure($_dependencies);
+			}
 			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
 				if (!playerIn.isAlive() || playerIn instanceof ServerPlayerEntity && ((ServerPlayerEntity) playerIn).hasDisconnected()) {
 					for (int j = 0; j < internal.getSlots(); ++j) {
 						if (j == 0)
 							continue;
 						if (j == 1)
+							continue;
+						if (j == 2)
+							continue;
+						if (j == 3)
+							continue;
+						if (j == 4)
+							continue;
+						if (j == 5)
 							continue;
 						playerIn.dropItem(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 					}
@@ -324,6 +387,14 @@ public class ShopGui extends ServerModElements.ModElement {
 						if (i == 0)
 							continue;
 						if (i == 1)
+							continue;
+						if (i == 2)
+							continue;
+						if (i == 3)
+							continue;
+						if (i == 4)
+							continue;
+						if (i == 5)
 							continue;
 						playerIn.inventory.placeItemBackInInventory(playerIn.world,
 								internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
@@ -371,9 +442,13 @@ public class ShopGui extends ServerModElements.ModElement {
 			int l = (this.height - this.ySize) / 2;
 			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
-			this.blit(this.guiLeft + 38, this.guiTop + 19, 0, 0, 16, 16, 16, 16);
+			this.blit(this.guiLeft + 38, this.guiTop + 15, 0, 0, 16, 16, 16, 16);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/shoptext.png"));
 			this.blit(this.guiLeft + 136, this.guiTop + 10, 0, 0, 64, 32, 64, 32);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
+			this.blit(this.guiLeft + 37, this.guiTop + 42, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
+			this.blit(this.guiLeft + 37, this.guiTop + 69, 0, 0, 16, 16, 16, 16);
 		}
 
 		@Override
@@ -506,6 +581,22 @@ public class ShopGui extends ServerModElements.ModElement {
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
 				Itemtaken1Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 3 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				Itemtaken2Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 5 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				Itemtaken3Procedure.executeProcedure($_dependencies);
 			}
 		}
 	}
