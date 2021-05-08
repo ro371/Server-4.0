@@ -2,14 +2,14 @@
   "_fv": 18,
   "_type": "musicdisc",
   "definition": {
-    "texture": "alonedisk",
-    "name": "Alone",
-    "description": "Alan Walker - Alone",
+    "texture": "resistiredisk",
+    "name": "Resistiré",
+    "description": "Resistiré 2020 - Sofía Ellar",
     "creativeTab": {
       "value": "MISC"
     },
     "music": {
-      "value": "CUSTOM:alone"
+      "value": "CUSTOM:resistiresound"
     },
     "specialInfo": [],
     "hasGlow": false

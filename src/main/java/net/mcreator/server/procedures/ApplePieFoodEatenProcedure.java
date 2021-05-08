@@ -8,6 +8,7 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 
 import net.mcreator.server.ServerModElements;
+import net.mcreator.server.ServerMod;
 
 import java.util.Map;
 
@@ -20,22 +21,22 @@ public class ApplePieFoodEatenProcedure extends ServerModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure ApplePieFoodEaten!");
+				ServerMod.LOGGER.warn("Failed to load dependency x for procedure ApplePieFoodEaten!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure ApplePieFoodEaten!");
+				ServerMod.LOGGER.warn("Failed to load dependency y for procedure ApplePieFoodEaten!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure ApplePieFoodEaten!");
+				ServerMod.LOGGER.warn("Failed to load dependency z for procedure ApplePieFoodEaten!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure ApplePieFoodEaten!");
+				ServerMod.LOGGER.warn("Failed to load dependency world for procedure ApplePieFoodEaten!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

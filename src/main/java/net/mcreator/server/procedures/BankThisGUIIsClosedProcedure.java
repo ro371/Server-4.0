@@ -12,6 +12,7 @@ import net.minecraft.entity.Entity;
 import net.mcreator.server.item.Coin5Item;
 import net.mcreator.server.item.Coin1Item;
 import net.mcreator.server.ServerModElements;
+import net.mcreator.server.ServerMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -25,7 +26,7 @@ public class BankThisGUIIsClosedProcedure extends ServerModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure BankThisGUIIsClosed!");
+				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure BankThisGUIIsClosed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

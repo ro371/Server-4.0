@@ -1,8 +1,6 @@
 
 package net.mcreator.server.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
@@ -12,9 +10,7 @@ import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -36,7 +32,6 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.server.procedures.ShopWhileThisGUIIsOpenTickProcedure;
 import net.mcreator.server.procedures.ShopThisGUIIsOpenedProcedure;
 import net.mcreator.server.procedures.ShopThisGUIIsClosedProcedure;
 import net.mcreator.server.procedures.Itemtaken3Procedure;
@@ -48,6 +43,8 @@ import net.mcreator.server.ServerMod;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
 
 @ServerModElements.ModElement.Tag
 public class ShopGui extends ServerModElements.ModElement {
@@ -61,28 +58,11 @@ public class ShopGui extends ServerModElements.ModElement {
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
-		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
-	}
-
-	@SubscribeEvent
-	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		PlayerEntity entity = event.player;
-		if (event.phase == TickEvent.Phase.END && entity.openContainer instanceof GuiContainerMod) {
-			World world = entity.world;
-			double x = entity.getPosX();
-			double y = entity.getPosY();
-			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				ShopWhileThisGUIIsOpenTickProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 
 	@SubscribeEvent
@@ -363,6 +343,8 @@ public class ShopGui extends ServerModElements.ModElement {
 			super.onContainerClosed(playerIn);
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
 				ShopThisGUIIsClosedProcedure.executeProcedure($_dependencies);
 			}
 			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
@@ -435,8 +417,10 @@ public class ShopGui extends ServerModElements.ModElement {
 		}
 
 		@Override
-		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1, 1, 1, 1);
+		protected void drawGuiContainerBackgroundLayer(float partialTicks, int gx, int gy) {
+			RenderSystem.color4f(1, 1, 1, 1);
+			RenderSystem.enableBlend();
+			RenderSystem.defaultBlendFunc();
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
@@ -449,6 +433,7 @@ public class ShopGui extends ServerModElements.ModElement {
 			this.blit(this.guiLeft + 37, this.guiTop + 42, 0, 0, 16, 16, 16, 16);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
 			this.blit(this.guiLeft + 37, this.guiTop + 69, 0, 0, 16, 16, 16, 16);
+			RenderSystem.disableBlend();
 		}
 
 		@Override
@@ -579,7 +564,6 @@ public class ShopGui extends ServerModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
 				Itemtaken1Procedure.executeProcedure($_dependencies);
 			}
 		}

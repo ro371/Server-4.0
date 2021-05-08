@@ -3,13 +3,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "server:poisondrop"
+      "item": "server:deleted_mod_element"
     },
     {
-      "item": "server:poisondrop"
+      "item": "server:deleted_mod_element"
     },
     {
-      "item": "server:poisondrop"
+      "item": "server:deleted_mod_element"
     }
   ],
   "result": {

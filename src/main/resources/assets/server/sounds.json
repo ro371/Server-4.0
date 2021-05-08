@@ -74,5 +74,15 @@
         "stream": true
       }
     ]
+  },
+  "resistiresound": {
+    "category": "master",
+    "subtitle": "subtitles.resistiresound",
+    "sounds": [
+      {
+        "name": "server:resistire_2020_-_video_oficial_musicaonlinemp3.org",
+        "stream": false
+      }
+    ]
   }
 }

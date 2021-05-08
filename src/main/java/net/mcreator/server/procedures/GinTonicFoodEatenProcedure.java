@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.server.ServerModElements;
+import net.mcreator.server.ServerMod;
 
 import java.util.Map;
 import java.util.Collection;
@@ -19,7 +20,7 @@ public class GinTonicFoodEatenProcedure extends ServerModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure GinTonicFoodEaten!");
+				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure GinTonicFoodEaten!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -58,6 +58,8 @@ public class ServerModElements {
 		sounds.put(new ResourceLocation("server", "quizas"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "quizas")));
 		sounds.put(new ResourceLocation("server", "sufremamon_disk"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("server", "sufremamon_disk")));
+		sounds.put(new ResourceLocation("server", "resistiresound"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("server", "resistiresound")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("server").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

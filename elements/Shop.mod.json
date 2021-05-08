@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 18,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -137,9 +137,6 @@
     ],
     "onOpen": {
       "name": "ShopThisGUIIsOpened"
-    },
-    "onTick": {
-      "name": "ShopWhileThisGUIIsOpenTick"
     },
     "onClosed": {
       "name": "ShopThisGUIIsClosed"

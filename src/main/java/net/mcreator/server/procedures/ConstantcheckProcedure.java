@@ -2,17 +2,29 @@ package net.mcreator.server.procedures;
 
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.container.Slot;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.server.item.SufreMamonDiskItem;
+import net.mcreator.server.item.QuizasDiskItem;
 import net.mcreator.server.item.Coin5Item;
 import net.mcreator.server.item.Coin1Item;
 import net.mcreator.server.ServerModElements;
+import net.mcreator.server.ServerMod;
 
+import java.util.function.Supplier;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
+import java.util.HashMap;
 
 @ServerModElements.ModElement.Tag
 public class ConstantcheckProcedure extends ServerModElements.ModElement {
@@ -23,12 +35,12 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure Constantcheck!");
+				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure Constantcheck!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure Constantcheck!");
+				ServerMod.LOGGER.warn("Failed to load dependency world for procedure Constantcheck!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -51,6 +63,178 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 					}
 				}
 			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 2);
+					((Slot) ((Map) invobj).get((int) (0))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 3);
+					((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 4);
+					((Slot) ((Map) invobj).get((int) (4))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (((entity.getPersistentData().getDouble("coin1")) >= 2)) {
+			if (entity instanceof PlayerEntity) {
+				Container _current = ((PlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						ItemStack _setstack = new ItemStack(QuizasDiskItem.block, (int) (1));
+						_setstack.setCount((int) 1);
+						((Slot) ((Map) invobj).get((int) (1))).putStack(_setstack);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (((entity.getPersistentData().getDouble("coin1")) >= 3)) {
+				if (entity instanceof PlayerEntity) {
+					Container _current = ((PlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							ItemStack _setstack = new ItemStack(SufreMamonDiskItem.block, (int) (1));
+							_setstack.setCount((int) 1);
+							((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				if (((entity.getPersistentData().getDouble("coin1")) >= 4)) {
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(SufreMamonDiskItem.block, (int) (1));
+								_setstack.setCount((int) 1);
+								((Slot) ((Map) invobj).get((int) (5))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+				} else {
+					if (entity instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								((Slot) ((Map) invobj).get((int) (5))).putStack(ItemStack.EMPTY);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+				}
+			} else {
+				if (entity instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							((Slot) ((Map) invobj).get((int) (3))).putStack(ItemStack.EMPTY);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				if (entity instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							((Slot) ((Map) invobj).get((int) (5))).putStack(ItemStack.EMPTY);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+			}
+		} else {
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (1))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (3))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (5))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+		}
+		if (((true) == (entity.getPersistentData().getBoolean("guishopopen")))) {
+			new Object() {
+				private int ticks = 0;
+				private float waitTicks;
+				private IWorld world;
+				public void start(IWorld world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
+					this.world = world;
+				}
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
+							run();
+					}
+				}
+
+				private void run() {
+					{
+						Map<String, Object> $_dependencies = new HashMap<>();
+						$_dependencies.put("entity", entity);
+						$_dependencies.put("world", world);
+						ConstantcheckProcedure.executeProcedure($_dependencies);
+					}
+					MinecraftForge.EVENT_BUS.unregister(this);
+				}
+			}.start(world, (int) 6);
 		}
 	}
 }

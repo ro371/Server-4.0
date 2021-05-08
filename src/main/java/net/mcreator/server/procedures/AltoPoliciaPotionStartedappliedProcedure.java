@@ -12,6 +12,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.server.ServerModElements;
+import net.mcreator.server.ServerMod;
 
 import java.util.Map;
 
@@ -24,27 +25,27 @@ public class AltoPoliciaPotionStartedappliedProcedure extends ServerModElements.
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure AltoPoliciaPotionStartedapplied!");
+				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure AltoPoliciaPotionStartedapplied!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure AltoPoliciaPotionStartedapplied!");
+				ServerMod.LOGGER.warn("Failed to load dependency x for procedure AltoPoliciaPotionStartedapplied!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure AltoPoliciaPotionStartedapplied!");
+				ServerMod.LOGGER.warn("Failed to load dependency y for procedure AltoPoliciaPotionStartedapplied!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure AltoPoliciaPotionStartedapplied!");
+				ServerMod.LOGGER.warn("Failed to load dependency z for procedure AltoPoliciaPotionStartedapplied!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure AltoPoliciaPotionStartedapplied!");
+				ServerMod.LOGGER.warn("Failed to load dependency world for procedure AltoPoliciaPotionStartedapplied!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

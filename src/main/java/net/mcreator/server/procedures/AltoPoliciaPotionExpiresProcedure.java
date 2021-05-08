@@ -6,6 +6,7 @@ import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.server.ServerModElements;
+import net.mcreator.server.ServerMod;
 
 import java.util.Map;
 
@@ -18,12 +19,12 @@ public class AltoPoliciaPotionExpiresProcedure extends ServerModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure AltoPoliciaPotionExpires!");
+				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure AltoPoliciaPotionExpires!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure AltoPoliciaPotionExpires!");
+				ServerMod.LOGGER.warn("Failed to load dependency world for procedure AltoPoliciaPotionExpires!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
