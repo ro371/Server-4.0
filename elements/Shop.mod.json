@@ -133,6 +133,231 @@
           "x": 82,
           "y": 89
         }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 6,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #6",
+          "x": 60,
+          "y": 116
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 7,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken4"
+          },
+          "name": "Slot #7",
+          "x": 105,
+          "y": 116
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 82,
+          "y": 116
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 8,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #8",
+          "x": 60,
+          "y": 143
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 82,
+          "y": 144
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 9,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken5"
+          },
+          "name": "Slot #9",
+          "x": 105,
+          "y": 143
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 10,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #10",
+          "x": 60,
+          "y": 170
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 82,
+          "y": 170
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 11,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #11",
+          "x": 105,
+          "y": 170
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 12,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #12",
+          "x": 60,
+          "y": 197
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 13,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken7"
+          },
+          "name": "Slot #13",
+          "x": 105,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 82,
+          "y": 197
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 14,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #14",
+          "x": 303,
+          "y": 35
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 15,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken8"
+          },
+          "name": "Slot #15",
+          "x": 348,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 325,
+          "y": 36
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 16,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #16",
+          "x": 303,
+          "y": 62
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 17,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken9"
+          },
+          "name": "Slot #17",
+          "x": 348,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": true,
+          "name": "arrow.png",
+          "x": 325,
+          "y": 62
+        }
       }
     ],
     "onOpen": {

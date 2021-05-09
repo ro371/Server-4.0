@@ -84,5 +84,45 @@
         "stream": false
       }
     ]
+  },
+  "popola": {
+    "category": "music",
+    "subtitle": "subtitles.popola",
+    "sounds": [
+      {
+        "name": "server:pase_por_tu_casa_-_welinton_quiw_sesion_acustica_",
+        "stream": true
+      }
+    ]
+  },
+  "blursound": {
+    "category": "music",
+    "subtitle": "subtitles.blursound",
+    "sounds": [
+      {
+        "name": "server:blur_-_song_2",
+        "stream": true
+      }
+    ]
+  },
+  "rammstein": {
+    "category": "master",
+    "subtitle": "subtitles.rammstein",
+    "sounds": [
+      {
+        "name": "server:rammstein_-_deutschland_english_lyrics_hd",
+        "stream": false
+      }
+    ]
+  },
+  "greenday": {
+    "category": "music",
+    "subtitle": "subtitles.greenday",
+    "sounds": [
+      {
+        "name": "server:01_green_day_-_american_idiot",
+        "stream": true
+      }
+    ]
   }
 }

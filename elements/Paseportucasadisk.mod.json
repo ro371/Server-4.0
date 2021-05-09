@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "popoladisk",
+    "name": "Pasé por tu casa",
+    "description": "Pasé por tu Casa - Welinton Quiw",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:popola"
+    },
+    "specialInfo": [],
+    "hasGlow": true
+  }
+}

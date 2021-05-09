@@ -2,14 +2,14 @@
   "_fv": 18,
   "_type": "musicdisc",
   "definition": {
-    "texture": "quizasdisk",
-    "name": "Quizás ",
-    "description": "Brytiago ft Lunay ft Ozuna – Quizás",
+    "texture": "greenday",
+    "name": "Green Day",
+    "description": "Green Day - American Idiot",
     "creativeTab": {
       "value": "MISC"
     },
     "music": {
-      "value": "CUSTOM:quizas"
+      "value": "CUSTOM:greenday"
     },
     "specialInfo": [],
     "hasGlow": false

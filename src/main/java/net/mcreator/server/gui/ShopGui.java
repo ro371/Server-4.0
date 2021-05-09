@@ -34,6 +34,11 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.server.procedures.ShopThisGUIIsOpenedProcedure;
 import net.mcreator.server.procedures.ShopThisGUIIsClosedProcedure;
+import net.mcreator.server.procedures.Itemtaken9Procedure;
+import net.mcreator.server.procedures.Itemtaken8Procedure;
+import net.mcreator.server.procedures.Itemtaken7Procedure;
+import net.mcreator.server.procedures.Itemtaken5Procedure;
+import net.mcreator.server.procedures.Itemtaken4Procedure;
 import net.mcreator.server.procedures.Itemtaken3Procedure;
 import net.mcreator.server.procedures.Itemtaken2Procedure;
 import net.mcreator.server.procedures.Itemtaken1Procedure;
@@ -86,7 +91,7 @@ public class ShopGui extends ServerModElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(6);
+			this.internal = new ItemStackHandler(18);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -196,6 +201,143 @@ public class ShopGui extends ServerModElements.ModElement {
 					return false;
 				}
 			}));
+			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 16, 97) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 61, 97) {
+				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(7, 1, 0);
+					return retval;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 16, 124) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 61, 124) {
+				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(9, 1, 0);
+					return retval;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 16, 151) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 61, 151) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 16, 178) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 61, 178) {
+				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(13, 1, 0);
+					return retval;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 259, 16) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 304, 16) {
+				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(15, 1, 0);
+					return retval;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 259, 43) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 304, 43) {
+				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(17, 1, 0);
+					return retval;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
 			int si;
 			int sj;
 			for (si = 0; si < 3; ++si)
@@ -227,18 +369,18 @@ public class ShopGui extends ServerModElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 6) {
-					if (!this.mergeItemStack(itemstack1, 6, this.inventorySlots.size(), true)) {
+				if (index < 18) {
+					if (!this.mergeItemStack(itemstack1, 18, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 6, false)) {
-					if (index < 6 + 27) {
-						if (!this.mergeItemStack(itemstack1, 6 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 18, false)) {
+					if (index < 18 + 27) {
+						if (!this.mergeItemStack(itemstack1, 18 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 6, 6 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 18, 18 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
@@ -344,7 +486,6 @@ public class ShopGui extends ServerModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
 				ShopThisGUIIsClosedProcedure.executeProcedure($_dependencies);
 			}
 			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
@@ -362,6 +503,30 @@ public class ShopGui extends ServerModElements.ModElement {
 							continue;
 						if (j == 5)
 							continue;
+						if (j == 6)
+							continue;
+						if (j == 7)
+							continue;
+						if (j == 8)
+							continue;
+						if (j == 9)
+							continue;
+						if (j == 10)
+							continue;
+						if (j == 11)
+							continue;
+						if (j == 12)
+							continue;
+						if (j == 13)
+							continue;
+						if (j == 14)
+							continue;
+						if (j == 15)
+							continue;
+						if (j == 16)
+							continue;
+						if (j == 17)
+							continue;
 						playerIn.dropItem(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 					}
 				} else {
@@ -377,6 +542,30 @@ public class ShopGui extends ServerModElements.ModElement {
 						if (i == 4)
 							continue;
 						if (i == 5)
+							continue;
+						if (i == 6)
+							continue;
+						if (i == 7)
+							continue;
+						if (i == 8)
+							continue;
+						if (i == 9)
+							continue;
+						if (i == 10)
+							continue;
+						if (i == 11)
+							continue;
+						if (i == 12)
+							continue;
+						if (i == 13)
+							continue;
+						if (i == 14)
+							continue;
+						if (i == 15)
+							continue;
+						if (i == 16)
+							continue;
+						if (i == 17)
 							continue;
 						playerIn.inventory.placeItemBackInInventory(playerIn.world,
 								internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
@@ -433,6 +622,18 @@ public class ShopGui extends ServerModElements.ModElement {
 			this.blit(this.guiLeft + 37, this.guiTop + 42, 0, 0, 16, 16, 16, 16);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
 			this.blit(this.guiLeft + 37, this.guiTop + 69, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
+			this.blit(this.guiLeft + 37, this.guiTop + 96, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
+			this.blit(this.guiLeft + 37, this.guiTop + 124, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
+			this.blit(this.guiLeft + 37, this.guiTop + 150, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
+			this.blit(this.guiLeft + 37, this.guiTop + 177, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
+			this.blit(this.guiLeft + 280, this.guiTop + 16, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow.png"));
+			this.blit(this.guiLeft + 280, this.guiTop + 42, 0, 0, 16, 16, 16, 16);
 			RenderSystem.disableBlend();
 		}
 
@@ -571,7 +772,6 @@ public class ShopGui extends ServerModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
 				Itemtaken2Procedure.executeProcedure($_dependencies);
 			}
 		}
@@ -579,8 +779,42 @@ public class ShopGui extends ServerModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
 				Itemtaken3Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 7 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				Itemtaken4Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 9 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				Itemtaken5Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 13 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				Itemtaken7Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 15 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				Itemtaken8Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 17 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				Itemtaken9Procedure.executeProcedure($_dependencies);
 			}
 		}
 	}

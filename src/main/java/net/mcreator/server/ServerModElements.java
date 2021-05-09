@@ -60,6 +60,10 @@ public class ServerModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("server", "sufremamon_disk")));
 		sounds.put(new ResourceLocation("server", "resistiresound"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("server", "resistiresound")));
+		sounds.put(new ResourceLocation("server", "popola"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "popola")));
+		sounds.put(new ResourceLocation("server", "blursound"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "blursound")));
+		sounds.put(new ResourceLocation("server", "rammstein"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "rammstein")));
+		sounds.put(new ResourceLocation("server", "greenday"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "greenday")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("server").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

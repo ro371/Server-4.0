@@ -15,9 +15,16 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.server.item.SufreMamonDiskItem;
+import net.mcreator.server.item.ResistirediskItem;
+import net.mcreator.server.item.RammsteindiskItem;
 import net.mcreator.server.item.QuizasDiskItem;
+import net.mcreator.server.item.PaseportucasadiskItem;
+import net.mcreator.server.item.GreenDaydiskItem;
+import net.mcreator.server.item.DesastreItem;
 import net.mcreator.server.item.Coin5Item;
 import net.mcreator.server.item.Coin1Item;
+import net.mcreator.server.item.BlurItem;
+import net.mcreator.server.item.AloneItem;
 import net.mcreator.server.ServerModElements;
 import net.mcreator.server.ServerMod;
 
@@ -94,8 +101,80 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 				Object invobj = ((Supplier) _current).get();
 				if (invobj instanceof Map) {
 					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 3);
+					((Slot) ((Map) invobj).get((int) (6))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
 					_setstack.setCount((int) 4);
 					((Slot) ((Map) invobj).get((int) (4))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 4);
+					((Slot) ((Map) invobj).get((int) (8))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 3);
+					((Slot) ((Map) invobj).get((int) (10))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 3);
+					((Slot) ((Map) invobj).get((int) (12))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 2);
+					((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
+					_current.detectAndSendChanges();
+				}
+			}
+		}
+		if (entity instanceof PlayerEntity) {
+			Container _current = ((PlayerEntity) entity).openContainer;
+			if (_current instanceof Supplier) {
+				Object invobj = ((Supplier) _current).get();
+				if (invobj instanceof Map) {
+					ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+					_setstack.setCount((int) 2);
+					((Slot) ((Map) invobj).get((int) (16))).putStack(_setstack);
 					_current.detectAndSendChanges();
 				}
 			}
@@ -113,6 +192,30 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 					}
 				}
 			}
+			if (entity instanceof PlayerEntity) {
+				Container _current = ((PlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						ItemStack _setstack = new ItemStack(RammsteindiskItem.block, (int) (1));
+						_setstack.setCount((int) 1);
+						((Slot) ((Map) invobj).get((int) (15))).putStack(_setstack);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (entity instanceof PlayerEntity) {
+				Container _current = ((PlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						ItemStack _setstack = new ItemStack(BlurItem.block, (int) (1));
+						_setstack.setCount((int) 1);
+						((Slot) ((Map) invobj).get((int) (17))).putStack(_setstack);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
 			if (((entity.getPersistentData().getDouble("coin1")) >= 3)) {
 				if (entity instanceof PlayerEntity) {
 					Container _current = ((PlayerEntity) entity).openContainer;
@@ -126,15 +229,63 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 						}
 					}
 				}
+				if (entity instanceof PlayerEntity) {
+					Container _current = ((PlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							ItemStack _setstack = new ItemStack(ResistirediskItem.block, (int) (1));
+							_setstack.setCount((int) 1);
+							((Slot) ((Map) invobj).get((int) (7))).putStack(_setstack);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				if (entity instanceof PlayerEntity) {
+					Container _current = ((PlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							ItemStack _setstack = new ItemStack(DesastreItem.block, (int) (1));
+							_setstack.setCount((int) 1);
+							((Slot) ((Map) invobj).get((int) (11))).putStack(_setstack);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				if (entity instanceof PlayerEntity) {
+					Container _current = ((PlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							ItemStack _setstack = new ItemStack(GreenDaydiskItem.block, (int) (1));
+							_setstack.setCount((int) 1);
+							((Slot) ((Map) invobj).get((int) (13))).putStack(_setstack);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
 				if (((entity.getPersistentData().getDouble("coin1")) >= 4)) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
 							Object invobj = ((Supplier) _current).get();
 							if (invobj instanceof Map) {
-								ItemStack _setstack = new ItemStack(SufreMamonDiskItem.block, (int) (1));
+								ItemStack _setstack = new ItemStack(PaseportucasadiskItem.block, (int) (1));
 								_setstack.setCount((int) 1);
 								((Slot) ((Map) invobj).get((int) (5))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(AloneItem.block, (int) (1));
+								_setstack.setCount((int) 1);
+								((Slot) ((Map) invobj).get((int) (9))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
 						}
@@ -146,6 +297,16 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 							Object invobj = ((Supplier) _current).get();
 							if (invobj instanceof Map) {
 								((Slot) ((Map) invobj).get((int) (5))).putStack(ItemStack.EMPTY);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+					if (entity instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								((Slot) ((Map) invobj).get((int) (9))).putStack(ItemStack.EMPTY);
 								_current.detectAndSendChanges();
 							}
 						}
@@ -168,6 +329,46 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 						Object invobj = ((Supplier) _current).get();
 						if (invobj instanceof Map) {
 							((Slot) ((Map) invobj).get((int) (5))).putStack(ItemStack.EMPTY);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				if (entity instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							((Slot) ((Map) invobj).get((int) (7))).putStack(ItemStack.EMPTY);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				if (entity instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							((Slot) ((Map) invobj).get((int) (9))).putStack(ItemStack.EMPTY);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				if (entity instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							((Slot) ((Map) invobj).get((int) (11))).putStack(ItemStack.EMPTY);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				if (entity instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							((Slot) ((Map) invobj).get((int) (13))).putStack(ItemStack.EMPTY);
 							_current.detectAndSendChanges();
 						}
 					}
@@ -204,6 +405,66 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 					}
 				}
 			}
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (7))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (9))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (11))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (13))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (15))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
+			if (entity instanceof ServerPlayerEntity) {
+				Container _current = ((ServerPlayerEntity) entity).openContainer;
+				if (_current instanceof Supplier) {
+					Object invobj = ((Supplier) _current).get();
+					if (invobj instanceof Map) {
+						((Slot) ((Map) invobj).get((int) (17))).putStack(ItemStack.EMPTY);
+						_current.detectAndSendChanges();
+					}
+				}
+			}
 		}
 		if (((true) == (entity.getPersistentData().getBoolean("guishopopen")))) {
 			new Object() {
@@ -234,7 +495,7 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, (int) 6);
+			}.start(world, (int) 5);
 		}
 	}
 }

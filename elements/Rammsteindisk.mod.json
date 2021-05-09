@@ -2,14 +2,14 @@
   "_fv": 18,
   "_type": "musicdisc",
   "definition": {
-    "texture": "quizasdisk",
-    "name": "Quizás ",
-    "description": "Brytiago ft Lunay ft Ozuna – Quizás",
+    "texture": "rammstein",
+    "name": "Rammstein",
+    "description": " Rammstein - Deutschland",
     "creativeTab": {
       "value": "MISC"
     },
     "music": {
-      "value": "CUSTOM:quizas"
+      "value": "CUSTOM:rammstein"
     },
     "specialInfo": [],
     "hasGlow": false

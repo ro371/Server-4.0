@@ -2,14 +2,14 @@
   "_fv": 18,
   "_type": "musicdisc",
   "definition": {
-    "texture": "quizasdisk",
-    "name": "Quizás ",
-    "description": "Brytiago ft Lunay ft Ozuna – Quizás",
+    "texture": "blur",
+    "name": "Blur",
+    "description": " Blur - Song 2",
     "creativeTab": {
       "value": "MISC"
     },
     "music": {
-      "value": "CUSTOM:quizas"
+      "value": "CUSTOM:blursound"
     },
     "specialInfo": [],
     "hasGlow": false
