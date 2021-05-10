@@ -3,7 +3,7 @@ loaderVersion="[31,)"
 
 [[mods]]
 modId="server"
-version="4.1.1"
+version="4.1.2"
 displayName="Server_4.0"
 credits="Created using MCreator - https://mcreator.net/about"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/server-4-0"

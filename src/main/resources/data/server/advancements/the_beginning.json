@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "the_beginning": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "server:dough",
+            "count": {
+              "min": 1,
+              "max": 1000
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5,
+    "recipes": [
+      "server:spaguetti_recipe",
+      "server:pdough",
+      "server:pizzadoughcook",
+      "server:spizza",
+      "server:mpizza",
+      "server:bpizza",
+      "server:morestick1",
+      "server:morestick2",
+      "server:cookstick",
+      "server:dstick",
+      "server:fishstickrecipe",
+      "server:applestickrecipe",
+      "server:spaguettidoughrecipe"
+    ]
+  }
+}
