@@ -2,6 +2,7 @@ package net.mcreator.server.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
@@ -60,12 +61,12 @@ public class VasodeAguaFoodEatenProcedure extends ServerModElements.ModElement {
 		double slowness = 0;
 		double bl = 0;
 		double sl = 0;
-		if (!world.getWorld().isRemote) {
-			world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+		if (world instanceof World && !world.isRemote()) {
+			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:saciado")),
 					SoundCategory.NEUTRAL, (float) 120, (float) 1);
 		} else {
-			world.getWorld().playSound(x, y, z,
+			((World) world).playSound(x, y, z,
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:saciado")),
 					SoundCategory.NEUTRAL, (float) 120, (float) 1, false);
 		}

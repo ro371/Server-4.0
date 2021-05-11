@@ -17,9 +17,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.item.ItemStack;
@@ -30,9 +28,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.server.procedures.BankWhileThisGUIIsOpenTickProcedure;
 import net.mcreator.server.procedures.BankThisGUIIsClosedProcedure;
@@ -45,8 +41,6 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-
 @ServerModElements.ModElement.Tag
 public class BankGui extends ServerModElements.ModElement {
 	public static HashMap guistate = new HashMap();
@@ -58,13 +52,18 @@ public class BankGui extends ServerModElements.ModElement {
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
-
+	private static class ContainerRegisterHandler {
+		@SubscribeEvent
+		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+			event.getRegistry().register(containerType.setRegistryName("bank"));
+		}
+	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, BankGuiWindow::new));
 	}
 
 	@SubscribeEvent
@@ -82,11 +81,6 @@ public class BankGui extends ServerModElements.ModElement {
 			}
 		}
 	}
-
-	@SubscribeEvent
-	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("bank"));
-	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
 			return new GuiContainerMod(id, inv, extraData);
@@ -94,9 +88,9 @@ public class BankGui extends ServerModElements.ModElement {
 	}
 
 	public static class GuiContainerMod extends Container implements Supplier<Map<Integer, Slot>> {
-		private World world;
-		private PlayerEntity entity;
-		private int x, y, z;
+		World world;
+		PlayerEntity entity;
+		int x, y, z;
 		private IItemHandler internal;
 		private Map<Integer, Slot> customSlots = new HashMap<>();
 		private boolean bound = false;
@@ -325,89 +319,10 @@ public class BankGui extends ServerModElements.ModElement {
 		}
 
 		private void slotChanged(int slotid, int ctype, int meta) {
-			if (this.world != null && this.world.isRemote) {
+			if (this.world != null && this.world.isRemote()) {
 				ServerMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
-		}
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static class GuiWindow extends ContainerScreen<GuiContainerMod> {
-		private World world;
-		private int x, y, z;
-		private PlayerEntity entity;
-		public GuiWindow(GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
-			super(container, inventory, text);
-			this.world = container.world;
-			this.x = container.x;
-			this.y = container.y;
-			this.z = container.z;
-			this.entity = container.entity;
-			this.xSize = 176;
-			this.ySize = 166;
-		}
-		private static final ResourceLocation texture = new ResourceLocation("server:textures/bank.png");
-		@Override
-		public void render(int mouseX, int mouseY, float partialTicks) {
-			this.renderBackground();
-			super.render(mouseX, mouseY, partialTicks);
-			this.renderHoveredToolTip(mouseX, mouseY);
-		}
-
-		@Override
-		protected void drawGuiContainerBackgroundLayer(float partialTicks, int gx, int gy) {
-			RenderSystem.color4f(1, 1, 1, 1);
-			RenderSystem.enableBlend();
-			RenderSystem.defaultBlendFunc();
-			Minecraft.getInstance().getTextureManager().bindTexture(texture);
-			int k = (this.width - this.xSize) / 2;
-			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow_hd.png"));
-			this.blit(this.guiLeft + -90, this.guiTop + -91, 0, 0, 256, 256, 256, 256);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/arrow_hd2.png"));
-			this.blit(this.guiLeft + -89, this.guiTop + -66, 0, 0, 256, 256, 256, 256);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/coin.png"));
-			this.blit(this.guiLeft + 24, this.guiTop + 53, 0, 0, 256, 256, 256, 256);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/coin_.png"));
-			this.blit(this.guiLeft + 79, this.guiTop + 26, 0, 0, 256, 256, 256, 256);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/coin_1.png"));
-			this.blit(this.guiLeft + 24, this.guiTop + 27, 0, 0, 256, 256, 256, 256);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("server:textures/coin_1_.png"));
-			this.blit(this.guiLeft + 79, this.guiTop + 54, 0, 0, 256, 256, 256, 256);
-			RenderSystem.disableBlend();
-		}
-
-		@Override
-		public boolean keyPressed(int key, int b, int c) {
-			if (key == 256) {
-				this.minecraft.player.closeScreen();
-				return true;
-			}
-			return super.keyPressed(key, b, c);
-		}
-
-		@Override
-		public void tick() {
-			super.tick();
-		}
-
-		@Override
-		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Cambia aqu\u00ED tus monedas", 32, 7, -16777216);
-		}
-
-		@Override
-		public void removed() {
-			super.removed();
-			Minecraft.getInstance().keyboardListener.enableRepeatEvents(false);
-		}
-
-		@Override
-		public void init(Minecraft minecraft, int width, int height) {
-			super.init(minecraft, width, height);
-			minecraft.keyboardListener.enableRepeatEvents(true);
 		}
 	}
 
@@ -492,7 +407,7 @@ public class BankGui extends ServerModElements.ModElement {
 			context.setPacketHandled(true);
 		}
 	}
-	private static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
+	static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
 		World world = entity.world;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))

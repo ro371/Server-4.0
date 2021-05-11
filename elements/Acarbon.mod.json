@@ -15,8 +15,11 @@
     "useDuration": 0,
     "toolType": 1.0,
     "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
     "destroyAnyBlock": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
@@ -25,6 +28,7 @@
       "Fuel_item"
     ],
     "hasGlow": false,
+    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64
   }

@@ -12,7 +12,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
-import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
+import net.minecraft.entity.ai.attributes.AttributeModifierManager;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
@@ -106,7 +106,7 @@ public class AltoPoliciaPotion extends ServerModElements.ModElement {
 		}
 
 		@Override
-		public void removeAttributesModifiersFromEntity(LivingEntity entity, AbstractAttributeMap attributeMapIn, int amplifier) {
+		public void removeAttributesModifiersFromEntity(LivingEntity entity, AttributeModifierManager attributeMapIn, int amplifier) {
 			super.removeAttributesModifiersFromEntity(entity, attributeMapIn, amplifier);
 			World world = entity.world;
 			double x = entity.getPosX();

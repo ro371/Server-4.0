@@ -14,7 +14,7 @@
     "creativeTab": {
       "value": "MISC"
     },
-    "frequencyOnChunks": 5,
+    "frequencyOnChunks": 0,
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "onEntityCollides": {

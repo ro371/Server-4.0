@@ -1,5 +1,6 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[36,)"
+license="All Rights Reserved"
 
 [[mods]]
 modId="server"
@@ -16,7 +17,7 @@ Random and useful mod for you and your friends
 [[dependencies.server]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
 

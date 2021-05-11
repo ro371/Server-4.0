@@ -2,6 +2,7 @@ package net.mcreator.server.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
@@ -59,12 +60,12 @@ public class AltoPoliciaPotionStartedappliedProcedure extends ServerModElements.
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.MINING_FATIGUE, (int) 400, (int) 1, (false), (false)));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 400, (int) 1, (false), (false)));
-		if (!world.getWorld().isRemote) {
-			world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+		if (world instanceof World && !world.isRemote()) {
+			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:policia_en_accion")),
 					SoundCategory.NEUTRAL, (float) 100, (float) 1);
 		} else {
-			world.getWorld().playSound(x, y, z,
+			((World) world).playSound(x, y, z,
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:policia_en_accion")),
 					SoundCategory.NEUTRAL, (float) 100, (float) 1, false);
 		}

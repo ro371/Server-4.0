@@ -1,8 +1,12 @@
 package net.mcreator.server.procedures;
 
 import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.entity.effect.LightningBoltEntity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.server.ServerModElements;
@@ -29,8 +33,12 @@ public class AltoPoliciaPotionExpiresProcedure extends ServerModElements.ModElem
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof ServerWorld)
-			((ServerWorld) world).addLightningBolt(
-					new LightningBoltEntity(world.getWorld(), (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), false));
+		if (world instanceof ServerWorld) {
+			LightningBoltEntity _ent = EntityType.LIGHTNING_BOLT.create((World) world);
+			_ent.moveForced(
+					Vector3d.copyCenteredHorizontally(new BlockPos((int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()))));
+			_ent.setEffectOnly(false);
+			((World) world).addEntity(_ent);
+		}
 	}
 }

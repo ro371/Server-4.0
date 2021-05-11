@@ -2,6 +2,7 @@ package net.mcreator.server.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
@@ -61,12 +62,12 @@ public class FishstickFoodEatenProcedure extends ServerModElements.ModElement {
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, (int) 160, (int) 0, (true), (false)));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 250, (int) 0, (true), (false)));
-		if (!world.getWorld().isRemote) {
-			world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+		if (world instanceof World && !world.isRemote()) {
+			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:yummy")),
 					SoundCategory.NEUTRAL, (float) 100, (float) 1);
 		} else {
-			world.getWorld().playSound(x, y, z,
+			((World) world).playSound(x, y, z,
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:yummy")),
 					SoundCategory.NEUTRAL, (float) 100, (float) 1, false);
 		}

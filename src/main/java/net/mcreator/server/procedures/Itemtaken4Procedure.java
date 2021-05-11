@@ -27,12 +27,14 @@ public class Itemtaken4Procedure extends ServerModElements.ModElement {
 		if (((entity.getPersistentData().getDouble("coin1")) >= 3)) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _stktoremove = new ItemStack(Coin1Item.block, (int) (1));
-				((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 3);
+				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 3,
+						((PlayerEntity) entity).container.func_234641_j_());
 			}
 		} else {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _stktoremove = new ItemStack(QuizasDiskItem.block, (int) (1));
-				((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+						((PlayerEntity) entity).container.func_234641_j_());
 			}
 		}
 	}

@@ -15,6 +15,9 @@
     "nutritionalValue": 0,
     "saturation": 0.1,
     "eatingSpeed": 32,
+    "resultItem": {
+      "value": "CUSTOM:Vaso"
+    },
     "forDogs": false,
     "isAlwaysEdible": false,
     "animation": "drink",

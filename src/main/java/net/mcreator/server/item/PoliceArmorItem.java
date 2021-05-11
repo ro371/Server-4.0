@@ -42,33 +42,45 @@ public class PoliceArmorItem extends ServerModElements.ModElement {
 	@Override
 	public void initElements() {
 		IArmorMaterial armormaterial = new IArmorMaterial() {
+			@Override
 			public int getDurability(EquipmentSlotType slot) {
 				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 24;
 			}
 
+			@Override
 			public int getDamageReductionAmount(EquipmentSlotType slot) {
 				return new int[]{4, 10, 9, 4}[slot.getIndex()];
 			}
 
+			@Override
 			public int getEnchantability() {
 				return 14;
 			}
 
+			@Override
 			public net.minecraft.util.SoundEvent getSoundEvent() {
 				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:policia_en_accion"));
 			}
 
+			@Override
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
 
 			@OnlyIn(Dist.CLIENT)
+			@Override
 			public String getName() {
 				return "policearmor";
 			}
 
+			@Override
 			public float getToughness() {
 				return 2.6f;
+			}
+
+			@Override
+			public float getKnockbackResistance() {
+				return 0f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)) {

@@ -93,21 +93,21 @@ public class ServerModVariables {
 	}
 	@SubscribeEvent
 	public void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}
 
 	@SubscribeEvent
 	public void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}
 
 	@SubscribeEvent
 	public void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}

@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.server.procedures.VasodeAguaFoodEatenProcedure;
@@ -54,7 +55,8 @@ public class VasodeAguaItem extends ServerModElements.ModElement {
 
 		@Override
 		public ItemStack onItemUseFinish(ItemStack itemstack, World world, LivingEntity entity) {
-			ItemStack retval = super.onItemUseFinish(itemstack, world, entity);
+			ItemStack retval = new ItemStack(VasoItem.block, (int) (1));
+			super.onItemUseFinish(itemstack, world, entity);
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
@@ -67,7 +69,16 @@ public class VasodeAguaItem extends ServerModElements.ModElement {
 				$_dependencies.put("world", world);
 				VasodeAguaFoodEatenProcedure.executeProcedure($_dependencies);
 			}
-			return retval;
+			if (itemstack.isEmpty()) {
+				return retval;
+			} else {
+				if (entity instanceof PlayerEntity) {
+					PlayerEntity player = (PlayerEntity) entity;
+					if (!player.isCreative() && !player.inventory.addItemStackToInventory(retval))
+						player.dropItem(retval, false);
+				}
+				return itemstack;
+			}
 		}
 	}
 }

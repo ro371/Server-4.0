@@ -15,6 +15,9 @@
     "nutritionalValue": 4,
     "saturation": 0.5,
     "eatingSpeed": 32,
+    "resultItem": {
+      "value": ""
+    },
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
