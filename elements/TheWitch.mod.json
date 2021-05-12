@@ -1,0 +1,38 @@
+{
+  "_fv": 18,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "The Witch",
+    "achievementDescription": "Now you have the power of the witch in your hands",
+    "achievementIcon": {
+      "value": "CUSTOM:Poisondrops"
+    },
+    "background": "Default",
+    "disableDisplay": true,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": true,
+    "rewardLoot": [],
+    "rewardRecipes": [
+      "Daiquirivenenorecipe",
+      "Gintonicvenenorecipe",
+      "Spaguettivenenorecipe",
+      "Applepievenenorecipe",
+      "Vasodeaguavenenorecipe",
+      "Smallpizzavenenorecipe",
+      "Mediumpizzavenenorecipe",
+      "Bigpizzavenenorecipe",
+      "Fishstickvenenorecipe",
+      "Burnpoison",
+      "PoisonDropsmake",
+      "Poisondroprecipe"
+    ],
+    "rewardFunction": "No function",
+    "rewardXP": 5,
+    "achievementType": "task",
+    "parent": {
+      "value": "CUSTOM:TheBeginning"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"47\" y=\"19\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">1000</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Poisondrops</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+  }
+}

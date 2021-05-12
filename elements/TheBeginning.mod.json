@@ -5,7 +5,7 @@
     "achievementName": "The Beginning",
     "achievementDescription": "You received the recipes to become a chef",
     "achievementIcon": {
-      "value": "Items.DYE#1"
+      "value": "CUSTOM:Poisondrops"
     },
     "background": "Default",
     "disableDisplay": true,
@@ -25,8 +25,7 @@
       "CookStick",
       "Dstick",
       "Fishstickrecipe",
-      "Applestickrecipe",
-      "Spaguettidoughrecipe"
+      "Vasodeaguarecipe"
     ],
     "rewardFunction": "No function",
     "rewardXP": 5,

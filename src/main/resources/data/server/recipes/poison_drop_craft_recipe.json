@@ -1,0 +1,16 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "server:poisondrops"
+    }
+  },
+  "result": {
+    "item": "server:poison_dropitem",
+    "count": 3
+  }
+}

@@ -5,9 +5,9 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 1,
+    "recipeRetstackSize": 3,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
@@ -19,13 +19,13 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:PoisonDropitem"
+        "value": ""
       },
       {
-        "value": "CUSTOM:PoisonDropitem"
+        "value": "CUSTOM:Poisondrops"
       },
       {
-        "value": "CUSTOM:PoisonDropitem"
+        "value": ""
       },
       {
         "value": ""
@@ -38,9 +38,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Poisondrops"
+      "value": "CUSTOM:PoisonDropitem"
     },
-    "name": "poison_dropsmake",
+    "name": "poison_drop_craft_recipe",
     "namespace": "mod"
   }
 }

@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "the_witch": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "server:poisondrops",
+            "count": {
+              "min": 1,
+              "max": 1000
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5,
+    "recipes": [
+      "server:daiquirivenenorecipe",
+      "server:gintonicvenenorecipe",
+      "server:spaguettivenenorecipe",
+      "server:applepievenenorecipe",
+      "server:vasodeaguavenenorecipe",
+      "server:smallpizzavenenorecipe",
+      "server:mediumpizzavenenorecipe",
+      "server:bigpizzavenenorecipe",
+      "server:fishstickvenenorecipe",
+      "server:burnpoison",
+      "server:poison_dropsmake",
+      "server:poisondroprecipe"
+    ]
+  },
+  "parent": "server:the_beginning"
+}
