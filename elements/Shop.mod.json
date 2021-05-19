@@ -358,6 +358,40 @@
           "x": 325,
           "y": 62
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "->",
+          "onClick": {
+            "name": "Next"
+          },
+          "displayCondition": {
+            "name": "Shownext"
+          },
+          "width": 35,
+          "height": 20,
+          "name": "->",
+          "x": 258,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<-",
+          "onClick": {
+            "name": "Previous"
+          },
+          "displayCondition": {
+            "name": "Showprevious"
+          },
+          "width": 35,
+          "height": 20,
+          "name": "<-",
+          "x": 132,
+          "y": 35
+        }
       }
     ],
     "onOpen": {

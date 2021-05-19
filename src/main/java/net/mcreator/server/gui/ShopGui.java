@@ -30,6 +30,8 @@ import net.minecraft.client.gui.ScreenManager;
 
 import net.mcreator.server.procedures.ShopThisGUIIsOpenedProcedure;
 import net.mcreator.server.procedures.ShopThisGUIIsClosedProcedure;
+import net.mcreator.server.procedures.PreviousProcedure;
+import net.mcreator.server.procedures.NextProcedure;
 import net.mcreator.server.procedures.Itemtaken9Procedure;
 import net.mcreator.server.procedures.Itemtaken8Procedure;
 import net.mcreator.server.procedures.Itemtaken7Procedure;
@@ -662,6 +664,20 @@ public class ShopGui extends ServerModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				NextProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				PreviousProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {

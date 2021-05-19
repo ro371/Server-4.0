@@ -70,6 +70,7 @@ public class ServerModVariables {
 			nbt.putDouble("coin1", instance.coin1);
 			nbt.putDouble("coin5", instance.coin5);
 			nbt.putBoolean("guishopopen", instance.guishopopen);
+			nbt.putDouble("menupage", instance.menupage);
 			return nbt;
 		}
 
@@ -79,6 +80,7 @@ public class ServerModVariables {
 			instance.coin1 = nbt.getDouble("coin1");
 			instance.coin5 = nbt.getDouble("coin5");
 			instance.guishopopen = nbt.getBoolean("guishopopen");
+			instance.menupage = nbt.getDouble("menupage");
 		}
 	}
 
@@ -86,6 +88,7 @@ public class ServerModVariables {
 		public double coin1 = 0;
 		public double coin5 = 0;
 		public boolean guishopopen = false;
+		public double menupage = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				ServerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -117,6 +120,7 @@ public class ServerModVariables {
 		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+		clone.menupage = original.menupage;
 		if (!event.isWasDeath()) {
 			clone.coin1 = original.coin1;
 			clone.coin5 = original.coin5;
@@ -147,6 +151,7 @@ public class ServerModVariables {
 					variables.coin1 = message.data.coin1;
 					variables.coin5 = message.data.coin5;
 					variables.guishopopen = message.data.guishopopen;
+					variables.menupage = message.data.menupage;
 				}
 			});
 			context.setPacketHandled(true);
