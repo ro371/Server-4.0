@@ -1,0 +1,128 @@
+{
+  "_fv": 18,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 179,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 150,
+          "y": 89
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 186,
+          "y": 89
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 222,
+          "y": 89
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 258,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #4",
+          "x": 253,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Tu misión es coneguir",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Tu misión es coneguir",
+          "x": 128,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:n_mission> de <VAR:objetomision>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:n_mission> de <VAR:objetomision>",
+          "x": 128,
+          "y": 52
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Completar",
+          "onClick": {
+            "name": "Done"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "Completar",
+          "x": 177,
+          "y": 66
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "MisionguiThisGUIIsOpened"
+    },
+    "onClosed": {
+      "name": "MisionguiThisGUIIsClosed"
+    }
+  }
+}

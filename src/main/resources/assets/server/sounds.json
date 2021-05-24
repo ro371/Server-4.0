@@ -124,5 +124,35 @@
         "stream": true
       }
     ]
+  },
+  "the_nights": {
+    "category": "master",
+    "subtitle": "subtitles.the_nights",
+    "sounds": [
+      {
+        "name": "server:avicii_-_the_nights_lyrics",
+        "stream": false
+      }
+    ]
+  },
+  "mood": {
+    "category": "master",
+    "subtitle": "subtitles.mood",
+    "sounds": [
+      {
+        "name": "server:24kgoldn_-_mood_lyrics_ft._iann_dior",
+        "stream": false
+      }
+    ]
+  },
+  "watermelon_sugar": {
+    "category": "master",
+    "subtitle": "subtitles.watermelon_sugar",
+    "sounds": [
+      {
+        "name": "server:harry_styles_-_watermelon_sugar_official_audio_320_kbps",
+        "stream": false
+      }
+    ]
   }
 }

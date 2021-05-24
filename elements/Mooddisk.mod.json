@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "mood_disk",
+    "name": "Mood",
+    "description": "24k Goldn - Mood",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:mood"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

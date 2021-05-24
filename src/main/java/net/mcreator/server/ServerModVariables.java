@@ -71,6 +71,9 @@ public class ServerModVariables {
 			nbt.putDouble("coin5", instance.coin5);
 			nbt.putBoolean("guishopopen", instance.guishopopen);
 			nbt.putDouble("menupage", instance.menupage);
+			nbt.putDouble("misionchosen", instance.misionchosen);
+			nbt.putString("objetomision", instance.objetomision);
+			nbt.putString("n_mission", instance.n_mission);
 			return nbt;
 		}
 
@@ -81,6 +84,9 @@ public class ServerModVariables {
 			instance.coin5 = nbt.getDouble("coin5");
 			instance.guishopopen = nbt.getBoolean("guishopopen");
 			instance.menupage = nbt.getDouble("menupage");
+			instance.misionchosen = nbt.getDouble("misionchosen");
+			instance.objetomision = nbt.getString("objetomision");
+			instance.n_mission = nbt.getString("n_mission");
 		}
 	}
 
@@ -89,6 +95,9 @@ public class ServerModVariables {
 		public double coin5 = 0;
 		public boolean guishopopen = false;
 		public double menupage = 0;
+		public double misionchosen = 0;
+		public String objetomision = "";
+		public String n_mission = "";
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				ServerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -125,6 +134,9 @@ public class ServerModVariables {
 			clone.coin1 = original.coin1;
 			clone.coin5 = original.coin5;
 			clone.guishopopen = original.guishopopen;
+			clone.misionchosen = original.misionchosen;
+			clone.objetomision = original.objetomision;
+			clone.n_mission = original.n_mission;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -152,6 +164,9 @@ public class ServerModVariables {
 					variables.coin5 = message.data.coin5;
 					variables.guishopopen = message.data.guishopopen;
 					variables.menupage = message.data.menupage;
+					variables.misionchosen = message.data.misionchosen;
+					variables.objetomision = message.data.objetomision;
+					variables.n_mission = message.data.n_mission;
 				}
 			});
 			context.setPacketHandled(true);

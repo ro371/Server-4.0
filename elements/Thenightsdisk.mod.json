@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "the_nights",
+    "name": "The Nights",
+    "description": "Avicii - The Nights",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:the_nights"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

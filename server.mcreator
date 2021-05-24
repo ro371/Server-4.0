@@ -1250,16 +1250,6 @@
       "path": "~/Pictures"
     },
     {
-      "name": "Solejuanma",
-      "type": "painting",
-      "sortid": 96,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "solejuanma",
-      "path": "~/Pictures"
-    },
-    {
       "name": "Romeo",
       "type": "painting",
       "sortid": 97,
@@ -1825,6 +1815,322 @@
         ]
       },
       "path": "~/Shop"
+    },
+    {
+      "name": "Createmission",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "createmission",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/mission"
+    },
+    {
+      "name": "Pergamino",
+      "type": "item",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pergamino",
+      "path": "~/mission"
+    },
+    {
+      "name": "Misiongui",
+      "type": "gui",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misiongui",
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionRightClickedInAir",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mision_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mission"
+    },
+    {
+      "name": "Mision",
+      "type": "item",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mision",
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionguiThisGUIIsOpened",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misiongui_this_gui_is_opened",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionguiThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misiongui_this_gui_is_closed",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/mission"
+    },
+    {
+      "name": "Misionwheat",
+      "type": "item",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misionwheat",
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionwheatRightClickedInAir",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misionwheat_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mission"
+    },
+    {
+      "name": "Done",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "done",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/mission"
+    },
+    {
+      "name": "Misionpumpkin",
+      "type": "item",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misionpumpkin",
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionpumpkinRightClickedInAir",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misionpumpkin_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionSeeds",
+      "type": "item",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mision_seeds",
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionSeedsRightClickedInAir",
+      "type": "procedure",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mision_seeds_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thenightsdisk",
+      "type": "musicdisc",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "thenightsdisk",
+      "path": "~/Disks"
+    },
+    {
+      "name": "Mooddisk",
+      "type": "musicdisc",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mooddisk",
+      "path": "~/Disks"
+    },
+    {
+      "name": "WatSugardisk",
+      "type": "musicdisc",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wat_sugardisk",
+      "path": "~/Disks"
+    },
+    {
+      "name": "Mateoarbusto",
+      "type": "painting",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mateoarbusto",
+      "path": "~/Pictures"
+    },
+    {
+      "name": "Mateopiloto",
+      "type": "painting",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mateopiloto",
+      "path": "~/Pictures"
     }
   ],
   "variable_elements": [
@@ -1851,6 +2157,24 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "misionchosen",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "objetomision",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "n_mission",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -1953,6 +2277,30 @@
       ],
       "category": "music",
       "subtitle": "Green Day - American Idiot"
+    },
+    {
+      "name": "the_nights",
+      "files": [
+        "avicii_-_the_nights_lyrics"
+      ],
+      "category": "master",
+      "subtitle": "Avicii - The Nights"
+    },
+    {
+      "name": "mood",
+      "files": [
+        "24kgoldn_-_mood_lyrics_ft._iann_dior"
+      ],
+      "category": "master",
+      "subtitle": "24kGoldn - Mood"
+    },
+    {
+      "name": "watermelon_sugar",
+      "files": [
+        "harry_styles_-_watermelon_sugar_official_audio_320_kbps"
+      ],
+      "category": "master",
+      "subtitle": "Watermelon Sugar"
     }
   ],
   "language_map": {
@@ -1980,6 +2328,7 @@
       "item.server.paseportucasadisk": "Pasé por tu casa",
       "item.server.daiquiri": "Daiquiri",
       "item.server.quizas_disk": "Quizás ",
+      "item.server.mision": "Mision",
       "item.poisondrops.name": "Poison Drops",
       "subtitles.sufremamon_disk": "Sufre mamón, devulveme a mi chica - Hombres G",
       "item.coin1.name": "Coin1",
@@ -1994,6 +2343,7 @@
       "item.server.green_daydisk.desc": "Green Day - American Idiot",
       "item.mojitosandia.name": "Cup of Melon",
       "item.server.coin1": "Coin1",
+      "subtitles.watermelon_sugar": "Watermelon Sugar",
       "item.minecraft.potion.effect.altopolicia": "Alto Policía",
       "item.server.coin5": "Coin5",
       "advancements.the_witch.title": "The Witch",
@@ -2005,6 +2355,7 @@
       "item.server.policearmor_helmet": "Police Helmet",
       "item.server.policearmor_boots": "Police Boots",
       "item.minecraft.lingering_potion.effect.altopolicia": "Lingering Alto Policía",
+      "item.server.wat_sugardisk": "Watermelon Sugar",
       "item.policearmorhelmet.name": "Police Helmet",
       "item.server.daiquiriveneno": "Daiquiriveneno",
       "item.server.applepieveneno": "Apple Pieveneno",
@@ -2012,6 +2363,7 @@
       "effect.altopolicia": "Alto Policia",
       "item.server.gintonicveneno": "Gin Tonicveneno",
       "item.server.pizzadough": "Pizza Dough",
+      "item.server.thenightsdisk.desc": "Avicii - The Nights",
       "item.policearmorlegs.name": "Police Leggings",
       "item.server.poisondrops": "Poisondrops",
       "item.server.alone.desc": "Alan Walker - Alone",
@@ -2019,11 +2371,13 @@
       "item.server.sufre_mamon_disk.desc": "Sufre mamón, devulveme a mi chica - Hombres G",
       "item.policearmorboots.name": "Police Boots",
       "item.server.vasodeaguaveneno": "Vasodeaguaveneno",
+      "item.server.mooddisk": "Mood",
       "lingering_potion.effect.altopolicia": "Lingering Stop",
       "item.vasodeaguaveneno.name": "Glass of Water",
       "item.server.spagettiveneno": "Spagettiveneno",
       "fluid.aguacaliente": "AguaCaliente",
       "item.server.paseportucasadisk.desc": "Pasé por tu Casa - Welinton Quiw",
+      "subtitles.the_nights": "Avicii - The Nights",
       "item.minecraft.tipped_arrow.effect.altopolicia": "Arrow of Alto Policía",
       "item.server.green_daydisk": "Green Day",
       "item.cocktaildesandia.name": "Melon Drink",
@@ -2048,19 +2402,25 @@
       "item.server.poison_dropitem": "Poison Dropitem",
       "advancements.the_beginning.title": "The Beginning",
       "subtitles.rammstein": "Rammstein - Deutschland",
+      "item.server.mision_seeds": "Mision",
       "item.doughstick.name": "Dough Stick",
       "item.server.cocktaildesandia": "Cocktaildesandia",
+      "subtitles.mood": "24kGoldn - Mood",
       "item.server.sufre_mamon_disk": "Sufre Mamón ",
       "item.server.aguacaliente_bucket": "AguaCaliente Bucket",
       "item.server.resistiredisk": "Resistiré",
+      "item.server.pergamino": "Pergamino",
+      "item.server.wat_sugardisk.desc": "Harry Styles - Watermelon Sugar",
       "item.spagettiveneno.name": "Spagetti",
       "item.server.cocktailcalabaza": "Cocktail Calabaza",
       "advancements.the_witch.descr": "Now you have the power of the witch in your hands",
+      "item.server.misionpumpkin": "Mision",
       "item.applepieveneno.name": "Apple Pie",
       "item.vaso.name": "Empty Glass",
       "subtitles.resistiresound": "Resistiré 2020 - Sofía Ellar",
       "subtitles.alone": "Alan Walker - Alone",
       "item.carbon_ahumado.name": "Smoked Coal",
+      "item.server.misionwheat": "Mision",
       "item.server.smallpizza": "Small Pizza",
       "item.server.resistiredisk.desc": "Resistiré 2020 - Sofía Ellar",
       "item.mediumpizza.name": "Medium Pizza",
@@ -2069,6 +2429,8 @@
       "item.vasodeagua.name": "Glass of Water",
       "item.server.policearmor_leggings": "Police Leggings",
       "item.mediumpizzaveneno.name": "Medium Pizza",
+      "item.server.thenightsdisk": "The Nights",
+      "item.server.mooddisk.desc": "24k Goldn - Mood",
       "item.gintonicveneno.name": "Gin Tonic",
       "item.server.carbon_ahumado": "Carbón Ahumado",
       "item.server.mediumpizza": "Medium Pizza"
@@ -2097,6 +2459,7 @@
       "item.server.paseportucasadisk": "Pasé por tu casa",
       "item.server.daiquiri": "Daiquiri",
       "item.server.quizas_disk": "Quizas Disk",
+      "item.server.mision": "Mision",
       "item.poisondrops.name": "Gotas de Veneno",
       "subtitles.sufremamon_disk": "Sufre mamón, devulveme a mi chica - Hombres G",
       "item.coin1.name": "Moneda 1",
@@ -2111,6 +2474,7 @@
       "item.server.green_daydisk.desc": "Green Day - American Idiot",
       "item.mojitosandia.name": "Mojito Sandía",
       "item.server.coin1": "Moneda 1",
+      "subtitles.watermelon_sugar": "Watermelon Sugar",
       "item.minecraft.potion.effect.altopolicia": "Alto Policía",
       "item.server.coin5": "Moneda 5",
       "advancements.the_witch.title": "El Brujo",
@@ -2122,6 +2486,7 @@
       "item.server.policearmor_helmet": "Casco de @Policía",
       "item.server.policearmor_boots": "Botas de @Policía",
       "item.minecraft.lingering_potion.effect.altopolicia": "Persistente Alto Policía",
+      "item.server.wat_sugardisk": "Watermelon Sugar",
       "item.policearmorhelmet.name": "Casco de @Policía",
       "item.server.daiquiriveneno": "Daiquiri",
       "item.server.applepieveneno": "Tarta de Manzana",
@@ -2129,6 +2494,7 @@
       "effect.altopolicia": "Alto Policía",
       "item.server.gintonicveneno": "Gin Tonic",
       "item.server.pizzadough": "Masa de Pizza",
+      "item.server.thenightsdisk.desc": "Avicii - The Nights",
       "item.policearmorlegs.name": "Pantalones de @Policía",
       "item.server.poisondrops": "Gotas de veneno",
       "item.server.alone.desc": "Alan Walker - Alone",
@@ -2136,11 +2502,13 @@
       "item.server.sufre_mamon_disk.desc": "Sufre mamón, devulveme a mi chica - Hombres G",
       "item.policearmorboots.name": "Botas de @Policía",
       "item.server.vasodeaguaveneno": "Vaso de agua",
+      "item.server.mooddisk": "Mood",
       "lingering_potion.effect.altopolicia": "Lingering Alto Policía",
       "item.vasodeaguaveneno.name": "Vaso de Agua",
       "item.server.spagettiveneno": "Spagetti",
       "fluid.aguacaliente": "Agua Caliente",
       "item.server.paseportucasadisk.desc": "Pasé por tu Casa - Welinton Quiw",
+      "subtitles.the_nights": "Avicii - The Nights",
       "item.minecraft.tipped_arrow.effect.altopolicia": "Flecha de Alto Policía",
       "item.server.green_daydisk": "Green Daydisk",
       "item.cocktaildesandia.name": "Cocktail de Sandía",
@@ -2165,19 +2533,25 @@
       "item.server.poison_dropitem": "Gota de veneno",
       "advancements.the_beginning.title": "The Beginning",
       "subtitles.rammstein": " Rammstein - Deutschland",
+      "item.server.mision_seeds": "Mision",
       "item.doughstick.name": "Palo de Harina",
       "item.server.cocktaildesandia": "Cocktail de sandía",
+      "subtitles.mood": "24kGoldn - Mood",
       "item.server.sufre_mamon_disk": "Sufre Mamon Disk",
       "item.server.aguacaliente_bucket": "Cubo de AguaCaliente",
       "item.server.resistiredisk": "Resistiré",
+      "item.server.pergamino": "Pergamino",
+      "item.server.wat_sugardisk.desc": "Harry Styles - Watermelon Sugar",
       "item.spagettiveneno.name": "Spagetti",
       "item.server.cocktailcalabaza": "Cocktail Calabaza",
       "advancements.the_witch.descr": "Ahora tienes el poder de la brujería en tus manos",
+      "item.server.misionpumpkin": "Mision",
       "item.applepieveneno.name": "Tarta de Manzana",
       "item.vaso.name": "Vaso",
       "subtitles.resistiresound": "Resistiré 2020 - Sofía Ellar",
       "subtitles.alone": "Alan Walker - Alone",
       "item.carbon_ahumado.name": "Carbón Ahumado",
+      "item.server.misionwheat": "Mision",
       "item.server.smallpizza": "Pizza Pequeña",
       "item.server.resistiredisk.desc": "Resistiré 2020 - Sofía Ellar",
       "item.mediumpizza.name": "Pizza Mediana",
@@ -2186,6 +2560,8 @@
       "item.vasodeagua.name": "Vaso de Agua",
       "item.server.policearmor_leggings": "Pantalones de @Policía",
       "item.mediumpizzaveneno.name": "Pizza Mediana",
+      "item.server.thenightsdisk": "The Nights",
+      "item.server.mooddisk.desc": "24k Goldn - Mood",
       "item.gintonicveneno.name": "Gin Tonic",
       "item.server.carbon_ahumado": "Carbón Ahumado",
       "item.server.mediumpizza": "Pizza Mediana"
@@ -2212,6 +2588,10 @@
       },
       {
         "name": "Pictures",
+        "children": []
+      },
+      {
+        "name": "mission",
         "children": []
       }
     ]
