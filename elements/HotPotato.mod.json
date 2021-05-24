@@ -1,0 +1,32 @@
+{
+  "_fv": 18,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "hotpotato",
+    "customModelName": "Normal",
+    "name": "Hot Potato",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 16,
+    "nutritionalValue": 0,
+    "saturation": 0.1,
+    "eatingSpeed": 30,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": true,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "HotPotatoFoodEaten"
+    },
+    "onEntityHitWith": {
+      "name": "HotPotatoLivingEntityIsHitWithItem"
+    }
+  }
+}

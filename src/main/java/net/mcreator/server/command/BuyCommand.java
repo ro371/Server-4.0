@@ -35,7 +35,7 @@ public class BuyCommand extends ServerModElements.ModElement {
 	}
 
 	private LiteralArgumentBuilder<CommandSource> customCommand() {
-		return LiteralArgumentBuilder.<CommandSource>literal("buy").requires(s -> s.hasPermissionLevel(1))
+		return LiteralArgumentBuilder.<CommandSource>literal("buy")
 				.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(this::execute)).executes(this::execute);
 	}
 

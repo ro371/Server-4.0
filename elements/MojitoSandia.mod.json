@@ -16,7 +16,7 @@
     "saturation": 0.19999999999999998,
     "eatingSpeed": 30,
     "resultItem": {
-      "value": ""
+      "value": "CUSTOM:Vaso"
     },
     "forDogs": false,
     "isAlwaysEdible": true,

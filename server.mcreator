@@ -368,7 +368,8 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "ids": {}
+      "ids": {},
+      "path": "~/Food"
     },
     {
       "name": "MojLimaLimonrecipe",
@@ -2131,6 +2132,81 @@
       "ids": {},
       "registry_name": "mateopiloto",
       "path": "~/Pictures"
+    },
+    {
+      "name": "HotPotatoFoodEaten",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hot_potato_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HotPotato",
+      "type": "food",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hot_potato"
+    },
+    {
+      "name": "HotPotatoLivingEntityIsHitWithItem",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hot_potato_living_entity_is_hit_with_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2330,6 +2406,7 @@
       "item.server.quizas_disk": "Quizás ",
       "item.server.mision": "Mision",
       "item.poisondrops.name": "Poison Drops",
+      "item.server.hot_potato": "Hot Potato",
       "subtitles.sufremamon_disk": "Sufre mamón, devulveme a mi chica - Hombres G",
       "item.coin1.name": "Coin1",
       "item.cocktailcalabaza.name": "Pumpkin Drink",
@@ -2461,6 +2538,7 @@
       "item.server.quizas_disk": "Quizas Disk",
       "item.server.mision": "Mision",
       "item.poisondrops.name": "Gotas de Veneno",
+      "item.server.hot_potato": "Hot Potato",
       "subtitles.sufremamon_disk": "Sufre mamón, devulveme a mi chica - Hombres G",
       "item.coin1.name": "Moneda 1",
       "item.cocktailcalabaza.name": "Cocktail de Calabaza",
