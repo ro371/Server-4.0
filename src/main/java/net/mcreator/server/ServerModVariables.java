@@ -74,6 +74,9 @@ public class ServerModVariables {
 			nbt.putDouble("misionchosen", instance.misionchosen);
 			nbt.putString("objetomision", instance.objetomision);
 			nbt.putString("n_mission", instance.n_mission);
+			nbt.putDouble("x", instance.x);
+			nbt.putDouble("y", instance.y);
+			nbt.putDouble("z", instance.z);
 			return nbt;
 		}
 
@@ -87,6 +90,9 @@ public class ServerModVariables {
 			instance.misionchosen = nbt.getDouble("misionchosen");
 			instance.objetomision = nbt.getString("objetomision");
 			instance.n_mission = nbt.getString("n_mission");
+			instance.x = nbt.getDouble("x");
+			instance.y = nbt.getDouble("y");
+			instance.z = nbt.getDouble("z");
 		}
 	}
 
@@ -98,6 +104,9 @@ public class ServerModVariables {
 		public double misionchosen = 0;
 		public String objetomision = "";
 		public String n_mission = "";
+		public double x = 0;
+		public double y = 0;
+		public double z = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				ServerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -137,6 +146,9 @@ public class ServerModVariables {
 			clone.misionchosen = original.misionchosen;
 			clone.objetomision = original.objetomision;
 			clone.n_mission = original.n_mission;
+			clone.x = original.x;
+			clone.y = original.y;
+			clone.z = original.z;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -167,6 +179,9 @@ public class ServerModVariables {
 					variables.misionchosen = message.data.misionchosen;
 					variables.objetomision = message.data.objetomision;
 					variables.n_mission = message.data.n_mission;
+					variables.x = message.data.x;
+					variables.y = message.data.y;
+					variables.z = message.data.z;
 				}
 			});
 			context.setPacketHandled(true);

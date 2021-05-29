@@ -1,5 +1,6 @@
 {
   "advancements.the_beginning.descr": "You received the recipes to become a chef",
+  "block.server.sell": "Puesto de Venta",
   "item.fishstickveneno.name": "Fish stick",
   "item.daiquiriveneno.name": "Daiquiri",
   "item.daiquiri.name": "Daiquiri",
@@ -12,8 +13,8 @@
   "item.server.dough": "Dough",
   "item.gintonic.name": "Gin Tonic",
   "item.server.spaguettidough": "Spaguettidough",
-  "item.server.fishstickveneno": "Fishstickveneno",
   "item.server.alone": "Alone",
+  "item.server.fishstickveneno": "Fishstickveneno",
   "item.server.rammsteindisk.desc": " Rammstein - Deutschland",
   "item.server.desastre": "De sastre",
   "item.pizzadough.name": "Pizza Dough",

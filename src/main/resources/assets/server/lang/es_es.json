@@ -1,5 +1,6 @@
 {
   "advancements.the_beginning.descr": "Acabas de recibir las recetas necesarias para convertirte en un chef",
+  "block.server.sell": "Sell",
   "item.fishstickveneno.name": "Palito de Pescado",
   "item.daiquiriveneno.name": "Daiquiri",
   "item.daiquiri.name": "Daiquiri",
@@ -12,8 +13,8 @@
   "item.server.dough": "Masa",
   "item.gintonic.name": "Gin Tonic",
   "item.server.spaguettidough": "Masa de Spaguetti",
-  "item.server.fishstickveneno": "Palito de Pescado",
   "item.server.alone": "Alone",
+  "item.server.fishstickveneno": "Palito de Pescado",
   "item.server.rammsteindisk.desc": " Rammstein - Deutschland",
   "item.server.desastre": "De sastre",
   "item.spaguetti.name": "Spaguetti",

@@ -1,0 +1,72 @@
+{
+  "_fv": 18,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Compras ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Compras ",
+          "x": 144,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "a cambio de",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "a cambio de",
+          "x": 139,
+          "y": 84
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #6",
+          "x": 204,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Tradedone"
+          },
+          "name": "Slot #5",
+          "x": 204,
+          "y": 53
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "BuyguiThisGUIIsOpened"
+    },
+    "onClosed": {
+      "name": "BuyguiThisGUIIsClosed"
+    }
+  }
+}
