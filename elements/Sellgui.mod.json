@@ -19,9 +19,6 @@
           "id": 0,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
-          "onSlotChanged": {
-            "name": "Sellslotchanged"
-          },
           "name": "Slot #0",
           "x": 248,
           "y": 44

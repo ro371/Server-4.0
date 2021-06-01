@@ -154,5 +154,75 @@
         "stream": false
       }
     ]
+  },
+  "montero": {
+    "category": "music",
+    "subtitle": "subtitles.montero",
+    "sounds": [
+      {
+        "name": "server:lil_nas_x_-_montero_call_me_by_your_name_lyrics",
+        "stream": true
+      }
+    ]
+  },
+  "ibaisong": {
+    "category": "music",
+    "subtitle": "subtitles.ibaisong",
+    "sounds": [
+      {
+        "name": "server:el_cuarteto_de_ibai_-_lucas_requena_feat._ibai_rubius_y_auronplay_toxicidad_mala_vibra_fu",
+        "stream": true
+      }
+    ]
+  },
+  "cakebytheocean": {
+    "category": "music",
+    "subtitle": "subtitles.cakebytheocean",
+    "sounds": [
+      {
+        "name": "server:dnce_-_cake_by_the_ocean",
+        "stream": true
+      }
+    ]
+  },
+  "delgadito": {
+    "category": "master",
+    "subtitle": "subtitles.delgadito",
+    "sounds": [
+      {
+        "name": "server:la_rabia_del_milenio_-_delgadito_video_clip_tubidy-mp3.net",
+        "stream": false
+      }
+    ]
+  },
+  "the_animals": {
+    "category": "master",
+    "subtitle": "subtitles.the_animals",
+    "sounds": [
+      {
+        "name": "server:the_animals_-_the_house_of_the_rising_sun_1964_high_quality",
+        "stream": false
+      }
+    ]
+  },
+  "phineasdisk": {
+    "category": "music",
+    "subtitle": "subtitles.phineasdisk",
+    "sounds": [
+      {
+        "name": "server:phineas_y_ferb__videoclip_sera_un_dia_fenomenal___disney_channel_oficial",
+        "stream": true
+      }
+    ]
+  },
+  "el_anillo": {
+    "category": "music",
+    "subtitle": "subtitles.el_anillo",
+    "sounds": [
+      {
+        "name": "server:jennifer_lopez___el_anillo_letra",
+        "stream": true
+      }
+    ]
   }
 }

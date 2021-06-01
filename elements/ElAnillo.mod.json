@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "anillodisk",
+    "name": "El Anillo",
+    "description": "Jennifer Lopez - El Anillo",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:el_anillo"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

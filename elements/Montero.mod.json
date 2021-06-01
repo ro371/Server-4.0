@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "montero",
+    "name": "Call me by your name",
+    "description": "Call me by your name Lil Nas X - Montero",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:montero"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

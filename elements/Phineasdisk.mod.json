@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "phineasdisk",
+    "name": "Será un día Fenomenal",
+    "description": "Phineas y Ferb - Será un día Fenomenal",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:phineasdisk"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "server:coin1"
+    },
+    "title": {
+      "translate": "advancements.shopachievement.title"
+    },
+    "description": {
+      "translate": "advancements.shopachievement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "shopachievement": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "item": "server:sell"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 4
+  }
+}

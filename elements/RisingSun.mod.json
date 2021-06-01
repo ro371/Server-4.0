@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "rising_sun",
+    "name": "Rising Sun",
+    "description": "The Animals - The House Of The Rising Sun 1964",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:the_animals"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

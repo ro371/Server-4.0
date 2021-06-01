@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "cakedisk",
+    "name": "Cake by the ocean",
+    "description": "DNCE - Cake By The Ocean",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:cakebytheocean"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

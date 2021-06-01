@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "delgaditodisk",
+    "name": "Delgadito",
+    "description": "La Rabia Del Milenio - Delgadito",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:delgadito"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

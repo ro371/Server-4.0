@@ -28,7 +28,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
-import net.mcreator.server.procedures.SellslotchangedProcedure;
 import net.mcreator.server.procedures.BreakshopProcedure;
 import net.mcreator.server.ServerModElements;
 import net.mcreator.server.ServerMod;
@@ -116,11 +115,6 @@ public class SellguiGui extends ServerModElements.ModElement {
 				}
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 123, 8) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(0, 0, 0);
-				}
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 8) {
 			}));
@@ -419,11 +413,5 @@ public class SellguiGui extends ServerModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (slotID == 0 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				SellslotchangedProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 }

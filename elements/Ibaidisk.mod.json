@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "ibaidisk",
+    "name": "El cuarteto de Ibai",
+    "description": "El Cuarteto de Ibai - Lucas Requema",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:ibaisong"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}
