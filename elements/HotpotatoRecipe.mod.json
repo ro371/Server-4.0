@@ -19,28 +19,28 @@
         "value": ""
       },
       {
+        "value": "Items.GUNPOWDER"
+      },
+      {
+        "value": "Items.BAKED_POTATO"
+      },
+      {
+        "value": "Items.GUNPOWDER"
+      },
+      {
         "value": ""
       },
       {
-        "value": "CUSTOM:PoisonDropitem"
-      },
-      {
         "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.SAND#0"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "Items.DYE#2"
+      "value": "CUSTOM:HotPotato"
     },
-    "name": "greendye",
+    "name": "hotpotato_recipe",
     "namespace": "mod"
   }
 }

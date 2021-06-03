@@ -2462,6 +2462,15 @@
       "ids": {},
       "registry_name": "el_anillo",
       "path": "~/Disks"
+    },
+    {
+      "name": "HotpotatoRecipe",
+      "type": "recipe",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hotpotato_recipe"
     }
   ],
   "variable_elements": [
@@ -2720,11 +2729,11 @@
       "item.server.montero": "Call me by your name",
       "subtitles.el_anillo": "Jennifer Lopez - El Anillo",
       "item.server.bigpizza": "Big Pizza",
-      "item.server.quizas_disk.desc": "Brytiago ft Lunay ft Ozuna – Quizás",
       "item.server.cakebytheocean.desc": "DNCE - Cake By The Ocean",
+      "item.server.quizas_disk.desc": "Brytiago ft Lunay ft Ozuna – Quizás",
       "potion.effect.altopolicia": "Stop!",
-      "item.server.mediumpizzaveneno": "Mediumpizzaveneno",
       "advancements.shopachievement.title": "The Dealer",
+      "item.server.mediumpizzaveneno": "Mediumpizzaveneno",
       "item.server.dough": "Dough",
       "item.gintonic.name": "Gin Tonic",
       "item.server.spaguettidough": "Spaguettidough",
@@ -2876,11 +2885,11 @@
       "item.server.montero": "Call me by your name",
       "subtitles.el_anillo": "Jennifer Lopez - El Anillo",
       "item.server.bigpizza": "Pizza Grande",
-      "item.server.quizas_disk.desc": "Brytiago ft Lunay ft Ozuna – Quizás",
       "item.server.cakebytheocean.desc": "DNCE - Cake By The Ocean",
+      "item.server.quizas_disk.desc": "Brytiago ft Lunay ft Ozuna – Quizás",
       "potion.effect.altopolicia": "Alto Policía",
-      "item.server.mediumpizzaveneno": "Pizza Mediana",
       "advancements.shopachievement.title": "The Dealer",
+      "item.server.mediumpizzaveneno": "Pizza Mediana",
       "item.server.dough": "Masa",
       "item.gintonic.name": "Gin Tonic",
       "item.server.spaguettidough": "Masa de Spaguetti",

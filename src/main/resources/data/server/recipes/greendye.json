@@ -7,7 +7,7 @@
   ],
   "key": {
     "0": {
-      "item": "server:poisondrops"
+      "item": "server:poison_dropitem"
     },
     "1": {
       "item": "minecraft:sand"

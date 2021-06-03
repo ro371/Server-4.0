@@ -240,6 +240,9 @@
           "id": 11,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Itemtaken6"
+          },
           "name": "Slot #11",
           "x": 105,
           "y": 170

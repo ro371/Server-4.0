@@ -35,6 +35,7 @@ import net.mcreator.server.procedures.NextProcedure;
 import net.mcreator.server.procedures.Itemtaken9Procedure;
 import net.mcreator.server.procedures.Itemtaken8Procedure;
 import net.mcreator.server.procedures.Itemtaken7Procedure;
+import net.mcreator.server.procedures.Itemtaken6Procedure;
 import net.mcreator.server.procedures.Itemtaken5Procedure;
 import net.mcreator.server.procedures.Itemtaken4Procedure;
 import net.mcreator.server.procedures.Itemtaken3Procedure;
@@ -257,6 +258,13 @@ public class ShopGui extends ServerModElements.ModElement {
 				}
 			}));
 			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 61, 151) {
+				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(11, 1, 0);
+					return retval;
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -718,6 +726,13 @@ public class ShopGui extends ServerModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				Itemtaken5Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 11 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				Itemtaken6Procedure.executeProcedure($_dependencies);
 			}
 		}
 		if (slotID == 13 && changeType == 1) {
