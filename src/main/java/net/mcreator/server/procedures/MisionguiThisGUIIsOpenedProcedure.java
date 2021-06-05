@@ -119,12 +119,44 @@ public class MisionguiThisGUIIsOpenedProcedure extends ServerModElements.ModElem
 										}
 									}
 								}
+							} else {
+								if ((((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new ServerModVariables.PlayerVariables())).misionchosen) == 4)) {
+									if (entity instanceof PlayerEntity) {
+										Container _current = ((PlayerEntity) entity).openContainer;
+										if (_current instanceof Supplier) {
+											Object invobj = ((Supplier) _current).get();
+											if (invobj instanceof Map) {
+												ItemStack _setstack = new ItemStack(Blocks.MELON, (int) (1));
+												_setstack.setCount((int) 128);
+												((Slot) ((Map) invobj).get((int) (4))).putStack(_setstack);
+												_current.detectAndSendChanges();
+											}
+										}
+									}
+								} else {
+									if ((((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+											.orElse(new ServerModVariables.PlayerVariables())).misionchosen) == 5)) {
+										if (entity instanceof PlayerEntity) {
+											Container _current = ((PlayerEntity) entity).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													ItemStack _setstack = new ItemStack(Blocks.SUGAR_CANE, (int) (1));
+													_setstack.setCount((int) 128);
+													((Slot) ((Map) invobj).get((int) (4))).putStack(_setstack);
+													_current.detectAndSendChanges();
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 					}
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 6);
+		}.start(world, (int) 5);
 	}
 }

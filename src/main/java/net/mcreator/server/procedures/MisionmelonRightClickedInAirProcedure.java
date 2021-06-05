@@ -24,35 +24,35 @@ import java.util.Map;
 import io.netty.buffer.Unpooled;
 
 @ServerModElements.ModElement.Tag
-public class MisionpumpkinRightClickedInAirProcedure extends ServerModElements.ModElement {
-	public MisionpumpkinRightClickedInAirProcedure(ServerModElements instance) {
-		super(instance, 147);
+public class MisionmelonRightClickedInAirProcedure extends ServerModElements.ModElement {
+	public MisionmelonRightClickedInAirProcedure(ServerModElements instance) {
+		super(instance, 177);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure MisionmelonRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				ServerMod.LOGGER.warn("Failed to load dependency x for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency x for procedure MisionmelonRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				ServerMod.LOGGER.warn("Failed to load dependency y for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency y for procedure MisionmelonRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				ServerMod.LOGGER.warn("Failed to load dependency z for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency z for procedure MisionmelonRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				ServerMod.LOGGER.warn("Failed to load dependency world for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency world for procedure MisionmelonRightClickedInAir!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -68,7 +68,7 @@ public class MisionpumpkinRightClickedInAirProcedure extends ServerModElements.M
 			});
 		}
 		{
-			String _setval = (String) "ca\u00F1a de az\u00FAcar";
+			String _setval = (String) "Melones";
 			entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.objetomision = _setval;
 				capability.syncPlayerVariables(entity);

@@ -12,7 +12,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.server.item.MisionwheatItem;
+import net.mcreator.server.item.MisionsugarItem;
 import net.mcreator.server.item.MisionpumpkinItem;
+import net.mcreator.server.item.MisionmelonItem;
 import net.mcreator.server.item.MisionSeedsItem;
 import net.mcreator.server.item.MisionItem;
 import net.mcreator.server.item.Coin1Item;
@@ -215,13 +217,13 @@ public class DoneProcedure extends ServerModElements.ModElement {
 								_setstack.setCount((int) 1);
 								ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 							}
-							if (entity instanceof PlayerEntity)
-								((PlayerEntity) entity).closeScreen();
 							if (entity instanceof PlayerEntity) {
 								ItemStack _stktoremove = new ItemStack(MisionSeedsItem.block, (int) (1));
 								((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 										((PlayerEntity) entity).container.func_234641_j_());
 							}
+							if (entity instanceof PlayerEntity)
+								((PlayerEntity) entity).closeScreen();
 						}
 					}
 					if ((1 == ((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -313,13 +315,13 @@ public class DoneProcedure extends ServerModElements.ModElement {
 								_setstack.setCount((int) 1);
 								ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 							}
-							if (entity instanceof PlayerEntity)
-								((PlayerEntity) entity).closeScreen();
 							if (entity instanceof PlayerEntity) {
 								ItemStack _stktoremove = new ItemStack(MisionwheatItem.block, (int) (1));
 								((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 										((PlayerEntity) entity).container.func_234641_j_());
 							}
+							if (entity instanceof PlayerEntity)
+								((PlayerEntity) entity).closeScreen();
 						}
 					}
 				}
@@ -385,13 +387,155 @@ public class DoneProcedure extends ServerModElements.ModElement {
 							_setstack.setCount((int) 1);
 							ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 						}
-						if (entity instanceof PlayerEntity)
-							((PlayerEntity) entity).closeScreen();
 						if (entity instanceof PlayerEntity) {
 							ItemStack _stktoremove = new ItemStack(MisionpumpkinItem.block, (int) (1));
 							((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 									((PlayerEntity) entity).container.func_234641_j_());
 						}
+						if (entity instanceof PlayerEntity)
+							((PlayerEntity) entity).closeScreen();
+					}
+				}
+				if ((4 == ((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new ServerModVariables.PlayerVariables())).misionchosen))) {
+					if (((new ItemStack(Blocks.MELON, (int) (1)).getItem() == (new Object() {
+						public ItemStack getItemStack(int sltid) {
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									}
+								}
+							}
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) (0))).getItem()) && (new ItemStack(Blocks.MELON, (int) (1)).getItem() == (new Object() {
+						public ItemStack getItemStack(int sltid) {
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									}
+								}
+							}
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) (1))).getItem()))) {
+						{
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (64));
+										_current.detectAndSendChanges();
+									}
+								}
+							}
+						}
+						{
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (64));
+										_current.detectAndSendChanges();
+									}
+								}
+							}
+						}
+						if (entity instanceof PlayerEntity) {
+							ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+							_setstack.setCount((int) 1);
+							ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+						}
+						if (entity instanceof PlayerEntity) {
+							ItemStack _stktoremove = new ItemStack(MisionmelonItem.block, (int) (1));
+							((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+									((PlayerEntity) entity).container.func_234641_j_());
+						}
+						if (entity instanceof PlayerEntity)
+							((PlayerEntity) entity).closeScreen();
+					}
+				}
+				if ((5 == ((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new ServerModVariables.PlayerVariables())).misionchosen))) {
+					if (((new ItemStack(Blocks.SUGAR_CANE, (int) (1)).getItem() == (new Object() {
+						public ItemStack getItemStack(int sltid) {
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									}
+								}
+							}
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) (0))).getItem()) && (new ItemStack(Blocks.SUGAR_CANE, (int) (1)).getItem() == (new Object() {
+						public ItemStack getItemStack(int sltid) {
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									}
+								}
+							}
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) (1))).getItem()))) {
+						{
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (64));
+										_current.detectAndSendChanges();
+									}
+								}
+							}
+						}
+						{
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (64));
+										_current.detectAndSendChanges();
+									}
+								}
+							}
+						}
+						if (entity instanceof PlayerEntity) {
+							ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+							_setstack.setCount((int) 1);
+							ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+						}
+						if (entity instanceof PlayerEntity) {
+							ItemStack _stktoremove = new ItemStack(MisionsugarItem.block, (int) (1));
+							((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+									((PlayerEntity) entity).container.func_234641_j_());
+						}
+						if (entity instanceof PlayerEntity)
+							((PlayerEntity) entity).closeScreen();
 					}
 				}
 			}
@@ -430,13 +574,13 @@ public class DoneProcedure extends ServerModElements.ModElement {
 						_setstack.setCount((int) 1);
 						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 					}
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).closeScreen();
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = new ItemStack(MisionItem.block, (int) (1));
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 								((PlayerEntity) entity).container.func_234641_j_());
 					}
+					if (entity instanceof PlayerEntity)
+						((PlayerEntity) entity).closeScreen();
 				}
 			}
 		}

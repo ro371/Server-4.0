@@ -2051,7 +2051,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/mission"
     },
     {
       "name": "Thenightsdisk",
@@ -2471,6 +2472,156 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "hotpotato_recipe"
+    },
+    {
+      "name": "Stay",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stay",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MissionCommandExecuted",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mission_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mission",
+      "type": "command",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mission"
+    },
+    {
+      "name": "Misionmelon",
+      "type": "item",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misionmelon",
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionmelonRightClickedInAir",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misionmelon_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mission"
+    },
+    {
+      "name": "Misionsugar",
+      "type": "item",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misionsugar",
+      "path": "~/mission"
+    },
+    {
+      "name": "MisionsugarRightClickedInAir",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "misionsugar_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2532,6 +2683,12 @@
       "name": "z",
       "type": "number",
       "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "time",
+      "type": "number",
+      "scope": "player_persistent",
       "value": "0"
     }
   ],
@@ -2740,6 +2897,7 @@
       "item.server.fishstickveneno": "Fishstickveneno",
       "item.server.alone": "Alone",
       "item.server.rammsteindisk.desc": " Rammstein - Deutschland",
+      "item.server.misionmelon": "Mision",
       "item.server.desastre": "De sastre",
       "item.pizzadough.name": "Pizza Dough",
       "item.spaguetti.name": "Spaguetti",
@@ -2867,6 +3025,7 @@
       "item.mediumpizzaveneno.name": "Medium Pizza",
       "item.server.thenightsdisk": "The Nights",
       "item.server.mooddisk.desc": "24k Goldn - Mood",
+      "item.server.misionsugar": "Mision",
       "item.gintonicveneno.name": "Gin Tonic",
       "subtitles.montero": "Lil Nas X - Montero",
       "subtitles.ibaisong": "El cuarteto de Ibai",
@@ -2896,6 +3055,7 @@
       "item.server.fishstickveneno": "Palito de Pescado",
       "item.server.alone": "Alone",
       "item.server.rammsteindisk.desc": " Rammstein - Deutschland",
+      "item.server.misionmelon": "Mision",
       "item.server.desastre": "De sastre",
       "item.spaguetti.name": "Spaguetti",
       "item.pizzadough.name": "Masa de Pizza",
@@ -3023,6 +3183,7 @@
       "item.mediumpizzaveneno.name": "Pizza Mediana",
       "item.server.thenightsdisk": "The Nights",
       "item.server.mooddisk.desc": "24k Goldn - Mood",
+      "item.server.misionsugar": "Mision",
       "item.gintonicveneno.name": "Gin Tonic",
       "subtitles.montero": "Lil Nas X - Montero",
       "subtitles.ibaisong": "El cuarteto de Ibai",

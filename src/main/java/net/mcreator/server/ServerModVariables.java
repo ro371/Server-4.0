@@ -77,6 +77,7 @@ public class ServerModVariables {
 			nbt.putDouble("x", instance.x);
 			nbt.putDouble("y", instance.y);
 			nbt.putDouble("z", instance.z);
+			nbt.putDouble("time", instance.time);
 			return nbt;
 		}
 
@@ -93,6 +94,7 @@ public class ServerModVariables {
 			instance.x = nbt.getDouble("x");
 			instance.y = nbt.getDouble("y");
 			instance.z = nbt.getDouble("z");
+			instance.time = nbt.getDouble("time");
 		}
 	}
 
@@ -107,6 +109,7 @@ public class ServerModVariables {
 		public double x = 0;
 		public double y = 0;
 		public double z = 0;
+		public double time = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				ServerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -139,6 +142,7 @@ public class ServerModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.menupage = original.menupage;
+		clone.time = original.time;
 		if (!event.isWasDeath()) {
 			clone.coin1 = original.coin1;
 			clone.coin5 = original.coin5;
@@ -182,6 +186,7 @@ public class ServerModVariables {
 					variables.x = message.data.x;
 					variables.y = message.data.y;
 					variables.z = message.data.z;
+					variables.time = message.data.time;
 				}
 			});
 			context.setPacketHandled(true);
