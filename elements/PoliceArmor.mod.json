@@ -13,6 +13,9 @@
     "onHelmetTick": {
       "name": "PoliceArmorHelmetTickEvent"
     },
+    "onBodyTick": {
+      "name": "PoliceArmorBodyTickEvent"
+    },
     "onBootsTick": {
       "name": "PoliceArmorBootsTickEvent"
     },
@@ -42,17 +45,24 @@
     "bootsModelPartL": "Boots L",
     "bootsModelPartR": "Boots R",
     "bootsModelTexture": "From armor",
-    "maxDamage": 24,
+    "maxDamage": 32,
     "damageValueHelmet": 4,
     "damageValueBody": 9,
     "damageValueLeggings": 10,
     "damageValueBoots": 4,
-    "enchantability": 14,
-    "toughness": 2.6,
-    "knockbackResistance": 0.0,
+    "enchantability": 18,
+    "toughness": 3.4,
+    "knockbackResistance": 0.30000000000000004,
     "equipSound": {
       "value": "CUSTOM:policia_en_accion"
     },
-    "repairItems": []
+    "repairItems": [
+      {
+        "value": "Blocks.OBSIDIAN"
+      },
+      {
+        "value": "Items.DIAMOND"
+      }
+    ]
   }
 }

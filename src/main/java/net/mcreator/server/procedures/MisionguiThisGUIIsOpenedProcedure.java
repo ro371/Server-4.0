@@ -149,6 +149,38 @@ public class MisionguiThisGUIIsOpenedProcedure extends ServerModElements.ModElem
 												}
 											}
 										}
+									} else {
+										if ((((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+												.orElse(new ServerModVariables.PlayerVariables())).misionchosen) == 6)) {
+											if (entity instanceof PlayerEntity) {
+												Container _current = ((PlayerEntity) entity).openContainer;
+												if (_current instanceof Supplier) {
+													Object invobj = ((Supplier) _current).get();
+													if (invobj instanceof Map) {
+														ItemStack _setstack = new ItemStack(Blocks.COBBLESTONE, (int) (1));
+														_setstack.setCount((int) 256);
+														((Slot) ((Map) invobj).get((int) (4))).putStack(_setstack);
+														_current.detectAndSendChanges();
+													}
+												}
+											}
+										} else {
+											if ((((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+													.orElse(new ServerModVariables.PlayerVariables())).misionchosen) == 7)) {
+												if (entity instanceof PlayerEntity) {
+													Container _current = ((PlayerEntity) entity).openContainer;
+													if (_current instanceof Supplier) {
+														Object invobj = ((Supplier) _current).get();
+														if (invobj instanceof Map) {
+															ItemStack _setstack = new ItemStack(Items.COD, (int) (1));
+															_setstack.setCount((int) 16);
+															((Slot) ((Map) invobj).get((int) (4))).putStack(_setstack);
+															_current.detectAndSendChanges();
+														}
+													}
+												}
+											}
+										}
 									}
 								}
 							}

@@ -24,35 +24,35 @@ import java.util.Map;
 import io.netty.buffer.Unpooled;
 
 @ServerModElements.ModElement.Tag
-public class MisionpumpkinRightClickedInAirProcedure extends ServerModElements.ModElement {
-	public MisionpumpkinRightClickedInAirProcedure(ServerModElements instance) {
-		super(instance, 147);
+public class MisionstoneRightClickedInAirProcedure extends ServerModElements.ModElement {
+	public MisionstoneRightClickedInAirProcedure(ServerModElements instance) {
+		super(instance, 181);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency entity for procedure MisionstoneRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				ServerMod.LOGGER.warn("Failed to load dependency x for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency x for procedure MisionstoneRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				ServerMod.LOGGER.warn("Failed to load dependency y for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency y for procedure MisionstoneRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				ServerMod.LOGGER.warn("Failed to load dependency z for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency z for procedure MisionstoneRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				ServerMod.LOGGER.warn("Failed to load dependency world for procedure MisionpumpkinRightClickedInAir!");
+				ServerMod.LOGGER.warn("Failed to load dependency world for procedure MisionstoneRightClickedInAir!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -61,21 +61,21 @@ public class MisionpumpkinRightClickedInAirProcedure extends ServerModElements.M
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		{
-			double _setval = (double) 2;
+			double _setval = (double) 6;
 			entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.misionchosen = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			String _setval = (String) "calabaza";
+			String _setval = (String) "piedra";
 			entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.objetomision = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			String _setval = (String) "128";
+			String _setval = (String) "256";
 			entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.n_mission = _setval;
 				capability.syncPlayerVariables(entity);

@@ -9,6 +9,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -17,9 +18,11 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
 
 import net.mcreator.server.procedures.PoliceArmorHelmetTickEventProcedure;
 import net.mcreator.server.procedures.PoliceArmorBootsTickEventProcedure;
+import net.mcreator.server.procedures.PoliceArmorBodyTickEventProcedure;
 import net.mcreator.server.ServerModElements;
 
 import java.util.Map;
@@ -44,7 +47,7 @@ public class PoliceArmorItem extends ServerModElements.ModElement {
 		IArmorMaterial armormaterial = new IArmorMaterial() {
 			@Override
 			public int getDurability(EquipmentSlotType slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 24;
+				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 32;
 			}
 
 			@Override
@@ -54,7 +57,7 @@ public class PoliceArmorItem extends ServerModElements.ModElement {
 
 			@Override
 			public int getEnchantability() {
-				return 14;
+				return 18;
 			}
 
 			@Override
@@ -64,7 +67,7 @@ public class PoliceArmorItem extends ServerModElements.ModElement {
 
 			@Override
 			public Ingredient getRepairMaterial() {
-				return Ingredient.EMPTY;
+				return Ingredient.fromStacks(new ItemStack(Blocks.OBSIDIAN, (int) (1)), new ItemStack(Items.DIAMOND, (int) (1)));
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -75,12 +78,12 @@ public class PoliceArmorItem extends ServerModElements.ModElement {
 
 			@Override
 			public float getToughness() {
-				return 2.6f;
+				return 3.4f;
 			}
 
 			@Override
 			public float getKnockbackResistance() {
-				return 0f;
+				return 0.3f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)) {
@@ -106,6 +109,18 @@ public class PoliceArmorItem extends ServerModElements.ModElement {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "server:textures/models/armor/police_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+			}
+
+			@Override
+			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
+				double x = entity.getPosX();
+				double y = entity.getPosY();
+				double z = entity.getPosZ();
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					PoliceArmorBodyTickEventProcedure.executeProcedure($_dependencies);
+				}
 			}
 		}.setRegistryName("policearmor_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)) {

@@ -68,7 +68,7 @@ public class MisionmelonRightClickedInAirProcedure extends ServerModElements.Mod
 			});
 		}
 		{
-			String _setval = (String) "Melones";
+			String _setval = (String) "mel\u00F3n";
 			entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.objetomision = _setval;
 				capability.syncPlayerVariables(entity);
