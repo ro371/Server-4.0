@@ -2728,6 +2728,44 @@
           }
         ]
       }
+    },
+    {
+      "name": "GoforwardRightClickedInAir",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "goforward_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Goforward",
+      "type": "item",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "goforward"
     }
   ],
   "variable_elements": [
@@ -3051,6 +3089,7 @@
       "item.server.delgadito.desc": "La Rabia Del Milenio - Delgadito",
       "item.server.rising_sun.desc": "The Animals - The House Of The Rising Sun 1964",
       "item.server.mojitosandia": "Mojito Sandia",
+      "item.server.goforward": "Avanza",
       "effect.altopolicia": "Alto Policia",
       "item.server.gintonicveneno": "Gin Tonicveneno",
       "item.server.pizzadough": "Pizza Dough",
@@ -3211,6 +3250,7 @@
       "item.server.delgadito.desc": "La Rabia Del Milenio - Delgadito",
       "item.server.rising_sun.desc": "The Animals - The House Of The Rising Sun 1964",
       "item.server.mojitosandia": "Mojito de Sandia",
+      "item.server.goforward": "Avanza",
       "effect.altopolicia": "Alto Policía",
       "item.server.gintonicveneno": "Gin Tonic",
       "item.server.pizzadough": "Masa de Pizza",
@@ -3338,7 +3378,7 @@
   "workspaceSettings": {
     "modid": "server",
     "modName": "Cuspiland´s Mod",
-    "version": "4.3",
+    "version": "4.3.1",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",
