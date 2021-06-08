@@ -6,11 +6,11 @@
       "item": "server:pastillavenom"
     },
     {
-      "item": "server:vasodeagua"
+      "item": "server:vasodeaguaveneno"
     }
   ],
   "result": {
-    "item": "server:vasodeaguaveneno",
+    "item": "server:vasodeagua_2veneno",
     "count": 1
   }
 }

@@ -5,15 +5,15 @@
     "renderType": 0,
     "texture": "vaso_de_agua",
     "customModelName": "Normal",
-    "name": "Vasodeaguaveneno",
+    "name": "Vaso de Agua",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "FOOD"
     },
     "stackSize": 1,
-    "nutritionalValue": 0,
-    "saturation": 0.0,
+    "nutritionalValue": 2,
+    "saturation": 0.19999999999999998,
     "eatingSpeed": 28,
     "resultItem": {
       "value": "CUSTOM:Vaso"
@@ -23,7 +23,7 @@
     "animation": "drink",
     "hasGlow": false,
     "onEaten": {
-      "name": "VasodeaguavenenoFoodEaten"
+      "name": "PastillaHealFoodEaten"
     }
   }
 }

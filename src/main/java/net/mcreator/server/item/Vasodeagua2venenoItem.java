@@ -13,18 +13,18 @@ import net.minecraft.item.Food;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
-import net.mcreator.server.procedures.VasodeaguavenenoFoodEatenProcedure;
+import net.mcreator.server.procedures.Vasodeagua2venenoFoodEatenProcedure;
 import net.mcreator.server.ServerModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
 @ServerModElements.ModElement.Tag
-public class VasodeaguavenenoItem extends ServerModElements.ModElement {
-	@ObjectHolder("server:vasodeaguaveneno")
+public class Vasodeagua2venenoItem extends ServerModElements.ModElement {
+	@ObjectHolder("server:vasodeagua_2veneno")
 	public static final Item block = null;
-	public VasodeaguavenenoItem(ServerModElements instance) {
-		super(instance, 60);
+	public Vasodeagua2venenoItem(ServerModElements instance) {
+		super(instance, 194);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class VasodeaguavenenoItem extends ServerModElements.ModElement {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().meat().build()));
-			setRegistryName("vasodeaguaveneno");
+			setRegistryName("vasodeagua_2veneno");
 		}
 
 		@Override
@@ -64,7 +64,7 @@ public class VasodeaguavenenoItem extends ServerModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
-				VasodeaguavenenoFoodEatenProcedure.executeProcedure($_dependencies);
+				Vasodeagua2venenoFoodEatenProcedure.executeProcedure($_dependencies);
 			}
 			if (itemstack.isEmpty()) {
 				return retval;

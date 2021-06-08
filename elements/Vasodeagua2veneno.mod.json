@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "vaso_de_agua",
     "customModelName": "Normal",
-    "name": "Vasodeaguaveneno",
+    "name": "Vaso de Agua",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
@@ -23,7 +23,7 @@
     "animation": "drink",
     "hasGlow": false,
     "onEaten": {
-      "name": "VasodeaguavenenoFoodEaten"
+      "name": "Vasodeagua2venenoFoodEaten"
     }
   }
 }

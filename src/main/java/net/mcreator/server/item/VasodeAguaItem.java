@@ -33,7 +33,7 @@ public class VasodeAguaItem extends ServerModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(32).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(0).saturation(0.1f).setAlwaysEdible().build()));
 			setRegistryName("vasodeagua");
 		}

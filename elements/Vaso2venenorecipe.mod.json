@@ -31,16 +31,16 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:Pastillavenom"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Vasodeaguaveneno"
+      "value": "CUSTOM:Vasodeagua2veneno"
     },
-    "name": "vasodeaguavenenorecipe",
+    "name": "vaso_2venenorecipe",
     "namespace": "mod"
   }
 }

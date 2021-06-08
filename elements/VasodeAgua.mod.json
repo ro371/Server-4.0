@@ -5,13 +5,13 @@
     "renderType": 0,
     "texture": "vaso_de_agua",
     "customModelName": "Normal",
-    "name": "Vasode Agua",
+    "name": "Vaso de Agua",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "FOOD"
     },
-    "stackSize": 32,
+    "stackSize": 1,
     "nutritionalValue": 0,
     "saturation": 0.1,
     "eatingSpeed": 20,

@@ -3,9 +3,9 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "vaso_de_agua",
+    "texture": "pastillavenom",
     "customModelName": "Normal",
-    "name": "Vasodeaguaveneno",
+    "name": "Pastillavenom",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
@@ -14,16 +14,16 @@
     "stackSize": 1,
     "nutritionalValue": 0,
     "saturation": 0.0,
-    "eatingSpeed": 28,
+    "eatingSpeed": 24,
     "resultItem": {
-      "value": "CUSTOM:Vaso"
+      "value": ""
     },
     "forDogs": true,
     "isAlwaysEdible": true,
-    "animation": "drink",
+    "animation": "eat",
     "hasGlow": false,
     "onEaten": {
-      "name": "VasodeaguavenenoFoodEaten"
+      "name": "PastillavenomFoodEaten"
     }
   }
 }

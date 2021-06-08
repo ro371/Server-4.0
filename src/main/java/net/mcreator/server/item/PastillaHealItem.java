@@ -10,21 +10,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
-import net.mcreator.server.procedures.VasodeaguavenenoFoodEatenProcedure;
+import net.mcreator.server.procedures.PastillaHealFoodEatenProcedure;
 import net.mcreator.server.ServerModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
 @ServerModElements.ModElement.Tag
-public class VasodeaguavenenoItem extends ServerModElements.ModElement {
-	@ObjectHolder("server:vasodeaguaveneno")
+public class PastillaHealItem extends ServerModElements.ModElement {
+	@ObjectHolder("server:pastilla_heal")
 	public static final Item block = null;
-	public VasodeaguavenenoItem(ServerModElements instance) {
-		super(instance, 60);
+	public PastillaHealItem(ServerModElements instance) {
+		super(instance, 188);
 	}
 
 	@Override
@@ -34,13 +33,13 @@ public class VasodeaguavenenoItem extends ServerModElements.ModElement {
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().meat().build()));
-			setRegistryName("vasodeaguaveneno");
+					.food((new Food.Builder()).hunger(0).saturation(0.8f).setAlwaysEdible().meat().build()));
+			setRegistryName("pastilla_heal");
 		}
 
 		@Override
 		public int getUseDuration(ItemStack stack) {
-			return 28;
+			return 24;
 		}
 
 		@Override
@@ -55,27 +54,20 @@ public class VasodeaguavenenoItem extends ServerModElements.ModElement {
 
 		@Override
 		public ItemStack onItemUseFinish(ItemStack itemstack, World world, LivingEntity entity) {
-			ItemStack retval = new ItemStack(VasoItem.block, (int) (1));
-			super.onItemUseFinish(itemstack, world, entity);
+			ItemStack retval = super.onItemUseFinish(itemstack, world, entity);
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				VasodeaguavenenoFoodEatenProcedure.executeProcedure($_dependencies);
+				PastillaHealFoodEatenProcedure.executeProcedure($_dependencies);
 			}
-			if (itemstack.isEmpty()) {
-				return retval;
-			} else {
-				if (entity instanceof PlayerEntity) {
-					PlayerEntity player = (PlayerEntity) entity;
-					if (!player.isCreative() && !player.inventory.addItemStackToInventory(retval))
-						player.dropItem(retval, false);
-				}
-				return itemstack;
-			}
+			return retval;
 		}
 	}
 }

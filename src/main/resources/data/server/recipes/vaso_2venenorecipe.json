@@ -7,10 +7,13 @@
     },
     {
       "item": "server:vasodeagua"
+    },
+    {
+      "item": "server:pastillavenom"
     }
   ],
   "result": {
-    "item": "server:vasodeaguaveneno",
+    "item": "server:vasodeagua_2veneno",
     "count": 1
   }
 }

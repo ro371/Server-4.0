@@ -1,0 +1,24 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "server:poison_dropitem"
+    },
+    "1": {
+      "item": "server:pastilla"
+    },
+    "2": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "result": {
+    "item": "server:pastillavenom",
+    "count": 1
+  }
+}

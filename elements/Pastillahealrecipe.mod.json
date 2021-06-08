@@ -7,13 +7,13 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:Pastillavenom"
+        "value": "Blocks.HAY_BLOCK"
       },
       {
         "value": ""
@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:VasodeAgua"
+        "value": "CUSTOM:Pastilla"
       },
       {
         "value": ""
@@ -31,16 +31,16 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "Items.DYE#1"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Vasodeaguaveneno"
+      "value": "CUSTOM:PastillaHeal"
     },
-    "name": "vasodeaguavenenorecipe",
+    "name": "pastillahealrecipe",
     "namespace": "mod"
   }
 }
