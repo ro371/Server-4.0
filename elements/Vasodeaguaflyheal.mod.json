@@ -1,0 +1,29 @@
+{
+  "_fv": 18,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "vaso_de_agua",
+    "customModelName": "Normal",
+    "name": "Vaso de Agua",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 1,
+    "nutritionalValue": 0,
+    "saturation": 0.1,
+    "eatingSpeed": 28,
+    "resultItem": {
+      "value": "CUSTOM:Vaso"
+    },
+    "forDogs": true,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "VasodeaguaflyhealFoodEaten"
+    }
+  }
+}

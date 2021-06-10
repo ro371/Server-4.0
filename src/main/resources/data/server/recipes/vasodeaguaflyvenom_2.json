@@ -1,0 +1,16 @@
+{
+  "group": "server",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "server:pastillavenom"
+    },
+    {
+      "item": "server:vasodeaguafly"
+    }
+  ],
+  "result": {
+    "item": "server:vasodeaguaflyvenom",
+    "count": 1
+  }
+}
