@@ -33,12 +33,14 @@ public class AltoPoliciaPotionExpiresProcedure extends ServerModElements.ModElem
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof ServerWorld) {
-			LightningBoltEntity _ent = EntityType.LIGHTNING_BOLT.create((World) world);
-			_ent.moveForced(
-					Vector3d.copyCenteredHorizontally(new BlockPos((int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()))));
-			_ent.setEffectOnly(false);
-			((World) world).addEntity(_ent);
+		if ((Math.random() < 0.4)) {
+			if (world instanceof ServerWorld) {
+				LightningBoltEntity _ent = EntityType.LIGHTNING_BOLT.create((World) world);
+				_ent.moveForced(Vector3d
+						.copyCenteredHorizontally(new BlockPos((int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()))));
+				_ent.setEffectOnly(false);
+				((World) world).addEntity(_ent);
+			}
 		}
 	}
 }

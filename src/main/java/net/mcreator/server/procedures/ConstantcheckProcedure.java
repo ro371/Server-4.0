@@ -24,11 +24,13 @@ import net.mcreator.server.item.ResistirediskItem;
 import net.mcreator.server.item.RammsteindiskItem;
 import net.mcreator.server.item.QuizasDiskItem;
 import net.mcreator.server.item.PhineasdiskItem;
+import net.mcreator.server.item.PhallicObjectItem;
 import net.mcreator.server.item.PaseportucasadiskItem;
 import net.mcreator.server.item.MooddiskItem;
 import net.mcreator.server.item.MonteroItem;
 import net.mcreator.server.item.IbaidiskItem;
 import net.mcreator.server.item.GreenDaydiskItem;
+import net.mcreator.server.item.GoforwardItem;
 import net.mcreator.server.item.FishstickItem;
 import net.mcreator.server.item.ElAnilloItem;
 import net.mcreator.server.item.DesastreItem;
@@ -39,7 +41,6 @@ import net.mcreator.server.item.CocktailCalabazaItem;
 import net.mcreator.server.item.CakebytheoceanItem;
 import net.mcreator.server.item.BlurItem;
 import net.mcreator.server.item.AloneItem;
-import net.mcreator.server.item.AcarbonItem;
 import net.mcreator.server.ServerModVariables;
 import net.mcreator.server.ServerModElements;
 import net.mcreator.server.ServerMod;
@@ -602,7 +603,7 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 							Object invobj = ((Supplier) _current).get();
 							if (invobj instanceof Map) {
 								ItemStack _setstack = new ItemStack(SpaguettiItem.block, (int) (1));
-								_setstack.setCount((int) 10);
+								_setstack.setCount((int) 16);
 								((Slot) ((Map) invobj).get((int) (1))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -614,7 +615,7 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 							Object invobj = ((Supplier) _current).get();
 							if (invobj instanceof Map) {
 								ItemStack _setstack = new ItemStack(Items.BREAD, (int) (1));
-								_setstack.setCount((int) 16);
+								_setstack.setCount((int) 32);
 								((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -638,7 +639,7 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 							Object invobj = ((Supplier) _current).get();
 							if (invobj instanceof Map) {
 								ItemStack _setstack = new ItemStack(CocktailCalabazaItem.block, (int) (1));
-								_setstack.setCount((int) 8);
+								_setstack.setCount((int) 10);
 								((Slot) ((Map) invobj).get((int) (7))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -988,7 +989,7 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 							Object invobj = ((Supplier) _current).get();
 							if (invobj instanceof Map) {
 								ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
-								_setstack.setCount((int) 2);
+								_setstack.setCount((int) 3);
 								((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -1061,7 +1062,7 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 								if (_current instanceof Supplier) {
 									Object invobj = ((Supplier) _current).get();
 									if (invobj instanceof Map) {
-										ItemStack _setstack = new ItemStack(AcarbonItem.block, (int) (1));
+										ItemStack _setstack = new ItemStack(GoforwardItem.block, (int) (1));
 										_setstack.setCount((int) 1);
 										((Slot) ((Map) invobj).get((int) (17))).putStack(_setstack);
 										_current.detectAndSendChanges();
@@ -1110,7 +1111,7 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(AcarbonItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(PhallicObjectItem.block, (int) (1));
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (15))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -1154,16 +1155,6 @@ public class ConstantcheckProcedure extends ServerModElements.ModElement {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
 											((Slot) ((Map) invobj).get((int) (15))).putStack(ItemStack.EMPTY);
-											_current.detectAndSendChanges();
-										}
-									}
-								}
-								if (entity instanceof ServerPlayerEntity) {
-									Container _current = ((ServerPlayerEntity) entity).openContainer;
-									if (_current instanceof Supplier) {
-										Object invobj = ((Supplier) _current).get();
-										if (invobj instanceof Map) {
-											((Slot) ((Map) invobj).get((int) (17))).putStack(ItemStack.EMPTY);
 											_current.detectAndSendChanges();
 										}
 									}

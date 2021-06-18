@@ -3,7 +3,7 @@
   "_type": "painting",
   "definition": {
     "texture": "cocheangel.png",
-    "width": 48,
-    "height": 32
+    "width": 64,
+    "height": 48
   }
 }

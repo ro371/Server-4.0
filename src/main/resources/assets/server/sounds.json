@@ -224,5 +224,32 @@
         "stream": true
       }
     ]
+  },
+  "gemido": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "server:gemido",
+        "stream": false
+      }
+    ]
+  },
+  "alto_policia": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "server:alto-policia",
+        "stream": false
+      }
+    ]
+  },
+  "orden_en_la_sala": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "server:orden_en_la_sala",
+        "stream": false
+      }
+    ]
   }
 }

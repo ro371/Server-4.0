@@ -74,6 +74,10 @@ public class ServerModElements {
 		sounds.put(new ResourceLocation("server", "the_animals"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "the_animals")));
 		sounds.put(new ResourceLocation("server", "phineasdisk"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "phineasdisk")));
 		sounds.put(new ResourceLocation("server", "el_anillo"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "el_anillo")));
+		sounds.put(new ResourceLocation("server", "gemido"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "gemido")));
+		sounds.put(new ResourceLocation("server", "alto_policia"), new net.minecraft.util.SoundEvent(new ResourceLocation("server", "alto_policia")));
+		sounds.put(new ResourceLocation("server", "orden_en_la_sala"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("server", "orden_en_la_sala")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("server").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "command",
+  "definition": {
+    "commandName": "reject",
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "RejectCommandExecuted"
+    }
+  }
+}

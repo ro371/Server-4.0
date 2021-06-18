@@ -1259,7 +1259,7 @@
       "type": "painting",
       "sortid": 95,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "paint",
       "path": "~/Pictures"
@@ -1289,7 +1289,7 @@
       "type": "painting",
       "sortid": 101,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "cocheangel",
       "path": "~/Pictures"
@@ -1309,7 +1309,7 @@
       "type": "painting",
       "sortid": 104,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "angelmovil",
       "path": "~/Pictures"
@@ -1319,7 +1319,7 @@
       "type": "painting",
       "sortid": 105,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "angelrogelio",
       "path": "~/Pictures"
@@ -2103,7 +2103,7 @@
       "type": "painting",
       "sortid": 153,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "mateoarbusto",
       "path": "~/Pictures"
@@ -3198,6 +3198,412 @@
       "ids": {},
       "registry_name": "vasodeaguaflyheal_3recipe",
       "path": "~/pastillas"
+    },
+    {
+      "name": "PhallicObjectLivingEntityIsHitWithItem",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "phallic_object_living_entity_is_hit_with_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhallicObject",
+      "type": "food",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "phallic_object"
+    },
+    {
+      "name": "Montero0",
+      "type": "painting",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "montero_0",
+      "path": "~/Pictures"
+    },
+    {
+      "name": "Montero1",
+      "type": "painting",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "montero_1",
+      "path": "~/Pictures"
+    },
+    {
+      "name": "Montero2",
+      "type": "painting",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "montero_2",
+      "path": "~/Pictures"
+    },
+    {
+      "name": "Montero3",
+      "type": "painting",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "montero_3",
+      "path": "~/Pictures"
+    },
+    {
+      "name": "Montero4",
+      "type": "painting",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "montero_4",
+      "path": "~/Pictures"
+    },
+    {
+      "name": "Montero5",
+      "type": "painting",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "montero_5",
+      "path": "~/Pictures"
+    },
+    {
+      "name": "Montero6",
+      "type": "painting",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "montero_6",
+      "path": "~/Pictures"
+    },
+    {
+      "name": "MarryCommandExecuted",
+      "type": "procedure",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "marry_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Marry",
+      "type": "command",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "marry"
+    },
+    {
+      "name": "Anillo",
+      "type": "item",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anillo"
+    },
+    {
+      "name": "RejectCommandExecuted",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "reject_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Reject",
+      "type": "command",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "reject"
+    },
+    {
+      "name": "AcceptCommandExecuted",
+      "type": "procedure",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "accept_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Accept",
+      "type": "command",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "accept"
+    },
+    {
+      "name": "AnilloRightClickedInAir",
+      "type": "procedure",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anillo_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnilloLivingEntityIsHitWithItem",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anillo_living_entity_is_hit_with_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnilloItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anillo_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Porra",
+      "type": "tool",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "porra"
+    },
+    {
+      "name": "MazoRightClickedInAir",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mazo_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mazo",
+      "type": "item",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mazo"
+    },
+    {
+      "name": "PorraRightClickedInAir",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "porra_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3266,6 +3672,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "nameproposal",
+      "type": "string",
+      "scope": "map",
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -3448,6 +3860,30 @@
       ],
       "category": "music",
       "subtitle": "Jennifer Lopez - El Anillo"
+    },
+    {
+      "name": "gemido",
+      "files": [
+        "gemido"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "alto_policia",
+      "files": [
+        "alto-policia"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "orden_en_la_sala",
+      "files": [
+        "orden_en_la_sala"
+      ],
+      "category": "player",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -3473,6 +3909,7 @@
       "item.server.spaguettidough": "Spaguettidough",
       "item.server.fishstickveneno": "Fishstickveneno",
       "item.server.alone": "Alone",
+      "subtitles.alto_policia": "",
       "item.server.rammsteindisk.desc": " Rammstein - Deutschland",
       "item.server.misionmelon": "Mision",
       "item.server.desastre": "De sastre",
@@ -3518,6 +3955,7 @@
       "item.server.vasodeaguaflyvenom": "Vaso de Agua",
       "item.server.policearmor_boots": "Police Boots",
       "item.minecraft.lingering_potion.effect.altopolicia": "Lingering Alto Policía",
+      "subtitles.gemido": "",
       "item.server.pastillafly": "Pastilla voladora",
       "item.server.wat_sugardisk": "Watermelon Sugar",
       "item.policearmorhelmet.name": "Police Helmet",
@@ -3536,7 +3974,9 @@
       "item.server.poisondrops": "Poisondrops",
       "item.server.alone.desc": "Alan Walker - Alone",
       "item.cookeddoughstick.name": "Cooked Dough Stick",
+      "subtitles.orden_en_la_sala": "",
       "item.server.sufre_mamon_disk.desc": "Sufre mamón, devulveme a mi chica - Hombres G",
+      "item.server.porra": "Porra",
       "item.policearmorboots.name": "Police Boots",
       "item.server.vasodeaguaveneno": "Vasodeaguaveneno",
       "item.server.mooddisk": "Mood",
@@ -3558,6 +3998,7 @@
       "item.cocktaildesandia.name": "Melon Drink",
       "item.server.fishstick": "Fishstick",
       "item.server.apple_stick": "Apple Stick",
+      "item.server.phallic_object": "Phallic Object",
       "item.server.tarta_de_manzana": "Tarta de Manzana",
       "subtitles.greenday": "Green Day - American Idiot",
       "item.server.pastilla": "Pastilla",
@@ -3568,12 +4009,14 @@
       "subtitles.de_sastre": "Sofía Ellar - De Sastre",
       "item.server.spaguetti": "Spaguetti",
       "item.minecraft.splash_potion.effect.altopolicia": "Splash Alto Policía",
+      "item.server.anillo": "Anillo",
       "item.policearmorbody.name": "Police Chestplate",
       "item.fishstick.name": "Fishstick",
       "subtitles.blursound": "Blur - Song 2",
       "item.dough.name": "Dough",
       "item.server.bigpizzaveneno": "Bigpizzaveneno",
       "item.server.blur.desc": " Blur - Song 2",
+      "item.server.mazo": "Mazo",
       "item.bigpizza.name": "Big Pizza",
       "subtitles.quizas": "Brytiago ft Lunay ft Ozuna – Quizás",
       "item.mojitolimalimon.name": "Lemon Drink",
@@ -3643,6 +4086,7 @@
       "item.server.spaguettidough": "Masa de Spaguetti",
       "item.server.fishstickveneno": "Palito de Pescado",
       "item.server.alone": "Alone",
+      "subtitles.alto_policia": "",
       "item.server.rammsteindisk.desc": " Rammstein - Deutschland",
       "item.server.misionmelon": "Mision",
       "item.server.desastre": "De sastre",
@@ -3688,6 +4132,7 @@
       "item.server.vasodeaguaflyvenom": "Vaso de Agua",
       "item.server.policearmor_boots": "Botas de @Policía",
       "item.minecraft.lingering_potion.effect.altopolicia": "Persistente Alto Policía",
+      "subtitles.gemido": "",
       "item.server.pastillafly": "Pastilla voladora",
       "item.server.wat_sugardisk": "Watermelon Sugar",
       "item.policearmorhelmet.name": "Casco de @Policía",
@@ -3706,7 +4151,9 @@
       "item.server.poisondrops": "Gotas de veneno",
       "item.server.alone.desc": "Alan Walker - Alone",
       "item.cookeddoughstick.name": "Palo de Harina cocinado",
+      "subtitles.orden_en_la_sala": "",
       "item.server.sufre_mamon_disk.desc": "Sufre mamón, devulveme a mi chica - Hombres G",
+      "item.server.porra": "Porra",
       "item.policearmorboots.name": "Botas de @Policía",
       "item.server.vasodeaguaveneno": "Vaso de agua",
       "item.server.mooddisk": "Mood",
@@ -3728,6 +4175,7 @@
       "item.cocktaildesandia.name": "Cocktail de Sandía",
       "item.server.fishstick": "Palito de pescado",
       "item.server.apple_stick": "Palito de Manzana",
+      "item.server.phallic_object": "Phallic Object",
       "item.server.tarta_de_manzana": "Tarta de Manzana",
       "subtitles.greenday": "Green Day - American Idiot",
       "item.server.pastilla": "Pastilla",
@@ -3738,12 +4186,14 @@
       "subtitles.de_sastre": "Sofía Ellar - De Sastre",
       "item.server.spaguetti": "Spaguetti",
       "item.minecraft.splash_potion.effect.altopolicia": "Splash Alto Policía",
+      "item.server.anillo": "Anillo",
       "item.policearmorbody.name": "Pechera de @Policía",
       "item.fishstick.name": "Palito de Pescado",
       "subtitles.blursound": "Blur - Song 2",
       "item.dough.name": "Masa",
       "item.server.bigpizzaveneno": "Pizza Grande",
       "item.server.blur.desc": "Blur - Song 2",
+      "item.server.mazo": "Mazo",
       "item.bigpizza.name": "Pizza Grande",
       "subtitles.quizas": "Brytiago ft Lunay ft Ozuna – Quizás",
       "item.mojitolimalimon.name": "Mojito Lima Limón",
@@ -3832,7 +4282,7 @@
   "workspaceSettings": {
     "modid": "server",
     "modName": "Cuspiland´s Mod",
-    "version": "4.3.3",
+    "version": "4.3.4",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",
