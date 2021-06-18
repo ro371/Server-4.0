@@ -251,5 +251,25 @@
         "stream": false
       }
     ]
+  },
+  "shower": {
+    "category": "music",
+    "subtitle": "subtitles.shower",
+    "sounds": [
+      {
+        "name": "server:ytbmp3s.me_-_becky_g_-_shower",
+        "stream": true
+      }
+    ]
+  },
+  "pilots21": {
+    "category": "music",
+    "subtitle": "subtitles.pilots21",
+    "sounds": [
+      {
+        "name": "server:ytbmp3s.me_-_twenty_one_pilots_-_stressed_out__lyrics_",
+        "stream": true
+      }
+    ]
   }
 }

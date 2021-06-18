@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "pilots21disk",
+    "name": "Stressed Out",
+    "description": "Twenty one pilots - Stressed Out",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:pilots21"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

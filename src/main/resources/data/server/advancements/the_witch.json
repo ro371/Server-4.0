@@ -29,7 +29,12 @@
       "server:fishstickvenenorecipe",
       "server:burnpoison",
       "server:poison_dropsmake",
-      "server:poisondroprecipe"
+      "server:poisondroprecipe",
+      "server:hotpotato_recipe",
+      "server:pastillarecipe",
+      "server:pastillahealrecipe",
+      "server:pastillavenomrecipe",
+      "server:pastillaflyrecipe"
     ]
   },
   "parent": "server:the_beginning"

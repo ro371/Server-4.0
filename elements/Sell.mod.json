@@ -69,7 +69,7 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "reactionToPushing": "NORMAL",
+    "reactionToPushing": "IGNORE",
     "isNotColidable": false,
     "soundOnStep": {
       "value": "STONE"
@@ -86,7 +86,7 @@
     "particleAmount": 4,
     "hasInventory": true,
     "guiBoundTo": "Sellgui",
-    "openGUIOnRightClick": true,
+    "openGUIOnRightClick": false,
     "inventorySize": 10,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": false,

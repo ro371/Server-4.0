@@ -5,7 +5,6 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -38,10 +37,10 @@ import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.block.material.PushReaction;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -94,6 +93,11 @@ public class SellBlock extends ServerModElements.ModElement {
 		}
 
 		@Override
+		public PushReaction getPushReaction(BlockState state) {
+			return PushReaction.IGNORE;
+		}
+
+		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
@@ -125,20 +129,6 @@ public class SellBlock extends ServerModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			if (entity instanceof ServerPlayerEntity) {
-				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
-					@Override
-					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Puesto de Venta");
-					}
-
-					@Override
-					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new SellguiGui.GuiContainerMod(id, inventory,
-								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
-					}
-				}, new BlockPos(x, y, z));
-			}
 			Direction direction = hit.getFace();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();

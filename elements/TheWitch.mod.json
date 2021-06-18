@@ -25,7 +25,12 @@
       "Fishstickvenenorecipe",
       "Burnpoison",
       "PoisonDropsmake",
-      "Poisondroprecipe"
+      "Poisondroprecipe",
+      "HotpotatoRecipe",
+      "Pastillarecipe",
+      "Pastillahealrecipe",
+      "Pastillavenomrecipe",
+      "Pastillaflyrecipe"
     ],
     "rewardFunction": "No function",
     "rewardXP": 5,

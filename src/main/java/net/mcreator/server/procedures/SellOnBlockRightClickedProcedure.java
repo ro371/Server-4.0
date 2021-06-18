@@ -2,9 +2,13 @@ package net.mcreator.server.procedures;
 
 import net.minecraftforge.fml.network.NetworkHooks;
 
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.PacketBuffer;
@@ -14,6 +18,9 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.command.ICommandSource;
+import net.minecraft.command.CommandSource;
+import net.minecraft.block.Blocks;
 
 import net.mcreator.server.gui.SellguiGui;
 import net.mcreator.server.gui.BuyguiGui;
@@ -83,48 +90,69 @@ public class SellOnBlockRightClickedProcedure extends ServerModElements.ModEleme
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		if ((((entity.getDisplayName().getString())).equals((new Object() {
-			public String getValue(IWorld world, BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getString(tag);
-				return "";
+		if (((world.getBlockState(new BlockPos((int) (Math.floor(x)), (int) ((Math.floor(y)) - 1), (int) (Math.floor(z)))))
+				.getBlock() == Blocks.HOPPER.getDefaultState().getBlock())) {
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+						"tell @p De momento las tiendas no son compatibles con tolvas.");
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "name"))))) {
-			if ((Math.random() < 0.7)) {
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("Sellgui");
-							}
-
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new SellguiGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
+		} else {
+			if (((world.getBlockState(new BlockPos((int) (Math.floor(x)), (int) ((Math.floor(y)) - 1), (int) (Math.floor(z)))))
+					.getBlock() == Blocks.RAIL.getDefaultState().getBlock())) {
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"tell @p Quite el ra\u00EDl para evitar fallos accidentales.");
 				}
 			} else {
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("Buygui");
-							}
+				if ((((entity.getDisplayName().getString())).equals((new Object() {
+					public String getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getString(tag);
+						return "";
+					}
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "name"))))) {
+					if ((Math.random() < 0.7)) {
+						{
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+								NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+									@Override
+									public ITextComponent getDisplayName() {
+										return new StringTextComponent("Sellgui");
+									}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new BuyguiGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+									@Override
+									public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+										return new SellguiGui.GuiContainerMod(id, inventory,
+												new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+									}
+								}, _bpos);
 							}
-						}, _bpos);
+						}
+					} else {
+						{
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+								NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+									@Override
+									public ITextComponent getDisplayName() {
+										return new StringTextComponent("Buygui");
+									}
+
+									@Override
+									public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+										return new BuyguiGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+									}
+								}, _bpos);
+							}
+						}
 					}
 				}
 			}
