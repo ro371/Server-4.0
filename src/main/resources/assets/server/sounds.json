@@ -271,5 +271,14 @@
         "stream": true
       }
     ]
+  },
+  "musicatristenaruto": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "server:naruto-shippuden-triste",
+        "stream": true
+      }
+    ]
   }
 }

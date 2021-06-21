@@ -3683,6 +3683,137 @@
       "ids": {},
       "registry_name": "manzanavenenorecipe",
       "path": "~/Food"
+    },
+    {
+      "name": "PresoArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "preso_armor_helmet_recipe"
+    },
+    {
+      "name": "PresoArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "preso_armor_body_recipe"
+    },
+    {
+      "name": "PresoArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "preso_armor_leggings_recipe"
+    },
+    {
+      "name": "PresoArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "preso_armor_boots_recipe"
+    },
+    {
+      "name": "PresoArmor",
+      "type": "armor",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "preso_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "PresoArmorBootsTickEvent",
+      "type": "procedure",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "preso_armor_boots_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PresoArmorBodyTickEvent",
+      "type": "procedure",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "preso_armor_body_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "JailCommandExecuted",
+      "type": "procedure",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jail_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jail",
+      "type": "command",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jail"
     }
   ],
   "variable_elements": [
@@ -3979,6 +4110,14 @@
       ],
       "category": "music",
       "subtitle": "Twenty one pilots - Stressed Out"
+    },
+    {
+      "name": "musicatristenaruto",
+      "files": [
+        "naruto-shippuden-triste"
+      ],
+      "category": "music",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -4024,6 +4163,7 @@
       "item.cocktailcalabaza.name": "Pumpkin Drink",
       "item.server.vasodeagua": "Glass of Water",
       "item.server.showerdisk.desc": "Becky G - Shower",
+      "item.server.preso_armor_leggings": "Taken Leggings",
       "item.server.desastre.desc": "Sofía Ellar - De Sastre",
       "item.smallpizzaveneno.name": "Small Pizza",
       "item.server.vasodeagua_2veneno": "Glass of Water",
@@ -4046,12 +4186,14 @@
       "item.server.blur": "Blur",
       "item.server.smallpizzaveneno": "Small Pizza",
       "item.server.doughstick": "Dough Stick",
+      "item.server.preso_armor_helmet": "Taken Helmet",
       "item.server.gintonic": "Gin Tonic",
       "item.server.policearmor_helmet": "Police Helmet",
       "item.server.vasodeaguaflyvenom": "Glass of Water",
       "item.server.policearmor_boots": "Police Boots",
       "item.minecraft.lingering_potion.effect.altopolicia": "Lingering Alto Policía",
       "subtitles.gemido": "",
+      "subtitles.musicatristenaruto": "",
       "item.server.pastillafly": "Flying Pill",
       "subtitles.shower": "Becky G - Shower",
       "item.server.wat_sugardisk": "Watermelon Sugar",
@@ -4101,6 +4243,7 @@
       "item.server.pastilla": "Pill",
       "item.server.ibaidisk": "El cuarteto de Ibai",
       "item.server.misionstone": "Mission",
+      "item.server.preso_armor_chestplate": "Taken Chestplate",
       "subtitles.popola": "Pasé por tu Casa - Welinton Quiw",
       "item.smallpizza.name": "Small Pizza",
       "subtitles.de_sastre": "Sofía Ellar - De Sastre",
@@ -4136,6 +4279,7 @@
       "item.spagettiveneno.name": "Spaguetti",
       "item.server.pilots_21disk.desc": "Twenty one pilots - Stressed Out",
       "item.server.cocktailcalabaza": "Cup of Pumpkin",
+      "item.server.preso_armor_boots": "Taken Boots",
       "advancements.the_witch.descr": "Now you have the power of the witch in your hands",
       "item.server.misionpumpkin": "Mission",
       "item.server.ibaidisk.desc": "El Cuarteto de Ibai - Lucas Requema",
@@ -4208,6 +4352,7 @@
       "item.cocktailcalabaza.name": "Cocktail de Calabaza",
       "item.server.vasodeagua": "Vaso de Agua",
       "item.server.showerdisk.desc": "Becky G - Shower",
+      "item.server.preso_armor_leggings": "Pantalones de Preso",
       "item.server.desastre.desc": "Sofía Ellar - De Sastre",
       "item.smallpizzaveneno.name": "Pizza Pequeña",
       "item.server.vasodeagua_2veneno": "Vaso de Agua",
@@ -4230,12 +4375,14 @@
       "item.server.blur": "Blur",
       "item.server.smallpizzaveneno": "Pizza Pequeña",
       "item.server.doughstick": "Palo de Harina",
+      "item.server.preso_armor_helmet": "Casco de Preso",
       "item.server.gintonic": "Gin Tonic",
       "item.server.policearmor_helmet": "Casco de @Policía",
       "item.server.vasodeaguaflyvenom": "Vaso de Agua",
       "item.server.policearmor_boots": "Botas de @Policía",
       "item.minecraft.lingering_potion.effect.altopolicia": "Persistente Alto Policía",
       "subtitles.gemido": "",
+      "subtitles.musicatristenaruto": "",
       "item.server.pastillafly": "Pastilla voladora",
       "subtitles.shower": "Becky G - Shower",
       "item.server.wat_sugardisk": "Watermelon Sugar",
@@ -4285,6 +4432,7 @@
       "item.server.pastilla": "Pastilla",
       "item.server.ibaidisk": "El cuarteto de Ibai",
       "item.server.misionstone": "Misión",
+      "item.server.preso_armor_chestplate": "Pechera de Preso",
       "subtitles.popola": "Pasé por tu Casa - Welinton Quiw",
       "item.smallpizza.name": "Pizza Pequeña",
       "subtitles.de_sastre": "Sofía Ellar - De Sastre",
@@ -4320,6 +4468,7 @@
       "item.spagettiveneno.name": "Spaguetti",
       "item.server.pilots_21disk.desc": "Twenty one pilots - Stressed Out",
       "item.server.cocktailcalabaza": "Cocktail Calabaza",
+      "item.server.preso_armor_boots": "Botas de preso",
       "advancements.the_witch.descr": "Ahora tienes el poder de la brujería en tus manos",
       "item.server.misionpumpkin": "Misión",
       "item.server.ibaidisk.desc": "El Cuarteto de Ibai - Lucas Requema",
@@ -4395,7 +4544,7 @@
   "workspaceSettings": {
     "modid": "server",
     "modName": "Cuspiland´s Mod",
-    "version": "4.3.5",
+    "version": "4.3.5.1",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",
