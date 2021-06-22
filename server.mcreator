@@ -3814,6 +3814,98 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "jail"
+    },
+    {
+      "name": "AtarCommandExecuted",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "atar_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Atar",
+      "type": "command",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "atar"
+    },
+    {
+      "name": "SoltarCommandExecuted",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soltar_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Soltar",
+      "type": "command",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soltar"
     }
   ],
   "variable_elements": [
@@ -4232,7 +4324,7 @@
       "subtitles.phineasdisk": "Phineas y Ferb Será un día Fenomenal",
       "item.server.misionfish": "Mission",
       "item.server.phineasdisk.desc": "Phineas y Ferb - Será un día Fenomenal",
-      "item.minecraft.tipped_arrow.effect.altopolicia": "Arrow of Alto Policía",
+      "item.minecraft.tipped_arrow.effect.altopolicia": "Flecha de Alto Policía",
       "item.server.green_daydisk": "Green Day",
       "item.cocktaildesandia.name": "Melon Drink",
       "item.server.fishstick": "Fish Stick",
@@ -4544,7 +4636,7 @@
   "workspaceSettings": {
     "modid": "server",
     "modName": "Cuspiland´s Mod",
-    "version": "4.3.5.1",
+    "version": "4.3.5.2",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",

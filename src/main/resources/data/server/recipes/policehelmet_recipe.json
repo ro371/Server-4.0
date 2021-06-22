@@ -2,26 +2,30 @@
   "group": "server",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345"
+    " 1 ",
+    "345",
+    "678"
   ],
   "key": {
-    "0": {
-      "item": "minecraft:blue_dye"
-    },
     "1": {
-      "item": "minecraft:diamond_helmet"
-    },
-    "2": {
-      "item": "minecraft:blue_dye"
+      "item": "server:porra"
     },
     "3": {
-      "item": "minecraft:obsidian"
+      "item": "minecraft:blue_dye"
     },
     "4": {
-      "item": "minecraft:obsidian"
+      "item": "minecraft:diamond_helmet"
     },
     "5": {
+      "item": "minecraft:blue_dye"
+    },
+    "6": {
+      "item": "minecraft:obsidian"
+    },
+    "7": {
+      "item": "minecraft:obsidian"
+    },
+    "8": {
       "item": "minecraft:obsidian"
     }
   },
