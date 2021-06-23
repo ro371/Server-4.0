@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "esgratisdisk",
+    "name": "Es gratis",
+    "description": "Arnau Griso - Es Gratis",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:esgratis"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "disc123",
+    "name": "1,2,3",
+    "description": "Sofia Reyes - 1, 2, 3",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:sound123"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "princesasdisk",
+    "name": "Princesas",
+    "description": "Pereza - Princesas",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:princesas"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

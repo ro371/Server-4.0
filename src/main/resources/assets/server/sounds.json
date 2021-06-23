@@ -280,5 +280,55 @@
         "stream": true
       }
     ]
+  },
+  "memyselfandi": {
+    "category": "music",
+    "subtitle": "subtitles.memyselfandi",
+    "sounds": [
+      {
+        "name": "server:ytbmp3s.me_-_g-eazy_x_bebe_rexha_-_me_myself__i_audio",
+        "stream": true
+      }
+    ]
+  },
+  "esgratis": {
+    "category": "music",
+    "subtitle": "subtitles.esgratis",
+    "sounds": [
+      {
+        "name": "server:ytbmp3s.me_-_arnau_griso_-_es_gratis",
+        "stream": true
+      }
+    ]
+  },
+  "princesas": {
+    "category": "music",
+    "subtitle": "subtitles.princesas",
+    "sounds": [
+      {
+        "name": "server:ytbmp3s.me_-_pereza_-_princesas",
+        "stream": true
+      }
+    ]
+  },
+  "sound123": {
+    "category": "music",
+    "subtitle": "subtitles.sound123",
+    "sounds": [
+      {
+        "name": "server:ytbmp3s.me_-_sofia_reyes_-_1_2_3_feat._jason_derulo__de_la_ghetto_official_video",
+        "stream": true
+      }
+    ]
+  },
+  "quemaspues": {
+    "category": "music",
+    "subtitle": "subtitles.quemaspues",
+    "sounds": [
+      {
+        "name": "server:j_balvin_x_maria_becerra_-_que_mas_pues_letra_lyrics",
+        "stream": true
+      }
+    ]
   }
 }
