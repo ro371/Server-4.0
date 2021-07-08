@@ -3956,6 +3956,68 @@
       "ids": {},
       "registry_name": "quemaspuesdisk",
       "path": "~/Disks"
+    },
+    {
+      "name": "JuramentodesalDisk",
+      "type": "musicdisc",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "juramentodesal_disk",
+      "path": "~/Disks"
+    },
+    {
+      "name": "Howdoyousleepdisk",
+      "type": "musicdisc",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "howdoyousleepdisk",
+      "path": "~/Disks"
+    },
+    {
+      "name": "SetCommandExecuted",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Set",
+      "type": "command",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set"
     }
   ],
   "variable_elements": [
@@ -4027,6 +4089,30 @@
     },
     {
       "name": "nameproposal",
+      "type": "string",
+      "scope": "map",
+      "value": ""
+    },
+    {
+      "name": "mayor",
+      "type": "string",
+      "scope": "map",
+      "value": ""
+    },
+    {
+      "name": "police1",
+      "type": "string",
+      "scope": "map",
+      "value": ""
+    },
+    {
+      "name": "police2",
+      "type": "string",
+      "scope": "map",
+      "value": ""
+    },
+    {
+      "name": "judge",
       "type": "string",
       "scope": "map",
       "value": ""
@@ -4300,6 +4386,22 @@
       ],
       "category": "music",
       "subtitle": "J Balvin x Maria Becerra - Qué Más Pues"
+    },
+    {
+      "name": "juramentodesal",
+      "files": [
+        "ytbmp3s.me_-_lvaro_de_luna_-_juramento_eterno_de_sal_lyric_video_oficial___letra_completa"
+      ],
+      "category": "music",
+      "subtitle": "lvaro de Luna - Juramento eterno de sal"
+    },
+    {
+      "name": "howdoyousleep",
+      "files": [
+        "ytbmp3s.me_-_sam_smith_-_how_do_you_sleep__lyrics"
+      ],
+      "category": "music",
+      "subtitle": "Sam Smith - How Do You Sleep"
     }
   ],
   "language_map": {
@@ -4347,6 +4449,7 @@
       "item.server.esgratisdisk": "Es gratis",
       "item.server.princesasdisk.desc": "Pereza - Princesas",
       "item.server.policearmor_boots": "Police Boots",
+      "subtitles.juramentodesal": "lvaro de Luna - Juramento eterno de sal",
       "subtitles.gemido": "",
       "subtitles.musicatristenaruto": "",
       "item.server.wat_sugardisk": "Watermelon Sugar",
@@ -4390,6 +4493,7 @@
       "item.server.sufre_mamon_disk": "Sufre Mamón ",
       "item.server.delgadito": "Delgadito",
       "item.server.showerdisk": "Shower",
+      "item.server.juramentodesal_disk": "Juramento eterno de sal",
       "item.server.resistiredisk": "Resistiré",
       "item.server.pilots_21disk.desc": "Twenty one pilots - Stressed Out",
       "item.server.preso_armor_boots": "Taken Boots",
@@ -4405,6 +4509,7 @@
       "item.server.rammsteindisk": "Rammstein",
       "item.server.policearmor_leggings": "Police Leggings",
       "item.server.pilots_21disk": "Stressed Out",
+      "item.server.howdoyousleepdisk.desc": "Sam Smith - How Do You Sleep",
       "item.server.misionsugar": "Mission",
       "subtitles.montero": "Lil Nas X - Montero",
       "item.server.disc_123.desc": "Sofia Reyes - 1, 2, 3",
@@ -4429,6 +4534,7 @@
       "item.cocktailcalabaza.name": "Pumpkin Drink",
       "item.smallpizzaveneno.name": "Small Pizza",
       "item.server.el_anillo": "El Anillo",
+      "item.server.howdoyousleepdisk": "How do you sleep",
       "item.server.vaso": "Glass",
       "tipped_arrow.effect.altopolicia": "Arrow of Stop!",
       "item.server.montero.desc": "Call me by your name Lil Nas X - Montero",
@@ -4449,6 +4555,7 @@
       "item.server.goforward": "Forward",
       "subtitles.memyselfandi": "G-Eazy X Bebe Rexha - Me, Myself \u0026 I",
       "item.server.princesasdisk": "Princesas",
+      "item.server.juramentodesal_disk.desc": "lvaro de Luna - Juramento eterno de sal",
       "effect.altopolicia": "Stop!",
       "item.server.thenightsdisk.desc": "Avicii - The Nights",
       "item.server.poisondrops": "Poison Drops",
@@ -4496,6 +4603,7 @@
       "subtitles.alone": "Alan Walker - Alone",
       "item.server.resistiredisk.desc": "Resistiré 2020 - Sofía Ellar",
       "item.server.manzana_veneno": "Apple",
+      "subtitles.howdoyousleep": "Sam Smith - How Do You Sleep",
       "item.mediumpizza.name": "Medium Pizza",
       "item.vasodeagua.name": "Glass of Water",
       "item.mediumpizzaveneno.name": "Medium Pizza",
@@ -4551,6 +4659,7 @@
       "item.server.esgratisdisk": "Es gratis",
       "item.server.princesasdisk.desc": "Pereza - Princesas",
       "item.server.policearmor_boots": "Botas de @Policía",
+      "subtitles.juramentodesal": "lvaro de Luna - Juramento eterno de sal",
       "subtitles.gemido": "",
       "subtitles.musicatristenaruto": "",
       "item.server.wat_sugardisk": "Watermelon Sugar",
@@ -4594,6 +4703,7 @@
       "item.server.sufre_mamon_disk": "Sufre Mamón ",
       "item.server.delgadito": "Delgadito",
       "item.server.showerdisk": "Shower",
+      "item.server.juramentodesal_disk": "Juramento eterno de sal",
       "item.server.resistiredisk": "Resistiré",
       "item.server.pilots_21disk.desc": "Twenty one pilots - Stressed Out",
       "item.server.preso_armor_boots": "Botas de preso",
@@ -4609,6 +4719,7 @@
       "item.server.rammsteindisk": "Rammstein",
       "item.server.policearmor_leggings": "Pantalones de @Policía",
       "item.server.pilots_21disk": "Stressed Out",
+      "item.server.howdoyousleepdisk.desc": "Sam Smith - How Do You Sleep",
       "item.server.misionsugar": "Misión",
       "subtitles.montero": "Lil Nas X - Montero",
       "item.server.disc_123.desc": "Sofia Reyes - 1, 2, 3",
@@ -4633,6 +4744,7 @@
       "item.cocktailcalabaza.name": "Cocktail de Calabaza",
       "item.smallpizzaveneno.name": "Pizza Pequeña",
       "item.server.el_anillo": "El Anillo",
+      "item.server.howdoyousleepdisk": "How do you sleep",
       "item.server.vaso": "Vaso",
       "tipped_arrow.effect.altopolicia": "Flecha de Alto Policía",
       "item.server.montero.desc": "Call me by your name Lil Nas X - Montero",
@@ -4653,6 +4765,7 @@
       "item.server.goforward": "Avanza",
       "subtitles.memyselfandi": "G-Eazy X Bebe Rexha - Me, Myself \u0026 I",
       "item.server.princesasdisk": "Princesas",
+      "item.server.juramentodesal_disk.desc": "lvaro de Luna - Juramento eterno de sal",
       "effect.altopolicia": "Alto Policía",
       "item.server.thenightsdisk.desc": "Avicii - The Nights",
       "item.server.poisondrops": "Gotas de veneno",
@@ -4700,6 +4813,7 @@
       "subtitles.alone": "Alan Walker - Alone",
       "item.server.resistiredisk.desc": "Resistiré 2020 - Sofía Ellar",
       "item.server.manzana_veneno": "Manzana",
+      "subtitles.howdoyousleep": "Sam Smith - How Do You Sleep",
       "item.mediumpizza.name": "Pizza Mediana",
       "item.vasodeagua.name": "Vaso de Agua",
       "item.mediumpizzaveneno.name": "Pizza Mediana",
@@ -4756,7 +4870,7 @@
   "workspaceSettings": {
     "modid": "server",
     "modName": "Cuspiland´s Mod",
-    "version": "4.3.5.3",
+    "version": "4.3.5.4",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",

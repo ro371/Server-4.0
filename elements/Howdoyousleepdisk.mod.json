@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "howdoyousleepdisk",
+    "name": "How do you sleep",
+    "description": "Sam Smith - How Do You Sleep",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:howdoyousleep"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

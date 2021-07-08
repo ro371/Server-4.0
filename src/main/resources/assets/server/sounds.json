@@ -330,5 +330,25 @@
         "stream": true
       }
     ]
+  },
+  "juramentodesal": {
+    "category": "music",
+    "subtitle": "subtitles.juramentodesal",
+    "sounds": [
+      {
+        "name": "server:ytbmp3s.me_-_lvaro_de_luna_-_juramento_eterno_de_sal_lyric_video_oficial___letra_completa",
+        "stream": true
+      }
+    ]
+  },
+  "howdoyousleep": {
+    "category": "music",
+    "subtitle": "subtitles.howdoyousleep",
+    "sounds": [
+      {
+        "name": "server:ytbmp3s.me_-_sam_smith_-_how_do_you_sleep__lyrics",
+        "stream": true
+      }
+    ]
   }
 }

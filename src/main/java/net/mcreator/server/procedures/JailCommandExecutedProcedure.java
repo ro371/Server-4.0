@@ -15,6 +15,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
+import net.mcreator.server.ServerModVariables;
 import net.mcreator.server.ServerModElements;
 import net.mcreator.server.ServerMod;
 
@@ -64,7 +65,7 @@ public class JailCommandExecutedProcedure extends ServerModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity.getDisplayName().getString())).equals("Dev"))) {
+		if ((((entity.getDisplayName().getString())).equals((ServerModVariables.MapVariables.get(world).police1)))) {
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
@@ -143,6 +144,180 @@ public class JailCommandExecutedProcedure extends ServerModElements.ModElement {
 				((World) world).playSound(31, 71, (-258),
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:musicatristenaruto")),
 						SoundCategory.NEUTRAL, (float) 10, (float) 1, false);
+			}
+		} else {
+			if ((((entity.getDisplayName().getString())).equals((ServerModVariables.MapVariables.get(world).police2)))) {
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							(("tp ") + "" + ((((new Object() {
+								public String getText() {
+									String param = (String) cmdparams.get("0");
+									if (param != null) {
+										return param;
+									}
+									return "";
+								}
+							}.getText())) + "" + (" 31 71 -258")))));
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							(("spawnpoint ") + "" + ((((new Object() {
+								public String getText() {
+									String param = (String) cmdparams.get("0");
+									if (param != null) {
+										return param;
+									}
+									return "";
+								}
+							}.getText())) + "" + (" 31 71 -258")))));
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							(("title ") + "" + ((((new Object() {
+								public String getText() {
+									String param = (String) cmdparams.get("0");
+									if (param != null) {
+										return param;
+									}
+									return "";
+								}
+							}.getText())) + "" + (" times 20 200 20")))));
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							(("title ") + "" + ((((new Object() {
+								public String getText() {
+									String param = (String) cmdparams.get("0");
+									if (param != null) {
+										return param;
+									}
+									return "";
+								}
+							}.getText())) + "" + (" subtitle {\"text\":\"encarcelado\"}")))));
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							(("title ") + "" + ((((new Object() {
+								public String getText() {
+									String param = (String) cmdparams.get("0");
+									if (param != null) {
+										return param;
+									}
+									return "";
+								}
+							}.getText())) + "" + (" title {\"text\":\"Has sido \"}")))));
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) 31, (int) 71, (int) (-258)),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:musicatristenaruto")),
+							SoundCategory.NEUTRAL, (float) 10, (float) 1);
+				} else {
+					((World) world).playSound(31, 71, (-258),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("server:musicatristenaruto")),
+							SoundCategory.NEUTRAL, (float) 10, (float) 1, false);
+				}
+			} else {
+				if ((((entity.getDisplayName().getString())).equals((ServerModVariables.MapVariables.get(world).judge)))) {
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+								(("tp ") + "" + ((((new Object() {
+									public String getText() {
+										String param = (String) cmdparams.get("0");
+										if (param != null) {
+											return param;
+										}
+										return "";
+									}
+								}.getText())) + "" + (" 31 71 -258")))));
+					}
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+								(("spawnpoint ") + "" + ((((new Object() {
+									public String getText() {
+										String param = (String) cmdparams.get("0");
+										if (param != null) {
+											return param;
+										}
+										return "";
+									}
+								}.getText())) + "" + (" 31 71 -258")))));
+					}
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+								(("title ") + "" + ((((new Object() {
+									public String getText() {
+										String param = (String) cmdparams.get("0");
+										if (param != null) {
+											return param;
+										}
+										return "";
+									}
+								}.getText())) + "" + (" times 20 200 20")))));
+					}
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+								(("title ") + "" + ((((new Object() {
+									public String getText() {
+										String param = (String) cmdparams.get("0");
+										if (param != null) {
+											return param;
+										}
+										return "";
+									}
+								}.getText())) + "" + (" subtitle {\"text\":\"encarcelado\"}")))));
+					}
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+								(("title ") + "" + ((((new Object() {
+									public String getText() {
+										String param = (String) cmdparams.get("0");
+										if (param != null) {
+											return param;
+										}
+										return "";
+									}
+								}.getText())) + "" + (" title {\"text\":\"Has sido \"}")))));
+					}
+					if (world instanceof World && !world.isRemote()) {
+						((World) world)
+								.playSound(null, new BlockPos((int) 31, (int) 71, (int) (-258)),
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("server:musicatristenaruto")),
+										SoundCategory.NEUTRAL, (float) 10, (float) 1);
+					} else {
+						((World) world).playSound(31, 71, (-258),
+								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+										.getValue(new ResourceLocation("server:musicatristenaruto")),
+								SoundCategory.NEUTRAL, (float) 10, (float) 1, false);
+					}
+				} else {
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+								"tell @p No tienes permisos");
+					}
+				}
 			}
 		}
 	}

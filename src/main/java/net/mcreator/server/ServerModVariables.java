@@ -105,6 +105,10 @@ public class ServerModVariables {
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "server_mapvars";
 		public String nameproposal = "";
+		public String mayor = "";
+		public String police1 = "";
+		public String police2 = "";
+		public String judge = "";
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -116,11 +120,19 @@ public class ServerModVariables {
 		@Override
 		public void read(CompoundNBT nbt) {
 			nameproposal = nbt.getString("nameproposal");
+			mayor = nbt.getString("mayor");
+			police1 = nbt.getString("police1");
+			police2 = nbt.getString("police2");
+			judge = nbt.getString("judge");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
 			nbt.putString("nameproposal", nameproposal);
+			nbt.putString("mayor", mayor);
+			nbt.putString("police1", police1);
+			nbt.putString("police2", police2);
+			nbt.putString("judge", judge);
 			return nbt;
 		}
 

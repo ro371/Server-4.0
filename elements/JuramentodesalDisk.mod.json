@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "saldisk",
+    "name": "Juramento eterno de sal",
+    "description": "lvaro de Luna - Juramento eterno de sal",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:juramentodesal"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

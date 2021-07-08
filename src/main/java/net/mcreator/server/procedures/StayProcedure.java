@@ -68,7 +68,7 @@ public class StayProcedure extends ServerModElements.ModElement {
 					});
 				}
 				if ((((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new ServerModVariables.PlayerVariables())).time) >= 120)) {
+						.orElse(new ServerModVariables.PlayerVariables())).time) >= 90)) {
 					{
 						double _setval = (double) 0;
 						entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
