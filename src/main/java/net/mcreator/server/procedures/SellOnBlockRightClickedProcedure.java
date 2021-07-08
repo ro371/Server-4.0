@@ -116,42 +116,39 @@ public class SellOnBlockRightClickedProcedure extends ServerModElements.ModEleme
 						return "";
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "name"))))) {
-					if ((Math.random() < 0.7)) {
-						{
-							Entity _ent = entity;
-							if (_ent instanceof ServerPlayerEntity) {
-								BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
-								NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-									@Override
-									public ITextComponent getDisplayName() {
-										return new StringTextComponent("Sellgui");
-									}
+					{
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+							NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+								@Override
+								public ITextComponent getDisplayName() {
+									return new StringTextComponent("Sellgui");
+								}
 
-									@Override
-									public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-										return new SellguiGui.GuiContainerMod(id, inventory,
-												new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-									}
-								}, _bpos);
-							}
+								@Override
+								public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+									return new SellguiGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+								}
+							}, _bpos);
 						}
-					} else {
-						{
-							Entity _ent = entity;
-							if (_ent instanceof ServerPlayerEntity) {
-								BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
-								NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-									@Override
-									public ITextComponent getDisplayName() {
-										return new StringTextComponent("Buygui");
-									}
+					}
+				} else {
+					{
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+							NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+								@Override
+								public ITextComponent getDisplayName() {
+									return new StringTextComponent("Buygui");
+								}
 
-									@Override
-									public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-										return new BuyguiGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-									}
-								}, _bpos);
-							}
+								@Override
+								public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+									return new BuyguiGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+								}
+							}, _bpos);
 						}
 					}
 				}
