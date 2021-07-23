@@ -227,7 +227,8 @@ public class JailCommandExecutedProcedure extends ServerModElements.ModElement {
 							SoundCategory.NEUTRAL, (float) 10, (float) 1, false);
 				}
 			} else {
-				if ((((entity.getDisplayName().getString())).equals((ServerModVariables.MapVariables.get(world).judge)))) {
+				if (((((entity.getDisplayName().getString())).equals((ServerModVariables.MapVariables.get(world).judge)))
+						|| (((entity.getDisplayName().getString())).equals((ServerModVariables.MapVariables.get(world).judge2))))) {
 					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",

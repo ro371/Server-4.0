@@ -1,17 +1,13 @@
 package net.mcreator.server.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.IWorld;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.server.item.PergaminoItem;
 import net.mcreator.server.ServerModVariables;
 import net.mcreator.server.ServerModElements;
 import net.mcreator.server.ServerMod;
@@ -69,18 +65,22 @@ public class StayProcedure extends ServerModElements.ModElement {
 				}
 				if ((((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new ServerModVariables.PlayerVariables())).time) >= 90)) {
-					{
-						double _setval = (double) 0;
-						entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.time = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					if ((Math.random() < 0.9)) {
-						if (entity instanceof PlayerEntity) {
-							ItemStack _setstack = new ItemStack(PergaminoItem.block, (int) (1));
-							_setstack.setCount((int) 1);
-							ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+					if ((Math.random() < 0.85)) {
+						{
+							double _setval = (double) (((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+									.orElse(new ServerModVariables.PlayerVariables())).coin1) + 1);
+							entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.coin1 = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							double _setval = (double) (((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+									.orElse(new ServerModVariables.PlayerVariables())).time) - 90);
+							entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.time = _setval;
+								capability.syncPlayerVariables(entity);
+							});
 						}
 					}
 				}

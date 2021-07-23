@@ -163,8 +163,8 @@ public class SetCommandExecutedProcedure extends ServerModElements.ModElement {
 							}
 							return "";
 						}
-					}.getText())).equals("mayor"))) {
-						ServerModVariables.MapVariables.get(world).mayor = (String) (new Object() {
+					}.getText())).equals("judge2"))) {
+						ServerModVariables.MapVariables.get(world).judge2 = (String) (new Object() {
 							public String getText() {
 								String param = (String) cmdparams.get("1");
 								if (param != null) {
@@ -178,7 +178,7 @@ public class SetCommandExecutedProcedure extends ServerModElements.ModElement {
 							((World) world).getServer().getCommandManager().handleCommand(
 									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-									(("tell @p ahora el alcalde es ") + "" + ((new Object() {
+									(("tell @p ahora el segundo juez es ") + "" + ((new Object() {
 										public String getText() {
 											String param = (String) cmdparams.get("1");
 											if (param != null) {
@@ -189,12 +189,46 @@ public class SetCommandExecutedProcedure extends ServerModElements.ModElement {
 									}.getText()))));
 						}
 					} else {
-						if (world instanceof ServerWorld) {
-							((World) world).getServer().getCommandManager()
-									.handleCommand(
-											new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-													new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-											"tell @p ERROR");
+						if ((((new Object() {
+							public String getText() {
+								String param = (String) cmdparams.get("0");
+								if (param != null) {
+									return param;
+								}
+								return "";
+							}
+						}.getText())).equals("mayor"))) {
+							ServerModVariables.MapVariables.get(world).mayor = (String) (new Object() {
+								public String getText() {
+									String param = (String) cmdparams.get("1");
+									if (param != null) {
+										return param;
+									}
+									return "";
+								}
+							}.getText());
+							ServerModVariables.MapVariables.get(world).syncData(world);
+							if (world instanceof ServerWorld) {
+								((World) world).getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+										(("tell @p ahora el alcalde es ") + "" + ((new Object() {
+											public String getText() {
+												String param = (String) cmdparams.get("1");
+												if (param != null) {
+													return param;
+												}
+												return "";
+											}
+										}.getText()))));
+							}
+						} else {
+							if (world instanceof ServerWorld) {
+								((World) world).getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+										"tell @p ERROR");
+							}
 						}
 					}
 				}

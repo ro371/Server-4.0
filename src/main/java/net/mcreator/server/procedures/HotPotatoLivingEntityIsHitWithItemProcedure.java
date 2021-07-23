@@ -89,7 +89,7 @@ public class HotPotatoLivingEntityIsHitWithItemProcedure extends ServerModElemen
 				if (world instanceof World && !((World) world).isRemote) {
 					((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 3, Explosion.Mode.NONE);
 				}
-				entity.attackEntityFrom(DamageSource.ON_FIRE, (float) 2);
+				entity.attackEntityFrom(DamageSource.ON_FIRE, (float) 3);
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, (int) 30);

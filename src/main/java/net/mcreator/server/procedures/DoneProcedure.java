@@ -165,249 +165,259 @@ public class DoneProcedure extends ServerModElements.ModElement {
 								return 0;
 							}
 						}.getAmount((int) (3))) == 64)) {
-							if (((((new ItemStack(Items.WHEAT_SEEDS, (int) (1)).getItem() == (new Object() {
-								public ItemStack getItemStack(int sltid) {
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							if ((3 == ((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+									.orElse(new ServerModVariables.PlayerVariables())).misionchosen))) {
+								if (((((new ItemStack(Items.WHEAT_SEEDS, (int) (1)).getItem() == (new Object() {
+									public ItemStack getItemStack(int sltid) {
+										Entity _ent = entity;
+										if (_ent instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) _ent).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													return ((Slot) ((Map) invobj).get(sltid)).getStack();
+												}
+											}
+										}
+										return ItemStack.EMPTY;
+									}
+								}.getItemStack((int) (0))).getItem()) && (new ItemStack(Items.WHEAT_SEEDS, (int) (1)).getItem() == (new Object() {
+									public ItemStack getItemStack(int sltid) {
+										Entity _ent = entity;
+										if (_ent instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) _ent).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													return ((Slot) ((Map) invobj).get(sltid)).getStack();
+												}
+											}
+										}
+										return ItemStack.EMPTY;
+									}
+								}.getItemStack((int) (1))).getItem())) && (new ItemStack(Items.WHEAT_SEEDS, (int) (1)).getItem() == (new Object() {
+									public ItemStack getItemStack(int sltid) {
+										Entity _ent = entity;
+										if (_ent instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) _ent).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													return ((Slot) ((Map) invobj).get(sltid)).getStack();
+												}
+											}
+										}
+										return ItemStack.EMPTY;
+									}
+								}.getItemStack((int) (2))).getItem())) && (new ItemStack(Items.WHEAT_SEEDS, (int) (1)).getItem() == (new Object() {
+									public ItemStack getItemStack(int sltid) {
+										Entity _ent = entity;
+										if (_ent instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) _ent).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													return ((Slot) ((Map) invobj).get(sltid)).getStack();
+												}
+											}
+										}
+										return ItemStack.EMPTY;
+									}
+								}.getItemStack((int) (3))).getItem()))) {
+									{
+										Entity _ent = entity;
+										if (_ent instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) _ent).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (64));
+													_current.detectAndSendChanges();
+												}
 											}
 										}
 									}
-									return ItemStack.EMPTY;
-								}
-							}.getItemStack((int) (0))).getItem()) && (new ItemStack(Items.WHEAT_SEEDS, (int) (1)).getItem() == (new Object() {
-								public ItemStack getItemStack(int sltid) {
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									{
+										Entity _ent = entity;
+										if (_ent instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) _ent).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (64));
+													_current.detectAndSendChanges();
+												}
 											}
 										}
 									}
-									return ItemStack.EMPTY;
-								}
-							}.getItemStack((int) (1))).getItem())) && (new ItemStack(Items.WHEAT_SEEDS, (int) (1)).getItem() == (new Object() {
-								public ItemStack getItemStack(int sltid) {
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									{
+										Entity _ent = entity;
+										if (_ent instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) _ent).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													((Slot) ((Map) invobj).get((int) (2))).decrStackSize((int) (64));
+													_current.detectAndSendChanges();
+												}
 											}
 										}
 									}
-									return ItemStack.EMPTY;
-								}
-							}.getItemStack((int) (2))).getItem())) && (new ItemStack(Items.WHEAT_SEEDS, (int) (1)).getItem() == (new Object() {
-								public ItemStack getItemStack(int sltid) {
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									{
+										Entity _ent = entity;
+										if (_ent instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) _ent).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													((Slot) ((Map) invobj).get((int) (3))).decrStackSize((int) (64));
+													_current.detectAndSendChanges();
+												}
 											}
 										}
 									}
-									return ItemStack.EMPTY;
+									if (entity instanceof PlayerEntity) {
+										ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+										_setstack.setCount((int) 1);
+										ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+									}
+									if (entity instanceof PlayerEntity) {
+										ItemStack _stktoremove = new ItemStack(MisionSeedsItem.block, (int) (1));
+										((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+												((PlayerEntity) entity).container.func_234641_j_());
+									}
+									if (entity instanceof PlayerEntity)
+										((PlayerEntity) entity).closeScreen();
 								}
-							}.getItemStack((int) (3))).getItem()))) {
-								{
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (64));
-												_current.detectAndSendChanges();
+							} else {
+								if ((6 == ((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new ServerModVariables.PlayerVariables())).misionchosen))) {
+									if (((((new ItemStack(Blocks.COBBLESTONE, (int) (1)).getItem() == (new Object() {
+										public ItemStack getItemStack(int sltid) {
+											Entity _ent = entity;
+											if (_ent instanceof ServerPlayerEntity) {
+												Container _current = ((ServerPlayerEntity) _ent).openContainer;
+												if (_current instanceof Supplier) {
+													Object invobj = ((Supplier) _current).get();
+													if (invobj instanceof Map) {
+														return ((Slot) ((Map) invobj).get(sltid)).getStack();
+													}
+												}
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack((int) (0))).getItem())
+											&& (new ItemStack(Blocks.COBBLESTONE, (int) (1)).getItem() == (new Object() {
+												public ItemStack getItemStack(int sltid) {
+													Entity _ent = entity;
+													if (_ent instanceof ServerPlayerEntity) {
+														Container _current = ((ServerPlayerEntity) _ent).openContainer;
+														if (_current instanceof Supplier) {
+															Object invobj = ((Supplier) _current).get();
+															if (invobj instanceof Map) {
+																return ((Slot) ((Map) invobj).get(sltid)).getStack();
+															}
+														}
+													}
+													return ItemStack.EMPTY;
+												}
+											}.getItemStack((int) (1))).getItem()))
+											&& (new ItemStack(Blocks.COBBLESTONE, (int) (1)).getItem() == (new Object() {
+												public ItemStack getItemStack(int sltid) {
+													Entity _ent = entity;
+													if (_ent instanceof ServerPlayerEntity) {
+														Container _current = ((ServerPlayerEntity) _ent).openContainer;
+														if (_current instanceof Supplier) {
+															Object invobj = ((Supplier) _current).get();
+															if (invobj instanceof Map) {
+																return ((Slot) ((Map) invobj).get(sltid)).getStack();
+															}
+														}
+													}
+													return ItemStack.EMPTY;
+												}
+											}.getItemStack((int) (2))).getItem()))
+											&& (new ItemStack(Blocks.COBBLESTONE, (int) (1)).getItem() == (new Object() {
+												public ItemStack getItemStack(int sltid) {
+													Entity _ent = entity;
+													if (_ent instanceof ServerPlayerEntity) {
+														Container _current = ((ServerPlayerEntity) _ent).openContainer;
+														if (_current instanceof Supplier) {
+															Object invobj = ((Supplier) _current).get();
+															if (invobj instanceof Map) {
+																return ((Slot) ((Map) invobj).get(sltid)).getStack();
+															}
+														}
+													}
+													return ItemStack.EMPTY;
+												}
+											}.getItemStack((int) (3))).getItem()))) {
+										{
+											Entity _ent = entity;
+											if (_ent instanceof ServerPlayerEntity) {
+												Container _current = ((ServerPlayerEntity) _ent).openContainer;
+												if (_current instanceof Supplier) {
+													Object invobj = ((Supplier) _current).get();
+													if (invobj instanceof Map) {
+														((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (64));
+														_current.detectAndSendChanges();
+													}
+												}
 											}
 										}
-									}
-								}
-								{
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (64));
-												_current.detectAndSendChanges();
+										{
+											Entity _ent = entity;
+											if (_ent instanceof ServerPlayerEntity) {
+												Container _current = ((ServerPlayerEntity) _ent).openContainer;
+												if (_current instanceof Supplier) {
+													Object invobj = ((Supplier) _current).get();
+													if (invobj instanceof Map) {
+														((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (64));
+														_current.detectAndSendChanges();
+													}
+												}
 											}
 										}
-									}
-								}
-								{
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												((Slot) ((Map) invobj).get((int) (2))).decrStackSize((int) (64));
-												_current.detectAndSendChanges();
+										{
+											Entity _ent = entity;
+											if (_ent instanceof ServerPlayerEntity) {
+												Container _current = ((ServerPlayerEntity) _ent).openContainer;
+												if (_current instanceof Supplier) {
+													Object invobj = ((Supplier) _current).get();
+													if (invobj instanceof Map) {
+														((Slot) ((Map) invobj).get((int) (2))).decrStackSize((int) (64));
+														_current.detectAndSendChanges();
+													}
+												}
 											}
 										}
-									}
-								}
-								{
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												((Slot) ((Map) invobj).get((int) (3))).decrStackSize((int) (64));
-												_current.detectAndSendChanges();
+										{
+											Entity _ent = entity;
+											if (_ent instanceof ServerPlayerEntity) {
+												Container _current = ((ServerPlayerEntity) _ent).openContainer;
+												if (_current instanceof Supplier) {
+													Object invobj = ((Supplier) _current).get();
+													if (invobj instanceof Map) {
+														((Slot) ((Map) invobj).get((int) (3))).decrStackSize((int) (64));
+														_current.detectAndSendChanges();
+													}
+												}
 											}
 										}
-									}
-								}
-								if (entity instanceof PlayerEntity) {
-									ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
-									_setstack.setCount((int) 1);
-									ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
-								}
-								if (entity instanceof PlayerEntity) {
-									ItemStack _stktoremove = new ItemStack(MisionSeedsItem.block, (int) (1));
-									((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-											((PlayerEntity) entity).container.func_234641_j_());
-								}
-								if (entity instanceof PlayerEntity)
-									((PlayerEntity) entity).closeScreen();
-							}
-							if (((((new ItemStack(Blocks.COBBLESTONE, (int) (1)).getItem() == (new Object() {
-								public ItemStack getItemStack(int sltid) {
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												return ((Slot) ((Map) invobj).get(sltid)).getStack();
-											}
+										if (entity instanceof PlayerEntity) {
+											ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
+											_setstack.setCount((int) 1);
+											ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 										}
-									}
-									return ItemStack.EMPTY;
-								}
-							}.getItemStack((int) (0))).getItem()) && (new ItemStack(Blocks.COBBLESTONE, (int) (1)).getItem() == (new Object() {
-								public ItemStack getItemStack(int sltid) {
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												return ((Slot) ((Map) invobj).get(sltid)).getStack();
-											}
+										if (entity instanceof PlayerEntity) {
+											ItemStack _stktoremove = new ItemStack(MisionstoneItem.block, (int) (1));
+											((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+													((PlayerEntity) entity).container.func_234641_j_());
 										}
-									}
-									return ItemStack.EMPTY;
-								}
-							}.getItemStack((int) (1))).getItem())) && (new ItemStack(Blocks.COBBLESTONE, (int) (1)).getItem() == (new Object() {
-								public ItemStack getItemStack(int sltid) {
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												return ((Slot) ((Map) invobj).get(sltid)).getStack();
-											}
-										}
-									}
-									return ItemStack.EMPTY;
-								}
-							}.getItemStack((int) (2))).getItem())) && (new ItemStack(Blocks.COBBLESTONE, (int) (1)).getItem() == (new Object() {
-								public ItemStack getItemStack(int sltid) {
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												return ((Slot) ((Map) invobj).get(sltid)).getStack();
-											}
-										}
-									}
-									return ItemStack.EMPTY;
-								}
-							}.getItemStack((int) (3))).getItem()))) {
-								{
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (64));
-												_current.detectAndSendChanges();
-											}
-										}
+										if (entity instanceof PlayerEntity)
+											((PlayerEntity) entity).closeScreen();
 									}
 								}
-								{
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (64));
-												_current.detectAndSendChanges();
-											}
-										}
-									}
-								}
-								{
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												((Slot) ((Map) invobj).get((int) (2))).decrStackSize((int) (64));
-												_current.detectAndSendChanges();
-											}
-										}
-									}
-								}
-								{
-									Entity _ent = entity;
-									if (_ent instanceof ServerPlayerEntity) {
-										Container _current = ((ServerPlayerEntity) _ent).openContainer;
-										if (_current instanceof Supplier) {
-											Object invobj = ((Supplier) _current).get();
-											if (invobj instanceof Map) {
-												((Slot) ((Map) invobj).get((int) (3))).decrStackSize((int) (64));
-												_current.detectAndSendChanges();
-											}
-										}
-									}
-								}
-								if (entity instanceof PlayerEntity) {
-									ItemStack _setstack = new ItemStack(Coin1Item.block, (int) (1));
-									_setstack.setCount((int) 1);
-									ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
-								}
-								if (entity instanceof PlayerEntity) {
-									ItemStack _stktoremove = new ItemStack(MisionstoneItem.block, (int) (1));
-									((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-											((PlayerEntity) entity).container.func_234641_j_());
-								}
-								if (entity instanceof PlayerEntity)
-									((PlayerEntity) entity).closeScreen();
 							}
 						}
 						if ((1 == ((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)

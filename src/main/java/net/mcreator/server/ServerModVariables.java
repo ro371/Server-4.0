@@ -109,6 +109,7 @@ public class ServerModVariables {
 		public String police1 = "";
 		public String police2 = "";
 		public String judge = "";
+		public String judge2 = "";
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -124,6 +125,7 @@ public class ServerModVariables {
 			police1 = nbt.getString("police1");
 			police2 = nbt.getString("police2");
 			judge = nbt.getString("judge");
+			judge2 = nbt.getString("judge2");
 		}
 
 		@Override
@@ -133,6 +135,7 @@ public class ServerModVariables {
 			nbt.putString("police1", police1);
 			nbt.putString("police2", police2);
 			nbt.putString("judge", judge);
+			nbt.putString("judge2", judge2);
 			return nbt;
 		}
 
@@ -226,6 +229,7 @@ public class ServerModVariables {
 			nbt.putDouble("y", instance.y);
 			nbt.putDouble("z", instance.z);
 			nbt.putDouble("time", instance.time);
+			nbt.putDouble("missions", instance.missions);
 			return nbt;
 		}
 
@@ -243,6 +247,7 @@ public class ServerModVariables {
 			instance.y = nbt.getDouble("y");
 			instance.z = nbt.getDouble("z");
 			instance.time = nbt.getDouble("time");
+			instance.missions = nbt.getDouble("missions");
 		}
 	}
 
@@ -258,6 +263,7 @@ public class ServerModVariables {
 		public double y = 0;
 		public double z = 0;
 		public double time = 0;
+		public double missions = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				ServerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -291,6 +297,7 @@ public class ServerModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.menupage = original.menupage;
 		clone.time = original.time;
+		clone.missions = original.missions;
 		if (!event.isWasDeath()) {
 			clone.coin1 = original.coin1;
 			clone.coin5 = original.coin5;
@@ -335,6 +342,7 @@ public class ServerModVariables {
 					variables.y = message.data.y;
 					variables.z = message.data.z;
 					variables.time = message.data.time;
+					variables.missions = message.data.missions;
 				}
 			});
 			context.setPacketHandled(true);

@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
+import net.mcreator.server.ServerModVariables;
 import net.mcreator.server.ServerModElements;
 import net.mcreator.server.ServerMod;
 
@@ -59,7 +60,8 @@ public class AtarCommandExecutedProcedure extends ServerModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity.getDisplayName().getString())).equals("Dev"))) {
+		if (((((entity.getDisplayName().getString())).equals((ServerModVariables.MapVariables.get(world).police1)))
+				|| (((entity.getDisplayName().getString())).equals((ServerModVariables.MapVariables.get(world).police2))))) {
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
