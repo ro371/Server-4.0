@@ -4048,6 +4048,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -4534,7 +4550,7 @@
       "subtitles.de_sastre": "Sofía Ellar - De Sastre",
       "subtitles.pilots21": "Twenty one pilots - Stressed Out",
       "item.minecraft.splash_potion.effect.altopolicia": "Splash Stop!",
-      "item.server.anillo": "Ring",
+      "item.server.anillo": "Anillo",
       "subtitles.blursound": "Blur - Song 2",
       "item.dough.name": "Dough",
       "item.server.bigpizzaveneno": "Big Pizza",
@@ -4924,7 +4940,7 @@
   "workspaceSettings": {
     "modid": "server",
     "modName": "Cuspiland´s Mod",
-    "version": "4.4",
+    "version": "4.4.1",
     "description": "Random and useful mod for you and your friends",
     "author": "THE_GLACIAL, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/server-4-0",

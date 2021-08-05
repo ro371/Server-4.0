@@ -25,9 +25,9 @@ public class AnilloItemInInventoryTickProcedure extends ServerModElements.ModEle
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 4)) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 10, (int) 0, (false), (false)));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 10, (int) 1, (false), (false)));
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 10, (int) 0, (false), (false)));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 10, (int) 1, (false), (false)));
 		}
 	}
 }

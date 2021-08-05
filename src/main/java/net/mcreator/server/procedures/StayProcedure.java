@@ -68,9 +68,9 @@ public class StayProcedure extends ServerModElements.ModElement {
 					if ((Math.random() < 0.85)) {
 						{
 							double _setval = (double) (((entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new ServerModVariables.PlayerVariables())).coin1) + 1);
+									.orElse(new ServerModVariables.PlayerVariables())).missions) + 1);
 							entity.getCapability(ServerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.coin1 = _setval;
+								capability.missions = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
